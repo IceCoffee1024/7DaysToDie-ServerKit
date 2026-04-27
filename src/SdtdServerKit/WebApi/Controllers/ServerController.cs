@@ -83,6 +83,48 @@ namespace SdtdServerKit.WebApi.Controllers
         }
 
         /// <summary>
+        /// 获取丧尸本地化名称
+        /// </summary>
+        [HttpGet]
+        [Route(nameof(ZombieEntityClasses))]
+        public IEnumerable<object> ZombieEntityClasses([FromUri] Language language = Language.English)
+        {
+            var result = new List<(string className, string locName)>();
+            foreach (var item in EntityClass.list.Dict.Values)
+            {
+                if (item.classname == null || string.IsNullOrEmpty(item.entityClassName))
+                    continue;
+
+                Type type = item.classname;
+                bool matched = false;
+                while (type != null && type != typeof(object))
+                {
+                    if (type.Name == "EntityZombie" || type.Name == "EntityEnemy"
+                        || type.Name == "EntityAnimal" || type.Name == "EntityEnemyAnimal")
+                    {
+                        matched = true;
+                        break;
+                    }
+                    type = type.BaseType;
+                }
+
+                if (matched)
+                {
+                    string locName = Utilities.Utils.GetLocalization(item.entityClassName, language);
+                    result.Add((item.entityClassName, locName));
+                }
+            }
+
+            result.Sort((a, b) => string.Compare(a.className, b.className, StringComparison.OrdinalIgnoreCase));
+
+            return result.Select(r => new
+            {
+                entityClassName = r.className,
+                localizationName = string.IsNullOrEmpty(r.locName) || r.locName == r.className ? null : r.locName,
+            });
+        }
+
+        /// <summary>
         /// Get stats.
         /// </summary>
         [HttpGet]

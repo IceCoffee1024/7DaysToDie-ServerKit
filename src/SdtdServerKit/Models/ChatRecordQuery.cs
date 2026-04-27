@@ -29,5 +29,10 @@ namespace SdtdServerKit.Models
         /// Chat Type
         /// </summary>
         public ChatType? ChatType { get; set; }
+
+        /// <summary>
+        /// 排除系统消息
+        /// </summary>
+        public bool? ExcludeSystemMessages { get; set; }
     }
 }

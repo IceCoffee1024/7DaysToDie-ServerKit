@@ -16,6 +16,11 @@
         public required string Name { get; set; }
 
         /// <summary>
+        /// 玩家名称
+        /// </summary>
+        public string? PlayerName { get; set; }
+
+        /// <summary>
         /// 领取状态
         /// </summary>
         public bool ClaimState { get; set; }

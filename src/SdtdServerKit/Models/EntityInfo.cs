@@ -16,6 +16,11 @@
         public string EntityName { get; set; }
 
         /// <summary>
+        /// 实体类名
+        /// </summary>
+        public string EntityClassName { get; set; }
+
+        /// <summary>
         /// 实体类型
         /// </summary>
         public EntityType EntityType { get; set; }

@@ -9,7 +9,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/CommandList")]
-    public class CommandListController : ApiController
+    public partial class CommandListController : ApiController
     {
         private readonly ICommandListRepository _repository;
 

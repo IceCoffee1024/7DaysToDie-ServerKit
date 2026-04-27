@@ -454,12 +454,26 @@ namespace SdtdServerKit
                     string sql = File.ReadAllText(file.FullName, Encoding.UTF8);
                     dbConnection.Execute(sql);
                 }
-
+                TryAddColumn(dbConnection, "T_VipGift_v1", "PlayerName", "TEXT");
                 CustomLogger.Info("Initialize database success.");
             }
             catch (Exception ex)
             {
                 throw new Exception("Initialize database error.", ex);
+            }
+        }
+
+        /// <summary>
+        /// 安全添加数据库列
+        /// </summary>
+        private static void TryAddColumn(System.Data.IDbConnection dbConnection, string tableName, string columnName, string columnType)
+        {
+            try
+            {
+                dbConnection.Execute($"ALTER TABLE {tableName} ADD COLUMN {columnName} {columnType}");
+            }
+            catch
+            {
             }
         }
     }

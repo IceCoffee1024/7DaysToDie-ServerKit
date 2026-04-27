@@ -21,6 +21,12 @@
 		<RepositoryUrl>https://github.com/1249993110/7DaysToDie-ServerKit</RepositoryUrl>
 		<Version>10.0</Version>
 		<Platforms>AnyCPU;x64</Platforms>
+		<OutputPath>bin</OutputPath>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DefineConstants>$(DefineConstants);ENABLE_DEBUGGING</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -47,33 +53,15 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 		<PackageReference Include="NSwag.Annotations" Version="14.6.3" />
 		<PackageReference Include="NSwag.AspNet.Owin" Version="14.6.3" />
-		<PackageReference Include="SkiaSharp" Version="3.119.1" />
-		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.1" />
 		<PackageReference Include="SQLitePCLRaw.core" Version="3.0.2" />
 		<PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="3.0.2" />
 		<PackageReference Include="SQLitePCLRaw.provider.winsqlite3" Version="3.0.2" />
-		<!--<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.2" />-->
-		<!--<PackageReference Include="SQLitePCLRaw.bundle_sqlite3" Version="2.1.11" />
-		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.11" GeneratePathProperty="true" />-->
 		<PackageReference Include="System.Collections.Immutable" Version="10.0.1" />
-		<!--<PackageReference Include="System.Runtime.Caching" Version="9.0.8" />-->
-		<PackageReference Include="System.Text.Encodings.Web" Version="10.0.1" />
 		<PackageReference Include="PolySharp" Version="1.15.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
-
-	<!--<ItemGroup>
-		<FilesToCopy Include="$(PkgSQLitePCLRaw_lib_e_sqlite3)\runtimes\linux-x64\native\*.*" />
-	</ItemGroup>
-	<Target Name="CopyFiles" AfterTargets="Build">
-		<Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(OutDir)\runtimes\linux-x64\native" SkipUnchangedFiles="true" />
-	</Target>-->
-	
-	<!--<ItemGroup>
-		<None Include="$(PkgSQLitePCLRaw_lib_e_sqlite3)\runtimes\linux-x64\native\libe_sqlite3.so" Visible="false" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>-->
 
 	<ItemGroup>
 		<None Update="ModInfo.xml">
@@ -98,26 +86,22 @@
 
 	<ItemGroup>
 		<Reference Include="Microsoft.CSharp">
-			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\Microsoft.CSharp.dll</HintPath>
+			<Private>false</Private>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Reflection.Emit">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Reflection.Emit.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Dynamic">
-			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Dynamic.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.Reflection.Emit.dll</HintPath>
 		</Reference>
 		<Reference Include="System.ComponentModel.DataAnnotations">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.ComponentModel.DataAnnotations.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.ComponentModel.DataAnnotations.dll</HintPath>
 		</Reference>
 		<Reference Include="websocket-sharp">
 			<Private>true</Private>
 			<HintPath>3rdparty-binaries\websocket-sharp.dll</HintPath>
 		</Reference>
-		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
+		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.Runtime.InteropServices.RuntimeInformation.dll">
 			<Visible>false</Visible>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
@@ -126,43 +110,43 @@
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\Assembly-CSharp.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\Assembly-CSharp.dll</HintPath>
 		</Reference>
 		<Reference Include="Assembly-CSharp-firstpass">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\Assembly-CSharp-firstpass.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.CoreModule">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\UnityEngine.CoreModule.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.AnimationModule">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\UnityEngine.AnimationModule.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
 		</Reference>
 		<Reference Include="LogLibrary">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\LogLibrary.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\LogLibrary.dll</HintPath>
 		</Reference>
 		<Reference Include="0Harmony">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\0Harmony.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\Mods\0_TFP_Harmony\0Harmony.dll</HintPath>
 		</Reference>
 		<Reference Include="Noemax.GZip">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\Noemax.GZip.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\Noemax.GZip.dll</HintPath>
 		</Reference>
 		<Reference Include="MapRendering">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\MapRendering.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\Mods\TFP_MapRendering\MapRendering.dll</HintPath>
 		</Reference>
 		<Reference Include="WebServer">
 			<Private>false</Private>
-			<HintPath>7dtd-binaries\WebServer.dll</HintPath>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\Mods\TFP_WebServer\WebServer.dll</HintPath>
 		</Reference>
-		<Reference Include="com.rlabrecque.steamworks.net">
-			<Private>false</Private>
-			<HintPath>7dtd-binaries\com.rlabrecque.steamworks.net.dll</HintPath>
+		<Reference Include="System.Drawing">
+			<Private>False</Private>
+			<HintPath>E:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\System.Drawing.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>
