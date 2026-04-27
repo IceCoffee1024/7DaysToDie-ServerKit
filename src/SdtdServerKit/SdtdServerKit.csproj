@@ -117,10 +117,11 @@
 			<Private>true</Private>
 			<HintPath>3rdparty-binaries\websocket-sharp.dll</HintPath>
 		</Reference>
-		<!--<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
+		<!-- For SkiaSharp on linux -->
+		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
 			<Visible>false</Visible>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>-->
+		</None>
 	</ItemGroup>
 	
 	<ItemGroup>
