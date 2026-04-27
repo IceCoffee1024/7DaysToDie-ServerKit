@@ -427,7 +427,6 @@ namespace SdtdServerKit
                 {
                     SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_sqlite3());
                 }
-                SQLitePCL.raw.FreezeProvider();
 
                 var dbConnection = DbConnectionFactory.Default.CreateConnection(DbAliases.Default);
 

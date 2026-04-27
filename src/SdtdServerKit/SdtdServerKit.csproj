@@ -165,4 +165,29 @@
 			<HintPath>7dtd-binaries\com.rlabrecque.steamworks.net.dll</HintPath>
 		</Reference>
 	</ItemGroup>
+
+	<Target Name="CleanUpFolders" AfterTargets="Publish">
+		<Message Text="Cleaning up unnecessary folders to reduce the mod's file size....." Importance="high" />
+
+		<!-- Define the list of folders to delete (supports wildcards) -->
+		<ItemGroup>
+			<FoldersToDelete Include="$(PublishDir)arm" />
+			<FoldersToDelete Include="$(PublishDir)arm64" />
+			<FoldersToDelete Include="$(PublishDir)musl-arm" />
+			<FoldersToDelete Include="$(PublishDir)musl-arm64" />
+			<FoldersToDelete Include="$(PublishDir)musl-loongarch64" />
+			<FoldersToDelete Include="$(PublishDir)musl-riscv64" />
+			<FoldersToDelete Include="$(PublishDir)musl-x64" />
+			<FoldersToDelete Include="$(PublishDir)loongarch64" />
+			<FoldersToDelete Include="$(PublishDir)riscv64" />
+			<FoldersToDelete Include="$(PublishDir)x86" />
+		</ItemGroup>
+
+		<ItemGroup>
+			<PublishFilesToDelete Include="$(PublishDir)libSkiaSharp.dylib" />
+		</ItemGroup>
+
+		<RemoveDir Directories="@(FoldersToDelete)" />
+		<Delete Files="@(PublishFilesToDelete)" />
+	</Target>
 </Project>

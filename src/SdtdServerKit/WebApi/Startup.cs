@@ -95,45 +95,44 @@ namespace SdtdServerKit.WebApi
                 });
             }
 
-            //app.UseSwaggerUi(ModApi.LoadedPlugins, settings =>
-            //{
-            //    // configure settings here
-            //    // settings.GeneratorSettings.*: Generator settings and extension points
-            //    // settings.*: Routing and UI settings
+            app.UseSwaggerUi(typeof(Startup).Assembly, settings =>
+            {
+                // configure settings here
+                // settings.GeneratorSettings.*: Generator settings and extension points
+                // settings.*: Routing and UI settings
 
-            //    // 可以设置从注释文件加载, 但是加载的内容可被 OpenApiTagAttribute 特性覆盖
-            //    settings.GeneratorSettings.UseControllerSummaryAsTagDescription = true;
-            //    settings.GeneratorSettings.OperationProcessors.Add(new SdtdServerKit.WebApi.OperationSecurityScopeProcessor("JWT Token"));
-            //    settings.GeneratorSettings.DocumentProcessors.Add(new SecurityDefinitionAppender("JWT Token",
-            //        new OpenApiSecurityScheme()
-            //        {
-            //            Type = OpenApiSecuritySchemeType.ApiKey,
-            //            Name = "Authorization",
-            //            Description = "Copy 'Bearer ' + valid JWT token into field",
-            //            In = OpenApiSecurityApiKeyLocation.Header,
-            //        }));
-            //    settings.GeneratorSettings.ApplySettings(new NewtonsoftJsonSchemaGeneratorSettings { SerializerSettings = ModApi.JsonSerializerSettings, SchemaType = SchemaType.OpenApi3 }, null);
-            //    settings.PostProcess = (document) =>
-            //    {
-            //        document.Info.Version = "v1";
-            //        document.Info.Title = "7DaysToDie-ServerKit RESTful APIs Documentation";
-            //        document.Info.Description = "RESTful APIs Documentation for 7 Days to Die dedicated servers.";
-            //        document.Info.TermsOfService = "https://7dtd.top";
-            //        document.Info.Contact = new OpenApiContact()
-            //        {
-            //            Name = "LuoShuiTianTi",
-            //            Email = "IceCoffee1024@qq.com",
-            //            Url = "https://github.com/IceCoffee1024"
-            //        };
-            //        document.Info.License = new OpenApiLicense()
-            //        {
-            //            Name = "LICENSE",
-            //            Url = "https://github.com/IceCoffee1024/7DaysToDie-ServerKit/blob/main/README.md"
-            //        };
+                settings.GeneratorSettings.UseControllerSummaryAsTagDescription = true;
+                settings.GeneratorSettings.OperationProcessors.Add(new SdtdServerKit.WebApi.OperationSecurityScopeProcessor("JWT Token"));
+                settings.GeneratorSettings.DocumentProcessors.Add(new SecurityDefinitionAppender("JWT Token",
+                    new OpenApiSecurityScheme()
+                    {
+                        Type = OpenApiSecuritySchemeType.ApiKey,
+                        Name = "Authorization",
+                        Description = "Copy 'Bearer ' + valid JWT token into field",
+                        In = OpenApiSecurityApiKeyLocation.Header,
+                    }));
+                settings.GeneratorSettings.ApplySettings(new NewtonsoftJsonSchemaGeneratorSettings { SerializerSettings = ModApi.JsonSerializerSettings, SchemaType = SchemaType.OpenApi3 }, null);
+                settings.PostProcess = (document) =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "7DaysToDie-ServerKit RESTful APIs Documentation";
+                    document.Info.Description = "RESTful APIs Documentation for 7 Days to Die dedicated servers.";
+                    document.Info.TermsOfService = "https://7dtd.top";
+                    document.Info.Contact = new OpenApiContact()
+                    {
+                        Name = "LuoShuiTianTi",
+                        Email = "IceCoffee1024@qq.com",
+                        Url = "https://github.com/IceCoffee1024"
+                    };
+                    document.Info.License = new OpenApiLicense()
+                    {
+                        Name = "LICENSE",
+                        Url = "https://github.com/IceCoffee1024/7DaysToDie-ServerKit/blob/main/README.md"
+                    };
 
-            //        AddOAuthTokenEndpointApiSchema(document);
-            //    };
-            //});
+                    AddOAuthTokenEndpointApiSchema(document);
+                };
+            });
 
             app.SetDataProtectionProvider(new CustomDataProtectionProvider());
             // Token Generation
