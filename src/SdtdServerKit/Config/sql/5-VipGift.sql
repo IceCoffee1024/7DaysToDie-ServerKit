@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS T_VipGift_v1(
 	Id TEXT NOT NULL PRIMARY KEY,					--Player Id
 	CreatedAt TEXT NOT NULL,						--创建日期
 	Name TEXT NOT NULL,								--礼包名称
+	PlayerName TEXT,								--玩家名称
 	ClaimState INTEGER NOT NULL,					--领取状态
 	TotalClaimCount INTEGER NOT NULL,				--总领取次数
 	LastClaimAt TEXT,								--上次领取日期

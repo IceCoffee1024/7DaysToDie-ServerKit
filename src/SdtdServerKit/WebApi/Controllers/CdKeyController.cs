@@ -13,7 +13,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/CdKeys")]
-    public class CdKeysController : ApiController
+    public partial class CdKeysController : ApiController
     {
         private readonly ICdKeyRepository _cdKeyRepository;
         private readonly IItemListRepository _itemListRepository;

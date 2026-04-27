@@ -100,9 +100,9 @@ namespace SdtdServerKit.Hooks
             var rootNode = xmlDocument.SelectSingleNode(xmlName);
             var xmlNodeList = rootNode.ChildNodes;
 
-            foreach (XmlNode item in xmlNodeList)
+            foreach (XmlElement item in xmlNodeList.OfType<XmlElement>())
             {
-                var xmlElement = (XmlElement)item;
+                var xmlElement = item;
                 string itemName = xmlElement.GetAttribute("name");
                 string tag = TagPrefix + itemName;
 

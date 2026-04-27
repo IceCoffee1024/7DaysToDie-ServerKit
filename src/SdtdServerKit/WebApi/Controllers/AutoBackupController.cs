@@ -43,7 +43,7 @@ namespace SdtdServerKit.WebApi.Controllers
                 var nameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(fileInfo.Name);
                 string[] strings = nameWithoutExtension.Split('_');
 
-                if(strings.Length != 5)
+                if(strings.Length != 8)
                 {
                     continue;
                 }

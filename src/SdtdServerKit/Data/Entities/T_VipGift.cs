@@ -26,6 +26,11 @@ namespace SdtdServerKit.Data.Entities
         public required string Name { get; set; }
 
         /// <summary>
+        /// 玩家名称
+        /// </summary>
+        public string? PlayerName { get; set; }
+
+        /// <summary>
         /// 领取状态, true: 已领取, false: 未领取
         /// </summary>
         public bool ClaimState { get; set; }

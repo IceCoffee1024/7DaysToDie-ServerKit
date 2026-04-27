@@ -158,11 +158,18 @@ namespace SdtdServerKit.Functions
             {
                 if (player.RespawnType == Models.RespawnType.Died)
                 {
-                    foreach (var command in Settings.DeathTrigger.ExecuteCommands)
+                    var managedPlayer = LivePlayerManager.GetByEntityId(player.EntityId);
+                    if (managedPlayer != null)
                     {
-                        if (string.IsNullOrEmpty(command) == false)
+                        if (Settings.DeathTrigger.DeathPenaltyPoints != 0)
                         {
-                            Utilities.Utils.ExecuteConsoleCommand(FormatCmd(command, player), true);
+                            string cmd = $"ty-cpp {managedPlayer.PlayerId} -{Settings.DeathTrigger.DeathPenaltyPoints}";
+                            Utilities.Utils.ExecuteConsoleCommand(cmd, true);
+                        }
+
+                        if (Settings.DeathTrigger.IsEnableDeathNotification && Settings.DeathTrigger.DeathPenaltyPoints != 0)
+                        {
+                            _ = SendDeathPenaltyNotificationAsync(managedPlayer, Settings.DeathTrigger.DeathPenaltyPoints);
                         }
                     }
                 }
@@ -171,19 +178,109 @@ namespace SdtdServerKit.Functions
 
         private void OnEntityKilled(KilledEntity entity)
         {
-            if (Settings.KillZombieTrigger.IsEnabled)
+            if (Settings.KillZombieTrigger.IsEnabled == false)
             {
-                if (entity.DeadEntity.EntityType == Models.EntityType.Zombie)
+                return;
+            }
+
+            var entityType = entity.DeadEntity.EntityType;
+            if (entityType != Models.EntityType.Zombie && entityType != Models.EntityType.Animal)
+            {
+                return;
+            }
+
+            var player = LivePlayerManager.GetByEntityId(entity.KillerEntityId);
+            if (player == null)
+            {
+                return;
+            }
+
+            string deadEntityName = entity.DeadEntity.EntityClassName;
+
+            FunctionSettings.ZombieKillRewardEntry matchedReward = null;
+
+            if (Settings.KillZombieTrigger.ZombieRewards != null)
+            {
+                foreach (var reward in Settings.KillZombieTrigger.ZombieRewards)
                 {
-                    var player = LivePlayerManager.GetByEntityId(entity.KillerEntityId);
-                    foreach (var command in Settings.KillZombieTrigger.ExecuteCommands)
+                    if (string.Equals(reward.EntityClassName, deadEntityName, StringComparison.OrdinalIgnoreCase))
                     {
-                        if (string.IsNullOrEmpty(command) == false)
+                        matchedReward = reward;
+                        break;
+                    }
+                }
+
+                if (matchedReward == null)
+                {
+                    foreach (var reward in Settings.KillZombieTrigger.ZombieRewards)
+                    {
+                        if (reward.EntityClassName == "*")
                         {
-                            Utilities.Utils.ExecuteConsoleCommand(FormatCmd(command, player), true);
+                            matchedReward = reward;
+                            break;
                         }
                     }
                 }
+
+                if (matchedReward == null)
+                {
+                }
+            }
+            else
+            {
+            }
+
+            if (matchedReward == null)
+            {
+                foreach (var command in Settings.KillZombieTrigger.ExecuteCommands)
+                {
+                    if (string.IsNullOrEmpty(command) == false)
+                    {
+                        Utilities.Utils.ExecuteConsoleCommand(FormatCmd(command, player), true);
+                    }
+                }
+                return;
+            }
+
+            if (matchedReward.RewardPoints != 0)
+            {
+                string cmd = $"ty-cpp {player.PlayerId} {matchedReward.RewardPoints}";
+                Utilities.Utils.ExecuteConsoleCommand(cmd, true);
+            }
+
+            if (Settings.KillZombieTrigger.IsEnableKillNotification && matchedReward.RewardPoints != 0)
+            {
+                _ = SendKillNotificationAsync(player, matchedReward.RewardPoints);
+            }
+        }
+
+        private async Task SendKillNotificationAsync(ManagedPlayer player, int rewardPoints)
+        {
+            try
+            {
+                await Task.Delay(500);
+                var repository = ModApi.ServiceContainer.Resolve<Data.IRepositories.IPointsInfoRepository>();
+                int totalPoints = await repository.GetPointsByIdAsync(player.PlayerId);
+                string message = $"[FF0000]击杀获得: [00FF00]积分{rewardPoints}[FF0000],当前积分:[00FF00]{totalPoints}";
+                SendMessageToPlayer(player.PlayerId, message);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private async Task SendDeathPenaltyNotificationAsync(ManagedPlayer player, int penaltyPoints)
+        {
+            try
+            {
+                await Task.Delay(500);
+                var repository = ModApi.ServiceContainer.Resolve<Data.IRepositories.IPointsInfoRepository>();
+                int totalPoints = await repository.GetPointsByIdAsync(player.PlayerId);
+                string message = $"[FF0000]死亡惩罚: 扣除[00FF00]积分{penaltyPoints}[FF0000],当前积分:[00FF00]{totalPoints}";
+                SendMessageToPlayer(player.PlayerId, message);
+            }
+            catch (Exception ex)
+            {
             }
         }
     }

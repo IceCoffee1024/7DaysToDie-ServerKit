@@ -243,12 +243,25 @@ namespace SdtdServerKit
                 }
                 else if (victim is EntityAlive diedEntity && victim.IsClientControlled() == false)
                 {
+                    Models.EntityType mappedType;
+                    if (diedEntity is EntityZombie)
+                        mappedType = Models.EntityType.Zombie;
+                    else if (diedEntity is EntityAnimal)
+                        mappedType = Models.EntityType.Animal;
+                    else if (diedEntity is EntityEnemyAnimal)
+                        mappedType = Models.EntityType.Animal;
+                    else if (diedEntity is EntityBandit)
+                        mappedType = Models.EntityType.Bandit;
+                    else
+                        mappedType = (Models.EntityType)diedEntity.entityType;
+
                     deadEntityInfo = new EntityInfo()
                     {
                         EntityId = diedEntity.entityId,
                         EntityName = diedEntity.EntityName,
+                        EntityClassName = EntityClass.GetEntityClassName(diedEntity.entityClass) ?? string.Empty,
                         Position = diedEntity.position.ToPosition(),
-                        EntityType = (Models.EntityType)diedEntity.entityType
+                        EntityType = mappedType
                     };
                 }
                 else
