@@ -11,7 +11,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/PointsInfo")]
-    public class PointsInfoController : ApiController
+    public partial class PointsInfoController : ApiController
     {
         private readonly IPointsInfoRepository _repository;
 

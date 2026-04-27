@@ -10,7 +10,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/VipGift")]
-    public class VipGiftController : ApiController
+    public partial class VipGiftController : ApiController
     {
         private readonly IVipGiftRepository _vipGiftRepository;
         private readonly IItemListRepository _itemListRepository;
@@ -68,10 +68,17 @@ namespace SdtdServerKit.WebApi.Controllers
         [Route("")]
         public async Task<IHttpActionResult> Post([FromBody] VipGift model)
         {
+            var existing = await _vipGiftRepository.GetByIdAsync(model.Id);
+            if (existing != null)
+            {
+                return BadRequest($"玩家 {model.Id} 已存在VIP礼包记录，请勿重复添加");
+            }
+
             var entity = new T_VipGift()
             {
                 Id = model.Id,
                 Name = model.Name,
+                PlayerName = model.PlayerName,
                 CreatedAt = DateTime.Now,
                 ClaimState = model.ClaimState,
                 TotalClaimCount = model.TotalClaimCount,
@@ -98,6 +105,7 @@ namespace SdtdServerKit.WebApi.Controllers
             }
 
             entity.Name = model.Name;
+            entity.PlayerName = model.PlayerName;
             entity.ClaimState = model.ClaimState;
             entity.TotalClaimCount = model.TotalClaimCount;
             entity.Description = model.Description;

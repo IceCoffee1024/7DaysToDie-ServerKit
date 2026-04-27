@@ -11,7 +11,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/ItemList")]
-    public class ItemListController : ApiController
+    public partial class ItemListController : ApiController
     {
         private readonly IItemListRepository _repository;
 

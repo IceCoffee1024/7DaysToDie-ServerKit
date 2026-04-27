@@ -51,6 +51,11 @@
         public bool IsMod { get; set; }
 
         /// <summary>
+        /// 随机种子
+        /// </summary>
+        public ushort Seed { get; set; }
+
+        /// <summary>
         /// 部件
         /// </summary>
         public InvItem?[]? Parts { get; set; }

@@ -176,6 +176,7 @@ namespace SdtdServerKit.Extensions
                     UseTimes = itemValue.UseTimes,
                     MaxUseTimes = itemValue.MaxUseTimes,
                     IsMod = itemValue.IsMod,
+                    Seed = itemValue.Seed,
                 };
 
                 return item;

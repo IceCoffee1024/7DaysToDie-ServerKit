@@ -42,7 +42,8 @@ namespace SdtdServerKit.WebApi.Controllers
                 Keyword = model.Keyword,
                 Order = model.Order,
                 Desc = model.Desc,
-                ChatType = model.ChatType
+                ChatType = model.ChatType,
+                ExcludeSystemMessages = model.ExcludeSystemMessages
             };
             var data = await _repository.GetPagedListAsync(dto);
             return data;

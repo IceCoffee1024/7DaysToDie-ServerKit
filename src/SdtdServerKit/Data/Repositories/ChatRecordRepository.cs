@@ -27,6 +27,11 @@ namespace SdtdServerKit.Data.Repositories
                 whereClauseSB.Append(" AND ChatType=@ChatType");
             }
 
+            if(dto.ExcludeSystemMessages == true)
+            {
+                whereClauseSB.Append(" AND EntityId != -1");
+            }
+
             if (string.IsNullOrEmpty(dto.Keyword) == false)
             {
                 whereClauseSB.Append(" AND (EntityId=@Keyword OR PlayerId=@Keyword OR SenderName LIKE '%'||@Keyword||'%' OR Message LIKE '%'||@Keyword||'%')");

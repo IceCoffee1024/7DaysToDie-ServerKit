@@ -10,7 +10,7 @@ namespace SdtdServerKit.WebApi.Controllers
     /// </summary>
     [Authorize]
     [RoutePrefix("api/Goods")]
-    public class GoodsController : ApiController
+    public partial class GoodsController : ApiController
     {
         private readonly IGoodsRepository _goodsRepository;
         private readonly IItemListRepository _itemListRepository;

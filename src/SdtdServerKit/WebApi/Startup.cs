@@ -65,6 +65,11 @@ namespace SdtdServerKit.WebApi
                 }
                 catch (Exception ex)
                 {
+                    if (ex is TaskCanceledException || 
+                        ex.InnerException is TaskCanceledException)
+                    {
+                        return;
+                    }
                     CustomLogger.Error(ex, "Error in Owin Host GlobalExceptionHandleMiddleware.");
                 }
             });
