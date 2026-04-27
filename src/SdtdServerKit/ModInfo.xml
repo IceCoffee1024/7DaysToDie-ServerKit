@@ -4,6 +4,6 @@
 	<DisplayName value="7DaysToDie-TianYiServerKit" />
 	<Description value="A open source mod for 7 Days to Die dedicated servers. Provides RESTful APIs and a powerful web management panel to help owners and administrators operate their dedicated server. Works with both Linux and Windows." />
 	<Author value="IceCoffee" />
-	<Version value="10.52" />
-	<Website value="https://github.com/1249993110/7DaysToDie-ServerKit" />
+	<Version value="10.53" />
+	<Website value="https://github.com/IceCoffee1024/7DaysToDie-ServerKit" />
 </ModInfo>

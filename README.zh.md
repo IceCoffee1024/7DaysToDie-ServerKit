@@ -6,11 +6,11 @@
   </p>
 </div>
 
-[![stars](https://img.shields.io/github/stars/1249993110/7DaysToDie-ServerKit?style=flat-square&logo=GitHub)](https://github.com/1249993110/7DaysToDie-ServerKit)
-[![license](https://img.shields.io/github/license/1249993110/7DaysToDie-ServerKit?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+[![stars](https://img.shields.io/github/stars/IceCoffee1024/7DaysToDie-ServerKit?style=flat-square&logo=GitHub)](https://github.com/IceCoffee1024/7DaysToDie-ServerKit)
+[![license](https://img.shields.io/github/license/IceCoffee1024/7DaysToDie-ServerKit?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 [![Crowdin](https://badges.crowdin.net/7daystodie-serverkit/localized.svg)](https://crowdin.com/project/7daystodie-serverkit)
 
-[前端代码仓库](https://github.com/1249993110/7DaysToDie-ServerKit-webui)
+[前端代码仓库](https://github.com/IceCoffee1024/7DaysToDie-ServerKit-webui)
 
 ## 🌐 兼容性
 仅限专用服务端。所需游戏版本：V1.0+
@@ -39,7 +39,7 @@ https://docs.qq.com/doc/DYlJlVmpaWmZKUHFt
 ## **安装指南**
 
 ### 1. **下载最新版本**
-- 从 [此处](https://github.com/1249993110/7DaysToDie-ServerKit/releases) 获取最新版本。
+- 从 [此处](https://github.com/IceCoffee1024/7DaysToDie-ServerKit/releases) 获取最新版本。
 
 ### 2. **将版本放入您的 Mods 文件夹中**
 - 将下载的 .zip 存档文件解压到您的 `7 Days to Die Dedicated Server/Mods` 文件夹中。
@@ -174,7 +174,7 @@ https://docs.qq.com/doc/DYlJlVmpaWmZKUHFt
       <img src="https://github.com/user-attachments/assets/dfd2f607-2f65-4ff5-9d29-f7a433ea1469">
     </td>
     <td style="width: 50%">
-      <div>V4.0 采用 C# 和 WPF 开发 <a href="https://github.com/1249993110/TianYiSdtdServerTools">代码仓库</a></div>
+      <div>V4.0 采用 C# 和 WPF 开发 <a href="https://github.com/IceCoffee1024/TianYiSdtdServerTools">代码仓库</a></div>
       <img src="https://github.com/user-attachments/assets/7a33428c-dad5-4c0c-9867-506ab626225a">
     </td>
   </tr>

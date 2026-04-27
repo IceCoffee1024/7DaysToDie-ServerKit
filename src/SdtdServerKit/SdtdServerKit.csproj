@@ -17,8 +17,8 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/1249993110/7DaysToDie-ServerKit</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/1249993110/7DaysToDie-ServerKit</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/IceCoffee1024/7DaysToDie-ServerKit</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/IceCoffee1024/7DaysToDie-ServerKit</RepositoryUrl>
 		<Version>10.0</Version>
 		<Platforms>AnyCPU;x64</Platforms>
 	</PropertyGroup>
@@ -33,31 +33,31 @@
 	<ItemGroup>
 		<PackageReference Include="Autofac.WebApi2.Owin" Version="6.2.1" />
 		<PackageReference Include="CronExpressionDescriptor" Version="2.44.0" />
-		<PackageReference Include="DeviceId" Version="6.9.0" />
+		<PackageReference Include="DeviceId" Version="6.10.0" />
 		<PackageReference Include="IceCoffee.Common" Version="1.4.0" />
 		<PackageReference Include="IceCoffee.Cron" Version="1.1.0" />
 		<PackageReference Include="IceCoffee.SimpleCRUD" Version="1.5.2" />
 		<PackageReference Include="Mapster" Version="7.3.0" />
 		<PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.3.0" />
-		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="10.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.3" />
 		<PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.2.3" />
 		<PackageReference Include="Microsoft.Owin.StaticFiles" Version="4.2.3" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 		<PackageReference Include="NSwag.Annotations" Version="14.6.3" />
 		<PackageReference Include="NSwag.AspNet.Owin" Version="14.6.3" />
-		<PackageReference Include="SkiaSharp" Version="3.119.1" />
-		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.1" />
+		<PackageReference Include="SkiaSharp" Version="3.119.2" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.2" />
 		<PackageReference Include="SQLitePCLRaw.core" Version="3.0.2" />
 		<PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="3.0.2" />
 		<PackageReference Include="SQLitePCLRaw.provider.winsqlite3" Version="3.0.2" />
 		<!--<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.2" />-->
 		<!--<PackageReference Include="SQLitePCLRaw.bundle_sqlite3" Version="2.1.11" />
 		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.11" GeneratePathProperty="true" />-->
-		<PackageReference Include="System.Collections.Immutable" Version="10.0.1" />
+		<PackageReference Include="System.Collections.Immutable" Version="10.0.3" />
 		<!--<PackageReference Include="System.Runtime.Caching" Version="9.0.8" />-->
-		<PackageReference Include="System.Text.Encodings.Web" Version="10.0.1" />
+		<PackageReference Include="System.Text.Encodings.Web" Version="10.0.3" />
 		<PackageReference Include="PolySharp" Version="1.15.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -117,10 +117,10 @@
 			<Private>true</Private>
 			<HintPath>3rdparty-binaries\websocket-sharp.dll</HintPath>
 		</Reference>
-		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
+		<!--<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
 			<Visible>false</Visible>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+		</None>-->
 	</ItemGroup>
 	
 	<ItemGroup>

@@ -117,13 +117,13 @@ namespace SdtdServerKit.WebApi
             //        document.Info.Contact = new OpenApiContact()
             //        {
             //            Name = "LuoShuiTianTi",
-            //            Email = "1249993110@qq.com",
-            //            Url = "https://github.com/1249993110"
+            //            Email = "IceCoffee1024@qq.com",
+            //            Url = "https://github.com/IceCoffee1024"
             //        };
             //        document.Info.License = new OpenApiLicense()
             //        {
             //            Name = "LICENSE",
-            //            Url = "https://github.com/1249993110/7DaysToDie-ServerKit/blob/main/README.md"
+            //            Url = "https://github.com/IceCoffee1024/7DaysToDie-ServerKit/blob/main/README.md"
             //        };
 
             //        AddOAuthTokenEndpointApiSchema(document);

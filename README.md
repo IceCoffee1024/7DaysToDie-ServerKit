@@ -6,11 +6,11 @@ English | [简体中文](./README.zh.md)
   </p>
 </div>
 
-[![stars](https://img.shields.io/github/stars/1249993110/7DaysToDie-ServerKit?style=flat-square&logo=GitHub)](https://github.com/1249993110/7DaysToDie-ServerKit)
-[![license](https://img.shields.io/github/license/1249993110/7DaysToDie-ServerKit?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+[![stars](https://img.shields.io/github/stars/IceCoffee1024/7DaysToDie-ServerKit?style=flat-square&logo=GitHub)](https://github.com/IceCoffee1024/7DaysToDie-ServerKit)
+[![license](https://img.shields.io/github/license/IceCoffee1024/7DaysToDie-ServerKit?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 [![Crowdin](https://badges.crowdin.net/7daystodie-serverkit/localized.svg)](https://crowdin.com/project/7daystodie-serverkit)
 
-[Front-end](https://github.com/1249993110/7DaysToDie-ServerKit-webui)
+[Front-end](https://github.com/IceCoffee1024/7DaysToDie-ServerKit-webui)
 
 ## 🌐 Compatibility
 Dedicated Server only. Required game version: V1.0+
@@ -39,7 +39,7 @@ https://youtu.be/N8IRmQHz2Uk?si=-Opo_JIF7VrTNnVE
 ## **Installation Guide**
 
 ### 1. **Download the Latest Release**
-- Get the latest version [here](https://github.com/1249993110/7DaysToDie-ServerKit/releases).
+- Get the latest version [here](https://github.com/IceCoffee1024/7DaysToDie-ServerKit/releases).
 
 ### 2. **Place the Release in Your Mods Folder**
 - Extract the downloaded .zip archive file to your `7 Days to Die Dedicated Server/Mods` folder.
