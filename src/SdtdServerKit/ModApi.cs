@@ -87,12 +87,6 @@ namespace SdtdServerKit
 
                 PatchByHarmony();
 
-                InitDependencyResolver();
-
-                StartupOwinHost();
-
-                StartupWebSocket();
-
                 RegisterModEventHandlers();
 
             }
@@ -325,6 +319,7 @@ namespace SdtdServerKit
                 WorldStaticDataHook.ReplaceXmls();
                 GlobalTimer.RegisterSubTimer(new SubTimer(SkyChangeTrigger.Callback, 1) { IsEnabled = true });
 
+                InitDependencyResolver();
                 FunctionManager.Init();
 
                 try
@@ -342,6 +337,8 @@ namespace SdtdServerKit
                     CustomLogger.Error(ex, "Load map tile cache failed, Please do not delete the default mod, You can verify the integrity of the game to solve this problem.");
                 }
 
+                StartupOwinHost();
+                StartupWebSocket();
 
                 IsGameStartDone = true;
             }
@@ -359,7 +356,7 @@ namespace SdtdServerKit
         /// <summary>
         /// 只注册控制器、Function、数据库仓储相关类型
         /// </summary>
-        private void InitDependencyResolver()
+        private static void InitDependencyResolver()
         {
             var builder = new ContainerBuilder();
 
@@ -418,7 +415,7 @@ namespace SdtdServerKit
         /// <summary>
         /// 初始化数据库
         /// </summary>
-        private void InitDatabase()
+        private static void InitDatabase()
         {
             try
             {
@@ -454,12 +451,26 @@ namespace SdtdServerKit
                     string sql = File.ReadAllText(file.FullName, Encoding.UTF8);
                     dbConnection.Execute(sql);
                 }
-
+                TryAddColumn(dbConnection, "T_VipGift_v1", "PlayerName", "TEXT");
                 CustomLogger.Info("Initialize database success.");
             }
             catch (Exception ex)
             {
                 throw new Exception("Initialize database error.", ex);
+            }
+        }
+
+        /// <summary>
+        /// 安全添加数据库列
+        /// </summary>
+        private static void TryAddColumn(System.Data.IDbConnection dbConnection, string tableName, string columnName, string columnType)
+        {
+            try
+            {
+                dbConnection.Execute($"ALTER TABLE {tableName} ADD COLUMN {columnName} {columnType}");
+            }
+            catch
+            {
             }
         }
     }

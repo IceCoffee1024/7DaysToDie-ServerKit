@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace SdtdServerKit.WebApi.Controllers
 {
@@ -72,28 +73,34 @@ namespace SdtdServerKit.WebApi.Controllers
             }
 
             byte[] data = System.IO.File.ReadAllBytes(iconPath);
-            using var skBitmap = SKBitmap.Decode(data);
-            int width = skBitmap.Width;
-            int height = skBitmap.Height;
-
-            for (int i = 0; i < width; i++)
+            
+            using (var ms = new MemoryStream(data))
+            using (var bitmap = new Bitmap(ms))
             {
-                for (int j = 0; j < height; j++)
+                for (int x = 0; x < bitmap.Width; x++)
                 {
-                    var skColor = skBitmap.GetPixel(i, j);
-
-                    skBitmap.SetPixel(i, j, new SKColor(
-                        (byte)(skColor.Red * r / 255),
-                        (byte)(skColor.Green * g / 255),
-                        (byte)(skColor.Blue * b / 255),
-                        skColor.Alpha));
+                    for (int y = 0; y < bitmap.Height; y++)
+                    {
+                        System.Drawing.Color pixel = bitmap.GetPixel(x, y);
+                        
+                        System.Drawing.Color tinted = System.Drawing.Color.FromArgb(
+                            pixel.A,
+                            pixel.R * r / 255,
+                            pixel.G * g / 255,
+                            pixel.B * b / 255
+                        );
+                        
+                        bitmap.SetPixel(x, y, tinted);
+                    }
+                }
+                
+                using (var resultStream = new MemoryStream())
+                {
+                    bitmap.Save(resultStream, ImageFormat.Png);
+                    byte[] resultData = resultStream.ToArray();
+                    return new FileContentResult(resultData, "image/png");
                 }
             }
-
-            var stream = new MemoryStream(data.Length / 2);
-            skBitmap.Encode(stream, SKEncodedImageFormat.Png, 100);
-            stream.Position = 0L;
-            return new FileStreamResult(stream, "image/png");
         }
 
         private static string? FindIconPath(string icon)

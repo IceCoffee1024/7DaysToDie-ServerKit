@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using SdtdServerKit.FunctionSettings;
 using SdtdServerKit.Managers;
 
@@ -16,6 +17,7 @@ namespace SdtdServerKit.Functions
     {
         private readonly SubTimer _timer;
         private DateTime _lastServerStateChange = DateTime.Now;
+        private volatile bool _isBackupRunning = false;
 
         /// <inheritdoc/>
         public AutoBackup()
@@ -36,7 +38,7 @@ namespace SdtdServerKit.Functions
         {
             if (Settings.IsEnabled && Settings.AutoBackupOnServerStartup)
             {
-                ExecuteInternal();
+                ExecuteBackupAsync();
             }
         }
 
@@ -94,7 +96,7 @@ namespace SdtdServerKit.Functions
                     return;
                 }
 
-                ExecuteInternal();
+                ExecuteBackupAsync();
             }
             catch (Exception ex)
             {
@@ -102,11 +104,40 @@ namespace SdtdServerKit.Functions
             }
         }
 
+        private void ExecuteBackupAsync()
+        {
+            if (_isBackupRunning)
+            {
+                CustomLogger.Info("AutoBackup: The previous backup has not been completed, skip this backup.");
+                return;
+            }
+
+            _isBackupRunning = true;
+            Task.Run(() =>
+            {
+                try
+                {
+                    ExecuteInternal();
+                }
+                catch (Exception ex)
+                {
+                    CustomLogger.Warn(ex, "AutoBackup: Exception in background backup task");
+                }
+                finally
+                {
+                    _isBackupRunning = false;
+                }
+            });
+        }
+
         private void ExecuteInternal()
         {
             string tempDir = null;
             try
             {
+                // 等待游戏存档线程完成当前队列，确保文件处于一致状态
+                WaitForSaveDone();
+
                 string backupSrcPath = GameIO.GetSaveGameDir();
                 string backupDestPath = Settings.ArchiveFolder;
 
@@ -118,7 +149,7 @@ namespace SdtdServerKit.Functions
                 Directory.CreateDirectory(backupDestPath);
 
                 string sourceFolderName = Path.GetFileName(backupSrcPath);
-                tempDir = Path.Combine(Path.GetTempPath(), sourceFolderName);
+                tempDir = Path.Combine(Path.GetTempPath(), $"AutoBackup_{sourceFolderName}_{Guid.NewGuid():N}");
                 Directory.CreateDirectory(tempDir);
 
                 CopyDirectoryWithRetry(backupSrcPath, tempDir, maxRetries: 3, retryDelayMs: 500);
@@ -273,16 +304,46 @@ namespace SdtdServerKit.Functions
         }
 
         /// <summary>
+        /// 等待游戏存档线程完成当前队列，确保 .7rg 文件处于一致状态后再复制
+        /// </summary>
+        private void WaitForSaveDone()
+        {
+            try
+            {
+                var chunkProvider = GameManager.Instance?.World?.ChunkClusters?[0]?.ChunkProvider
+                    as ChunkProviderGenerateWorld;
+
+                if (chunkProvider?.m_RegionFileManager == null)
+                    return;
+
+                CustomLogger.Info("AutoBackup: 等待存档线程完成写入...");
+                chunkProvider.m_RegionFileManager.WaitSaveDone();
+                CustomLogger.Info("AutoBackup: 存档线程已完成，开始复制文件。");
+            }
+            catch (Exception ex)
+            {
+                CustomLogger.Warn(ex, "AutoBackup: 等待存档完成时出错，将直接继续备份");
+            }
+        }
+
+        /// <summary>
         /// 手动备份
         /// </summary>
         public void ManualBackup()
         {
-            ExecuteInternal();
+            if (_isBackupRunning)
+            {
+                CustomLogger.Info("AutoBackup: There is already a backup task being executed. Please try again later.");
+                return;
+            }
+
             if (Settings.ResetIntervalAfterManualBackup)
             {
                 _timer.IsEnabled = false;
                 _timer.IsEnabled = Settings.IsEnabled;
             }
+
+            ExecuteBackupAsync();
         }
     }
 }

@@ -1,5 +1,26 @@
 ﻿namespace SdtdServerKit.FunctionSettings
 {
+    /// <summary>
+    /// 击杀奖励配置
+    /// </summary>
+    public class ZombieKillRewardEntry
+    {
+        /// <summary>
+        /// 僵尸实体类名
+        /// </summary>
+        public string EntityClassName { get; set; }
+
+        /// <summary>
+        /// 击杀奖励积分
+        /// </summary>
+        public int RewardPoints { get; set; }
+
+        /// <summary>
+        /// 击杀后执行的指令列表
+        /// </summary>
+        public string[] ExecuteCommands { get; set; } = Array.Empty<string>();
+    }
+
     public class Trigger
     {
         /// <summary>
@@ -8,9 +29,29 @@
         public bool IsEnabled { get; set; }
 
         /// <summary>
+        /// 是否启用击杀通知
+        /// </summary>
+        public bool IsEnableKillNotification { get; set; }
+
+        /// <summary>
         /// Gets or sets the commands to execute when the trigger is activated.
         /// </summary>
         public string[] ExecuteCommands { get; set; }
+
+        /// <summary>
+        /// 击杀奖励
+        /// </summary>
+        public ZombieKillRewardEntry[] ZombieRewards { get; set; } = Array.Empty<ZombieKillRewardEntry>();
+
+        /// <summary>
+        /// 死亡惩罚扣除积分
+        /// </summary>
+        public int DeathPenaltyPoints { get; set; }
+
+        /// <summary>
+        /// 是否启用死亡惩罚通知
+        /// </summary>
+        public bool IsEnableDeathNotification { get; set; }
     }
     public class AutoRestart
     {
