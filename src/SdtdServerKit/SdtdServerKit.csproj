@@ -39,7 +39,7 @@
 		<PackageReference Include="IceCoffee.SimpleCRUD" Version="1.5.2" />
 		<PackageReference Include="Mapster" Version="7.3.0" />
 		<PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.3.0" />
-		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="10.0.3" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="10.0.7" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.3" />
 		<PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.2.3" />
@@ -99,26 +99,26 @@
 	<ItemGroup>
 		<Reference Include="Microsoft.CSharp">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\Microsoft.CSharp.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Reflection.Emit">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Reflection.Emit.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.Reflection.Emit.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Dynamic">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Dynamic.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.Dynamic.dll</HintPath>
 		</Reference>
 		<Reference Include="System.ComponentModel.DataAnnotations">
 			<Private>true</Private>
-			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.ComponentModel.DataAnnotations.dll</HintPath>
+			<HintPath>$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.ComponentModel.DataAnnotations.dll</HintPath>
 		</Reference>
 		<Reference Include="websocket-sharp">
 			<Private>true</Private>
 			<HintPath>3rdparty-binaries\websocket-sharp.dll</HintPath>
 		</Reference>
 		<!-- For SkiaSharp on linux -->
-		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v$(MSBuildRuntimeVersion)\System.Runtime.InteropServices.RuntimeInformation.dll">
+		<None Include="$(SystemRoot)\Microsoft.NET\Framework64\v4.0.30319\System.Runtime.InteropServices.RuntimeInformation.dll">
 			<Visible>false</Visible>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
