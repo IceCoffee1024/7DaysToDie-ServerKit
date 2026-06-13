@@ -1,0 +1,398 @@
+{
+  "ServerName": {
+    "Group": "Servers",
+    "Desc": "Server name. Fill in any name you like"
+  },
+  "ServerDescription": {
+    "Group": "Servers",
+    "Desc": "Server description. Fill in any server description you like"
+  },
+  "ServerWebsiteURL": {
+    "Group": "Servers",
+    "Desc": "Server website address. Will be displayed as a clickable link in the server browser"
+  },
+  "ServerPassword": {
+    "Group": "Servers",
+    "Desc": "Server password. The password that players use to enter the game server"
+  },
+  "ServerLoginConfirmationText": {
+    "Group": "Servers",
+    "Desc": "Server login confirmation text. If this option is set, users will see this message when joining the server and must confirm it before continuing. For more complex changes to this window, change the serverjoinrulesdialog window in XUi"
+  },
+  "Region": {
+    "Group": "Servers",
+    "Desc": "The region where the server is located. Possible values ​​are: Asia, NorthAmericaEast, NorthAmericaWest, CentralAmerica, SouthAmerica, Europe, Russia, MiddleEast, Africa, Oceania"
+  },
+  "Language": {
+    "Group": "Servers",
+    "Desc": "The primary language of players on the server. Use the English name of any language players wish to search for. Possible values ​​are: english, german, spanish, french, italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese"
+  },
+  "ServerPort": {
+    "Group": "Network",
+    "Desc": "The port the server program is listening on. If you want computers on the same LAN to see it as a LAN server, keep this in the range 26900 to 26905 or 27015 to 27020"
+  },
+  "ServerVisibility": {
+    "Group": "Network",
+    "Desc": "Visibility of the server. 2 = public, 1 = visible only to friends, 0 = unlisted. Since you are never friends with the dedicated server, setting this to 1 will only work if the first player connects manually by IP"
+  },
+  "ServerDisabledNetworkProtocols": {
+    "Group": "Networking",
+    "Desc": "Networking protocols disabled by the server. Comma separated, possible values ​​LiteNetLib, SteamNetworking. Dedicated servers should disable SteamNetworking if there is no NAT router between the user and the server, or port forwarding is setup correctly"
+  },
+  "ServerMaxWorldTransferSpeedKiBs": {
+    "Group": "Networking",
+    "Desc": "Server maximum world transfer speed. Maximum speed (in kiB/s) for world transfers on first connection if the client does not have a world yet. Maximum value is about 1300 kiB/s, even if you set it higher"
+  },
+  "ServerMaxPlayerCount": {
+    "Group": "Slots",
+    "Desc": "Maximum number of players on the server. Maximum number of players allowed online at once"
+  },
+  "ServerReservedSlots": {
+    "Group": "Slots",
+    "Desc": "Server reserved slots. Beyond the maximum number of players, many slots can only be used by players with a certain permission level."
+  },
+  "ServerReservedSlotsPermission": {
+    "Group": "Slots",
+    "Desc": "Server reserved slots permission. The permission level required to use the above reserved slots"
+  },
+  "ServerAdminSlots": {
+    "Group": "Slots",
+    "Desc": "Server admin slots. Even if the server has reached the maximum number of players, there are still so many admins who can join"
+  },
+  "ServerAdminSlotsPermission": {
+    "Group": "Slots",
+    "Desc": "Server admin permission slots. The permission level required to use the above admin slots"
+  },
+  "WebDashboardEnabled": {
+    "Group": "Administrative Interface",
+    "Desc": "Enable/disable the web dashboard. "
+  },
+  "WebDashboardPort": {
+    "Group": "Administrative Interface",
+    "Desc": "Port for the web dashboard."
+  },
+  "WebDashboardUrl": {
+    "Group": "Administrative Interface",
+    "Desc": "External URL for the web dashboard. (If not using only the public IP of the server, e.g. the web dashboard is behind a reverse proxy). Needs to be a full URL, e.g. https://domainOfReverseProxy.tld:1234/. Can be left blank if using the public IP and dashboard port directly."
+  },
+  "EnableMapRendering": {
+    "Group": "Administrative Interface",
+    "Desc": "Enable map rendering. Enable/disable rendering of maps as tile images when browsing maps. For example, the web dashboard can use this to display map views."
+  },
+  "TelnetEnabled": {
+    "Group": "Administrative Interface",
+    "Desc": "Whether the Telnet service is enabled. Enable or disable Telnet service <true,false>"
+  },
+  "TelnetPort": {
+    "Group": "Administrative Interface",
+    "Desc": "Telnet port. Telnet server port"
+  },
+  "TelnetPassword": {
+    "Group": "Administrative Interface",
+    "Desc": "Telnet access password. If no password is set, the server will only listen to the local loopback interface"
+  },
+  "TelnetFailedLoginLimit": {
+    "Group": "Administrative Interface",
+    "Desc": "Telnet login failure limit. After a remote client enters an incorrect password multiple times, the client will be blocked from connecting to the Telnet interface"
+  },
+  "TelnetFailedLoginsBlocktime": {
+    "Group": "Administrative Interface",
+    "Desc": "Login failure lock time. After exceeding the login failure limit, how long will the block last (in seconds)"
+  },
+  "TerminalWindowEnabled": {
+    "Group": "Administrative Interface",
+    "Desc": "Terminal window enabled. Show terminal window for log output/command input (Windows only)"
+  },
+  "AdminFileName": {
+    "Group": "Folder and File Locations",
+    "Desc": "Server admin file name. Path relative to SaveGameFolder"
+  },
+  "UserDataFolder": {
+    "Group": "Folder and File Locations",
+    "Desc": "User data folder. Use this to override where the server stores all generated data, including RWG generated worlds. Don't forget to uncomment"
+  },
+  "SaveGameFolder": {
+    "Group": "Folder and File Locations",
+    "Desc": "Save game folder. Only used to override game save path. Don't forget to uncomment"
+  },
+  "ServerAllowCrossplay": {
+    "Group": "Other Technical Settings",
+    "Desc": "Server allow crossplay. Enables/disables crossplay. Crossplay servers will only be found in searches and joinable if sanctions are not ignored and have a default or fewer player slot count"
+  },
+  "EACEnabled": {
+    "Group": "Other Technical Settings",
+    "Desc": "Whether EAC anti-cheat is enabled. Whether to enable anti-cheat function (need to be turned off for cracked and Chinese servers)"
+  },
+  "IgnoreEOSSanctions": {
+    "Group": "Other Technical Settings",
+    "Desc": "Ignore EOS sanctions. Ignore EOS sanctions when allowing players to join"
+  },
+  "HideCommandExecutionLog": {
+    "Group": "Other Technical Settings",
+    "Desc": "Hide command execution log. 0 = Show everything, 1 = Hide only from Telnet/Control Panel, 2 = Hide also from remote game clients, 3 = Hide everything"
+  },
+  "MaxUncoveredMapChunksPerPlayer": {
+    "Group": "Other Technical Settings",
+    "Desc": "The area that each player can explore on the game map. Therefore, the maximum map file size per player is limited to (x * 512 bytes) and the coverage area is (x * 256 square meters). The default value of 131072 means that a maximum of 32 square kilometers of map can be uncovered at any time"
+  },
+  "PersistentPlayerProfiles": {
+    "Group": "Other Technical Settings",
+    "Desc": "Whether the player profile can be changed. If disabled, players can join with any selected profile. If true, they will join using the config file they last joined with"
+  },
+  "MaxChunkAge": {
+    "Group": "Other Technical Settings",
+    "Desc": "Number of days in game that a chunk will be reset to its original state after it has been visited if it has not been revisited or protected (e.g. by having a territory stone or sleeping bag nearby)"
+  },
+  "SaveDataLimit": {
+    "Group": "Other Technical Settings",
+    "Desc": "Save data limit. Maximum disk space allowed per saved game, in MB. When this limit is reached, saved game chunks may be forcibly reset to their original state to free up space. Negative values ​​disable the limit"
+  },
+  "GameWorld": {
+    "Group": "Game World",
+    "Desc": "Game world map. Navezgane[Fixed Map], RWG[Random Map] (see 'World Seed' and 'World Size' options below) or any existing world name in the 'Worlds' folder (e.g. 'Navezgane', 'PREGEN01'...)"
+  },
+  "WorldGenSeed": {
+    "Group": "Game World",
+    "Desc": "World Seed. If RWG, this is the seed to generate a new world. If a world with the same name already exists, it will be loaded directly"
+  },
+  "WorldGenSize": {
+    "Group": "Game World",
+    "Desc": "World Generated Size. If RWG, controls the width and height of the created world. Officially supported sizes are between 6144 and 10240 and must be multiples of 2048, e.g. 6144, 8192, 10240"
+  },
+  "GameName": {
+    "Group": "Game World",
+    "Desc": "GameName. Whatever you want your game to be called, this will affect the name of the saved game and the seed used when placing decorations (trees, etc.) in the world. If creating an RWG world, it does not control the general layout of the world"
+  },
+  "GameMode": {
+    "Group": "Game World",
+    "Desc": "GameMode. GameModeSurvival (multiplayer)"
+  },
+  "GameDifficulty": {
+    "Group": "Game Difficulty",
+    "Desc": "GameDifficulty. Difficulty from 0 to 5, 0 is easiest and 5 is hardest"
+  },
+  "BlockDamagePlayer": {
+    "Group": "Game Difficulty",
+    "Desc": "Player Block Damage. Damage dealt to blocks by the player (percentage, expressed as an integer)"
+  },
+  "BlockDamageAI": {
+    "Group": "Game Difficulty",
+    "Desc": "AI Block Damage. Damage dealt to blocks by the AI ​​(percentage, expressed as an integer) (integer)"
+  },
+  "BlockDamageAIBM": {
+    "Group": "Game Difficulty",
+    "Desc": "AI Block Damage during Blood Moon. Damage caused to blocks by AI during Blood Moon (percentage, expressed as integer)"
+  },
+  "XPMultiplier": {
+    "Group": "Game Difficulty",
+    "Desc": "XP Gain Multiplier. XP Gain Multiplier for Players (percentage, expressed as integer)"
+  },
+  "PlayerSafeZoneLevel": {
+    "Group": "Game Difficulty",
+    "Desc": "Novice Player SafeZone Level. If the player's level is less than or equal to this level, he will create a safe zone (no enemies) when spawning. If the player is below this level, zombies will no longer spawn around him"
+  },
+  "PlayerSafeZoneHours": {
+    "Group": "Game Difficulty",
+    "Desc": "Safe Zone Duration. The effective time of the player's safe zone (in game hours)"
+  },
+  "BuildCreate": {
+    "Group": "Game Difficulty",
+    "Desc": "Creative mode. Switches cheat mode on and off"
+  },
+  "DayNightLength": {
+    "Group": "Game Difficulty",
+    "Desc": "Real time of a day in the game (in minutes). Indicates how many minutes of real time is equivalent to a day in the game"
+  },
+  "DayLightLength": {
+    "Group": "Game Difficulty",
+    "Desc": "Daylight Length in the game. Indicates how many hours of daylight there are in a day (default 18 hours)"
+  },
+  "BiomeProgression": {
+    "Group": "Game Difficulty",
+    "Desc": "Biome progression. Enables biome hazards. Weather and storms are not affected by this setting."
+  },
+  "StormFreq": {
+    "Group": "Game Difficulty",
+    "Desc": "Storm frequency. Adjusts the frequency of storms. 0% turns them off. Vanilla values: 0, 50, 100, 150, 200, 300, 400, 500"
+  },
+  "DeathPenalty": {
+    "Group": "Game Difficulty",
+    "Desc": "Penalty after death. 0 = None. 1 = Default: Classic XP penalty. 2 = Injured: You will keep most of your debuffs. Respawn with a 50% food and water ratio. 3 = Permadeath: Your character will be completely reset. You will be reborn in a saved game)"
+  },
+  "DropOnDeath": {
+    "Group": "Game Difficulty",
+    "Desc": "Death drop. 0 = None, 1 = All, 2 = Toolbelt Only, 3 = Backpack Only, 4 = Delete All"
+  },
+  "DropOnQuit": {
+    "Group": "Game Difficulty",
+    "Desc": "Logout drop. 0 = None, 1 = All, 2 = Toolbelt Only, 3 = Backpack Only"
+  },
+  "BedrollDeadZoneSize": {
+    "Group": "Game Difficulty",
+    "Desc": "The size of the BedrollDeadZone (i.e. a box radius with each side twice the length of the given value) where zombies will not spawn. Any cleared sleeper zones that touch the BedrollDeadZone will not spawn again after clearing"
+  },
+  "BedrollExpiryTime": {
+    "Group": "Game Difficulty",
+    "Desc": "Bedroll expiration time. The number of real-world days a sleeping bag will remain active after the owner was last online"
+  },
+  "AllowSpawnNearFriend": {
+    "Group": "Game Difficulty",
+    "Desc": "Allow spawn near friend. Can new players joining the server for the first time select to join near any friend playing at the same time? 0 = Disabled, 1 = Always, 2 = Only near friends in forest biome"
+  },
+  "CameraRestrictionMode": {
+    "Group": "Game Difficulty",
+    "Desc": "Camera restriction mode. 0 = Players can freely swap between first and third person camera modes, 1 = Restricted to first person, 2 = Restricted to third person"
+  },
+  "JarRefund": {
+    "Group": "Game Difficulty",
+    "Desc": "Jar refund. 0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100% The empty jar refund percentage after consuming an item."
+  },
+  "MaxSpawnedZombies": {
+    "Group": "Performance",
+    "Desc": "Maximum number of spawned zombies. This setting covers the entire map, there can only be so many zombies on the entire map at once. Changing this setting can have a huge impact on performance"
+  },
+  "MaxSpawnedAnimals": {
+    "Group": "Performance",
+    "Desc": "Maximum number of spawned zombies. If you have a large number of players on your server, you can increase this limit to add more wildlife. Animals do not consume a lot of CPU like zombies. Note: This will not cause arbitrarily more animals to spawn: the biome spawning system will only spawn a certain number of animals in a given area, but if you have a large and spread out player base you may run into the limit, so you can increase it"
+  },
+  "ServerMaxAllowedViewDistance": {
+    "Group": "Performance",
+    "Desc": "Maximum view distance allowed for clients (6 - 12). Has a significant impact on memory usage and performance"
+  },
+  "MaxQueuedMeshLayers": {
+    "Group": "Performance",
+    "Desc": "The maximum number of Chunk mesh layers that can be queued during mesh generation. Reducing this value will increase memory usage, but may increase Chunk generation time"
+  },
+  "EnemySpawnMode": {
+    "Group": "Zombie Settings",
+    "Desc": "Enable/disable enemy spawning."
+  },
+  "EnemyDifficulty": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie intensity. 0 = normal, 1 = frenzy"
+  },
+  "ZombieFeralSense": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie Feral Sense. 0-3 (off, day, night, all)"
+  },
+  "ZombieMove": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie move. 0-4 (walk, jog, run, sprint, nightmare)"
+  },
+  "ZombieMoveNight": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie night move. 0-4 (walk, jog, run, sprint, nightmare)"
+  },
+  "ZombieFeralMove": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie Feral Move. 0-4 (Walk, Jog, Run, Sprint, Nightmare)"
+  },
+  "ZombieBMMove": {
+    "Group": "Zombie Settings",
+    "Desc": "Zombie BM Move. 0-4 (Walk, Jog, Run, Sprint, Nightmare)"
+  },
+  "AISmellMode": {
+    "Group": "Zombie Settings",
+    "Desc": "AI smell mode. 0-5 (off, walk, jog, run, sprint, nightmare)"
+  },
+  "BloodMoonFrequency": {
+    "Group": "Zombie Settings",
+    "Desc": "Blood Moon Frequency. How often (in days) a Blood Moon appears. Setting this to 0 means no Blood Moon"
+  },
+  "BloodMoonRange": {
+    "Group": "Zombie Settings",
+    "Desc": "Blood Moon Range. The actual Blood Moon day can deviate from the above setting by a random number of days. When this value is set to 0, the Blood Moon will appear on time every N days specified in the Blood Moon Frequency"
+  },
+  "BloodMoonWarning": {
+    "Group": "Zombie Settings",
+    "Desc": "Blood Moon Warning. The number of hours after the red day of the Blood Moon day begins. When this is set to -1, Red will never be displayed. "
+  },
+  "BloodMoonEnemyCount": {
+    "Group": "Zombie Settings",
+    "Desc": "Blood Moon Enemy Count. This is the number of zombies that can be alive (spawned at the same time) at any time for each player in a Blood Moon Zombie Group, but in multiplayer, MaxSpawnedZombies overrides this. Also note that the game stage sets the maximum number of zombies per side. Low game stage values ​​will result in zombie counts lower than the Blood Moon Enemy Count setting. Changing this setting can have a huge impact on performance. "
+  },
+  "LootAbundance": {
+    "Group": "Loot",
+    "Desc": "Search Item Abundance Percentage"
+  },
+  "LootRespawnDays": {
+    "Group": "Loot",
+    "Desc": "Search Item Refresh Days. How many days it takes to refresh the searchable item resources"
+  },
+  "AirDropFrequency": {
+    "Group": "Loot",
+    "Desc": "Airdrop frequency. Indicates how many game hours an airdrop is made, 0 = never"
+  },
+  "AirDropMarker": {
+    "Group": "Loot",
+    "Desc": "Airdrop display. Sets whether to add a marker on the map/compass for airdrops"
+  },
+  "PartySharedKillRange": {
+    "Group": "Multiplayer",
+    "Desc": "Party shared kill range. The distance required to get party shared kill rewards and mission party kill target rewards"
+  },
+  "PlayerKillingMode": {
+    "Group": "Multiplayer",
+    "Desc": "Player killing settings (0 = no killing, 1 = only damage allies, 2 = only damage strangers, 3 = damage everyone)"
+  },
+  "LandClaimCount": {
+    "Group": "LandClaimSize Options",
+    "Desc": "Number of LandClaim. The maximum number of LandClaimSize allowed per player"
+  },
+  "LandClaimSize": {
+    "Group": "LandClaimSize Options",
+    "Desc": "LandClaimSize protection range. Unit is block"
+  },
+  "LandClaimDeadZone": {
+    "Group": "LandClaimSize Options",
+    "Desc": "LandClaimSize protection range. The distance between LandClaimSizes. LandClaimSizes must be greater than this distance to be set (unless you are friends with the other party)"
+  },
+  "LandClaimExpiryTime": {
+    "Group": "LandClaimSize Options",
+    "Desc": "Number of days for LandClaim protection when the player is offline. Number of days (in real time) that LandClaimSizes are valid after the player is offline"
+  },
+  "LandClaimDecayMode": {
+    "Group": "LandClaimSize Options",
+    "Desc": "LandClaimSize protection decay mode. Controls the decay mode of the offline player's land range. 0 = Slow (Linear), 1 = Fast (Exponential), 2 = None (Full protection until expiration)"
+  },
+  "LandClaimOnlineDurabilityModifier": {
+    "Group": "LandStone Options",
+    "Desc": "The protection multiplier of the LandStone when the player is online. Indicates the hardness multiplier of the LandStone when the player is online, 0 means invincibility, default 4 times"
+  },
+  "LandClaimOfflineDurabilityModifier": {
+    "Group": "LandStone Options",
+    "Desc": "The protection multiplier of the LandStone when the player is offline. Indicates the hardness multiplier of the LandStone when the player is offline, 0 means invincibility, default 4 times"
+  },
+  "LandClaimOfflineDelay": {
+    "Group": "LandStone Options",
+    "Desc": "The number of minutes after the player quits the game for the LandStone hardness to change from online to offline. Default is 0"
+  },
+  "DynamicMeshEnabled": {
+    "Group": "Other",
+    "Desc": "Whether to enable the dynamic mesh system"
+  },
+  "DynamicMeshLandClaimOnly": {
+    "Group": "Other",
+    "Desc": "Whether the dynamic mesh system is only valid in the player LCB area"
+  },
+  "DynamicMeshLandClaimBuffer": {
+    "Group": "Other",
+    "Desc": "Dynamic mesh LCB block radius"
+  },
+  "DynamicMeshMaxItemCache": {
+    "Group": "Other",
+    "Desc": "Dynamic mesh maximum item cache. How many projects can be processed simultaneously, the higher the value, the more RAM is used"
+  },
+  "TwitchServerPermission": {
+    "Group": "Other",
+    "Desc": "Permission level required to use twitch integration on the server"
+  },
+  "TwitchBloodMoonAllowed": {
+    "Group": "Other",
+    "Desc": "Whether to allow Twitch Blood Moon. If the server allows Twitch operations during a Blood Moon, additional zombies may spawn during the Blood Moon, causing server lag"
+  },
+  "QuestProgressionDailyLimit": {
+    "Group": "Other",
+    "Desc": "Daily quest progress limit. Limits the number of quests a player can complete each day to help increase their quest level. Quests above the limit can still be completed to receive rewards"
+  }
+}

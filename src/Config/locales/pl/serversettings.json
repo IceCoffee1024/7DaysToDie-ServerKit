@@ -1,0 +1,398 @@
+{
+  "ServerName": {
+    "Group": "Serwer",
+    "Desc": "Nazwa serwera. Wprowadź wybraną nazwę"
+  },
+  "ServerDescription": {
+    "Group": "Serwer",
+    "Desc": "Opis serwera. Wprowadź wybrany opis serwera"
+  },
+  "ServerWebsiteURL": {
+    "Group": "Serwer",
+    "Desc": "Adres URL strony internetowej serwera. Będzie wyświetlany jako klikalny link w przeglądarce serwerów"
+  },
+  "ServerPassword": {
+    "Group": "Serwer",
+    "Desc": "Hasło do serwera. Hasło, którego gracze będą używać do połączenia się z serwerem gry"
+  },
+  "ServerLoginConfirmationText": {
+    "Group": "Serwer",
+    "Desc": "Tekst potwierdzenia logowania na serwer. Gdy jest włączony, użytkownicy zobaczą tę wiadomość podczas łączenia się z serwerem i będą musieli ją zaakceptować. Aby bardziej zaawansowanie edytować to okno, edytuj okno serverjoinrulesdialog w XUi"
+  },
+  "Region": {
+    "Group": "Serwer",
+    "Desc": "Region, w którym znajduje się serwer. Możliwe wartości: Asia, NorthAmericaEast, NorthAmericaWest, CentralAmerica, SouthAmerica, Europe, Russia, MiddleEast, Africa, Oceania"
+  },
+  "Language": {
+    "Group": "Serwer",
+    "Desc": "Główny język używany na serwerze. Użyj angielskiej nazwy języka, którego będą szukać gracze. Możliwe wartości: english, german, spanish, french, italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese"
+  },
+  "ServerPort": {
+    "Group": "Sieć",
+    "Desc": "Port, którego nasłuchuje program serwera. Aby komputery w tej samej sieci lokalnej rozpoznały to jako serwer LAN, trzymaj się zakresu od 26900 do 26905 lub od 27015 do 27020"
+  },
+  "ServerVisibility": {
+    "Group": "Sieć",
+    "Desc": "Widoczność serwera. 2 = publiczny, 1 = tylko dla znajomych, 0 = niewidoczny na liście. Prywatne serwery działają tylko wtedy, gdy pierwszy gracz łączy się ręcznie przez IP, ponieważ nie ma znajomych, jeśli ustawiono na 1"
+  },
+  "ServerDisabledNetworkProtocols": {
+    "Group": "Sieć",
+    "Desc": "Wyłączone protokoły sieciowe na serwerze. Wartości oddzielone przecinkami: LiteNetLib, SteamNetworking. Prywatne serwery powinny wyłączyć SteamNetworking, jeśli między użytkownikiem a serwerem nie ma routera NAT lub przekierowanie portów jest poprawnie skonfigurowane"
+  },
+  "ServerMaxWorldTransferSpeedKiBs": {
+    "Group": "Sieć",
+    "Desc": "Maksymalna prędkość transferu świata na serwerze. Maksymalna prędkość (w kiB/s) transferu świata podczas pierwszego połączenia klienta, gdy nie ma on jeszcze świata. Maksymalna wartość to około 1300 kiB/s i nie zostanie przekroczona, nawet jeśli ustawiona jest wyższa wartość"
+  },
+  "ServerMaxPlayerCount": {
+    "Group": "Sloty",
+    "Desc": "Maksymalna liczba graczy na serwerze. Maksymalna liczba graczy, którzy mogą być jednocześnie online"
+  },
+  "ServerReservedSlots": {
+    "Group": "Sloty",
+    "Desc": "Zarezerwowane sloty na serwerze. Oprócz maksymalnej liczby graczy, niektóre sloty mogą być używane tylko przez graczy z określonym poziomem uprawnień"
+  },
+  "ServerReservedSlotsPermission": {
+    "Group": "Sloty",
+    "Desc": "Uprawnienia do zarezerwowanych slotów na serwerze. Poziom uprawnień wymagany do korzystania z zarezerwowanych slotów"
+  },
+  "ServerAdminSlots": {
+    "Group": "Sloty",
+    "Desc": "Sloty administratorów na serwerze. Administratorzy mogą się nadal łączyć, nawet gdy osiągnięta zostanie maksymalna liczba graczy"
+  },
+  "ServerAdminSlotsPermission": {
+    "Group": "Sloty",
+    "Desc": "Uprawnienia do slotów administratorów na serwerze. Poziom uprawnień wymagany do korzystania ze slotów administratorów"
+  },
+  "WebDashboardEnabled": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Włącz/wyłącz panel kontrolny sieci."
+  },
+  "WebDashboardPort": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Port panelu kontrolnego sieci."
+  },
+  "WebDashboardUrl": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Zewnętrzny adres URL dla panelu kontrolnego sieci (jeśli nieużywany, używany jest tylko publiczny adres IP serwera. Jeśli panel kontrolny sieci znajduje się za odwrotnym proxy). Musi być pełnym adresem URL. Przykład: https://reverseProxyDomain.tld:1234/. Można pozostawić puste, jeśli używasz bezpośrednio publicznego IP i portu panelu kontrolnego."
+  },
+  "EnableMapRendering": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Włącz renderowanie mapy. Możesz renderować mapę jako obrazy kafelków podczas eksploracji mapy. Na przykład, panel kontrolny sieci może używać tego do wyświetlania widoku mapy."
+  },
+  "TelnetEnabled": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Czy usługa Telnet jest włączona. Włącz lub wyłącz usługę Telnet <true,false>"
+  },
+  "TelnetPort": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Port Telnet. Port serwera Telnet"
+  },
+  "TelnetPassword": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Hasło do logowania Telnet. Jeśli nie ustawiono hasła, serwer nasłuchuje tylko na pętli zwrotnej"
+  },
+  "TelnetFailedLoginLimit": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Limit nieudanych logowań Telnet. Jeśli zdalny klient wprowadzi niepoprawne hasło, po przekroczeniu tego limitu klient zostanie zablokowany przy próbie połączenia z interfejsem Telnet"
+  },
+  "TelnetFailedLoginsBlocktime": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Czas blokady po nieudanych logowaniach. Jak długo (w sekundach) blokada będzie trwała po przekroczeniu limitu nieudanych prób logowania?"
+  },
+  "TerminalWindowEnabled": {
+    "Group": "Interfejs Administracyjny",
+    "Desc": "Włączone okno terminala. Wyświetla okno terminala do wyjścia dziennika/wejścia poleceń (tylko Windows)"
+  },
+  "AdminFileName": {
+    "Group": "Foldery i Ścieżki Plików",
+    "Desc": "Nazwa pliku administratora serwera. Ścieżka względna dla SaveGameFolder"
+  },
+  "UserDataFolder": {
+    "Group": "Foldery i Ścieżki Plików",
+    "Desc": "Folder danych użytkownika. Użyj tego, aby zastąpić miejsce, w którym serwer przechowuje wszystkie generowane dane. Obejmuje to światy generowane przez RWG. Nie zapomnij usunąć komentarza"
+  },
+  "SaveGameFolder": {
+    "Group": "Foldery i Ścieżki Plików",
+    "Desc": "Folder zapisu gry. Użyj tego, aby zastąpić ścieżkę zapisu gry. Nie zapomnij usunąć komentarza"
+  },
+  "ServerAllowCrossplay": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Zezwól na grę międzyplatformową na serwerze. Włącza/wyłącza grę międzyplatformową. Serwery z grą międzyplatformową będą znajdowane w wyszukiwaniu i dostępne tylko wtedy, gdy sankcje nie są ignorowane i mają domyślną lub mniejszą liczbę slotów dla graczy"
+  },
+  "EACEnabled": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Czy EAC Anti-Cheat jest włączony. Wybierz, czy włączyć Anti-Cheat (powinien być wyłączony na serwerach pirackich i chińskich)"
+  },
+  "IgnoreEOSSanctions": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Ignoruj sankcje EOS. Wybierz, czy gracze będą ignorować sankcje EOS podczas łączenia się z serwerem"
+  },
+  "HideCommandExecutionLog": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Ukryj dziennik wykonania poleceń. 0 = Pokaż wszystkie dzienniki, 1 = Ukryj tylko w Telnet/panelu, 2 = Ukryj również w zdalnym kliencie gry, 3 = Ukryj wszystkie dzienniki"
+  },
+  "MaxUncoveredMapChunksPerPlayer": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Obszar mapy, który gracz może odkryć. W związku z tym maksymalny rozmiar pliku mapy na gracza jest ograniczony do (x * 512 bajtów), a obszar, który można odkryć, wynosi (x * 256 metrów kwadratowych). Domyślna wartość 131072 oznacza, że gracz może odkryć jednocześnie maksymalnie 32 kilometry kwadratowe mapy"
+  },
+  "PersistentPlayerProfiles": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Czy profile graczy mogą być edytowane. Gdy jest wyłączone, gracze logują się z wybranym profilem. Gdy jest włączone, logują się z ostatnim używanym plikiem konfiguracyjnym"
+  },
+  "MaxChunkAge": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Liczba dni w grze, po których fragment, który został odwiedzony, ale nie został ponownie odwiedzony ani chroniony (np. nie ma w pobliżu kamienia ziemi ani rolki łóżka), zostanie przywrócony do stanu pierwotnego"
+  },
+  "SaveDataLimit": {
+    "Group": "Inne Ustawienia Techniczne",
+    "Desc": "Limit danych zapisu. Maksymalna ilość miejsca na dysku dozwolona dla zapisanego gry (w MB). Po osiągnięciu tego limitu, zapisane fragmenty gry mogą zostać wymuszone do przywrócenia do stanu pierwotnego. Wartość ujemna wyłącza limit"
+  },
+  "GameWorld": {
+    "Group": "Świat Gry",
+    "Desc": "Mapa świata gry. Navezgane[stała mapa], RWG[losowa mapa] (patrz opcje 'Ziarno Świata' i 'Rozmiar Świata' poniżej) lub istniejąca nazwa świata w folderze 'Worlds' (np. 'Navezgane', 'PREGEN01'...)"
+  },
+  "WorldGenSeed": {
+    "Group": "Świat Gry",
+    "Desc": "Ziarno Świata. Jeśli RWG, to ziarno używane do wygenerowania nowego świata. Jeśli istnieje już świat o tej samej nazwie, ten świat zostanie bezpośrednio załadowany"
+  },
+  "WorldGenSize": {
+    "Group": "Świat Gry",
+    "Desc": "Rozmiar wygenerowanego świata. Jeśli RWG, kontroluje szerokość i wysokość wygenerowanego świata. Oficjalnie obsługiwane rozmiary to od 6144 do 10240 i muszą być wielokrotnością 2048. Na przykład, 6144, 8192, 10240"
+  },
+  "GameName": {
+    "Group": "Świat Gry",
+    "Desc": "Nazwa gry. Służy do określenia nazwy gry, a także ma wpływ na nazwę zapisu gry oraz na ziarno używane do rozmieszczania dekoracji (drzewa itp.) w świecie. Jeśli tworzony jest świat RWG, to nie kontroluje ogólnego układu świata"
+  },
+  "GameMode": {
+    "Group": "Świat Gry",
+    "Desc": "Tryb gry. Tryb przetrwania (wielu graczy)"
+  },
+  "GameDifficulty": {
+    "Group": "Trudność Gry",
+    "Desc": "Poziom trudności gry. Poziom trudności od 0 do 5, gdzie 0 to najłatwiejszy, a 5 to najtrudniejszy"
+  },
+  "BlockDamagePlayer": {
+    "Group": "Trudność Gry",
+    "Desc": "Obrażenia bloków zadawane przez gracza. Obrażenia zadawane blokom przez gracza (w procentach, liczba całkowita)"
+  },
+  "BlockDamageAI": {
+    "Group": "Trudność Gry",
+    "Desc": "Obrażenia bloków zadawane przez AI. Obrażenia zadawane blokom przez AI (w procentach, liczba całkowita)"
+  },
+  "BlockDamageAIBM": {
+    "Group": "Trudność Gry",
+    "Desc": "Obrażenia bloków zadawane przez AI podczas Krwawego Księżyca. Obrażenia zadawane blokom przez AI podczas Krwawego Księżyca (w procentach, liczba całkowita)"
+  },
+  "XPMultiplier": {
+    "Group": "Trudność Gry",
+    "Desc": "Mnożnik zdobywania XP. Tempo zdobywania XP przez gracza (w procentach, liczba całkowita)"
+  },
+  "PlayerSafeZoneLevel": {
+    "Group": "Trudność Gry",
+    "Desc": "Poziom strefy bezpieczeństwa dla nowych graczy. Jeśli poziom gracza jest poniżej tego poziomu, gdy się odradza, tworzona jest strefa bezpieczeństwa (obszar bez wrogów). Jeśli gracz jest poniżej tego poziomu, zombie nie pojawiają się wokół niego"
+  },
+  "PlayerSafeZoneHours": {
+    "Group": "Trudność Gry",
+    "Desc": "Czas trwania strefy bezpieczeństwa. Czas trwania strefy bezpieczeństwa gracza (w godzinach gry)"
+  },
+  "BuildCreate": {
+    "Group": "Trudność Gry",
+    "Desc": "Tryb kreatywny. Włącza lub wyłącza tryb oszukiwania"
+  },
+  "DayNightLength": {
+    "Group": "Trudność Gry",
+    "Desc": "Rzeczywisty czas trwania jednego dnia w grze (w minutach). Określa, ile minut w rzeczywistości równa się jednemu dniu w grze"
+  },
+  "DayLightLength": {
+    "Group": "Trudność Gry",
+    "Desc": "Czas trwania dnia w grze. Określa, ile godzin dnia jest w grze (domyślnie 18 godzin)"
+  },
+  "BiomeProgression": {
+    "Group": "Trudność Gry",
+    "Desc": "Progresja biomów. Włącza zagrożenia biomów. Pogoda i burze nie są zależne od tego ustawienia"
+  },
+  "StormFreq": {
+    "Group": "Trudność Gry",
+    "Desc": "Częstotliwość burz. Reguluje częstotliwość burz. 0% wyłącza je. Wartości standardowe: 0, 50, 100, 150, 200, 300, 400, 500"
+  },
+  "DeathPenalty": {
+    "Group": "Trudność Gry",
+    "Desc": "Kara po śmierci. 0 = Brak. 1 = Domyślnie: Klasyczna kara XP. 2 = Kontuzja: Zachowuje większość debuffów. Odradza się z 50% jedzenia i wody. 3 = Permanentna śmierć: Postać jest całkowicie zresetowana. Ponownie uruchamia się z zapisanej gry)"
+  },
+  "DropOnDeath": {
+    "Group": "Trudność Gry",
+    "Desc": "Upuszczanie przedmiotów po śmierci. 0 = Brak, 1 = Wszystko, 2 = Pasek narzędzi, 3 = Plecak, 4 = Usuń wszystko"
+  },
+  "DropOnQuit": {
+    "Group": "Trudność Gry",
+    "Desc": "Upuszczanie przedmiotów po wyjściu. 0 = Brak, 1 = Wszystko, 2 = Pasek narzędzi, 3 = Plecak"
+  },
+  "BedrollDeadZoneSize": {
+    "Group": "Trudność Gry",
+    "Desc": "Rozmiar martwej strefy rolki łóżka (czyli promień pudełka o długości podanej wartości w obie strony), w której nie pojawiają się zombie. Wszystkie obszary snu dotykające martwej strefy rolki łóżka są usuwane i nie pojawiają się ponownie"
+  },
+  "BedrollExpiryTime": {
+    "Group": "Trudność Gry",
+    "Desc": "Czas wygaśnięcia rolki łóżka. Rzeczywisty czas (w dniach), przez który rolka łóżka gracza pozostaje aktywna od ostatniego logowania gracza"
+  },
+  "AllowSpawnNearFriend": {
+    "Group": "Trudność Gry",
+    "Desc": "Zezwól na pojawianie się obok przyjaciela. Czy nowi gracze dołączający do serwera po raz pierwszy mogą wybrać pojawienie się w pobliżu dowolnego przyjaciela grającego w tym samym czasie? 0 = Wyłączone, 1 = Zawsze, 2 = Tylko obok przyjaciół w biomie leśnym"
+  },
+  "CameraRestrictionMode": {
+    "Group": "Trudność Gry",
+    "Desc": "Tryb ograniczenia kamery. 0 = Gracze mogą dowolnie przełączać się między widokiem pierwszej i trzeciej osoby, 1 = Ograniczone do pierwszej osoby, 2 = Ograniczone do trzeciej osoby"
+  },
+  "JarRefund": {
+    "Group": "Trudność Gry",
+    "Desc": "Zwrot słoika. 0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100% Procent zwrotu pustego słoika po zużyciu przedmiotu"
+  },
+  "MaxSpawnedZombies": {
+    "Group": "Wydajność",
+    "Desc": "Maksymalna liczba zombie. To ustawienie dotyczy całej mapy i ogranicza liczbę zombie, które mogą jednocześnie znajdować się na mapie. Zmiana tego ustawienia może znacznie wpłynąć na wydajność"
+  },
+  "MaxSpawnedAnimals": {
+    "Group": "Wydajność",
+    "Desc": "Maksymalna liczba zwierząt. Jeśli na serwerze jest wielu graczy, możesz zwiększyć ten limit, aby dodać więcej zwierząt. Zwierzęta zużywają mniej mocy CPU niż zombie. Uwaga: To ustawienie nie generuje losowo więcej zwierząt, a system spawnów biomów generuje tylko określoną liczbę zwierząt na danym obszarze. Jednak jeśli gracze są rozproszeni na dużym obszarze, można osiągnąć limit, więc można zwiększyć ten limit"
+  },
+  "ServerMaxAllowedViewDistance": {
+    "Group": "Wydajność",
+    "Desc": "Maksymalna odległość widzenia dozwolona na kliencie (6 - 12). Znacząco wpływa na użycie pamięci i wydajność"
+  },
+  "MaxQueuedMeshLayers": {
+    "Group": "Wydajność",
+    "Desc": "Maksymalna liczba warstw siatki w kolejce. Zmniejszenie tej wartości zwiększa zużycie pamięci, ale może wydłużyć czas renderowania fragmentów"
+  },
+  "EnemySpawnMode": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Włącz/wyłącz pojawianie się wrogów."
+  },
+  "EnemyDifficulty": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Siła zombie. 0 = Normalna, 1 = Wściekła"
+  },
+  "ZombieFeralSense": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Zmysł dzikiego zombie. 0-3 (Wyłączone, Dzień, Noc, Wszystko)"
+  },
+  "ZombieMove": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Prędkość ruchu zombie. 0-4 (Spacer, Szybki spacer, Bieg, Sprint, Koszmar)"
+  },
+  "ZombieMoveNight": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Prędkość ruchu zombie w nocy. 0-4 (Spacer, Szybki spacer, Bieg, Sprint, Koszmar)"
+  },
+  "ZombieFeralMove": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Prędkość ruchu dzikiego zombie. 0-4 (Spacer, Szybki spacer, Bieg, Sprint, Koszmar)"
+  },
+  "ZombieBMMove": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Prędkość ruchu zombie BM. 0-4 (Spacer, Szybki spacer, Bieg, Sprint, Koszmar)"
+  },
+  "AISmellMode": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Tryb węchu SI. 0-5 (wyłączone, spacer, szybki spacer, bieg, sprint, koszmar)"
+  },
+  "BloodMoonFrequency": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Częstotliwość Krwawego Księżyca. Cykl, w którym pojawia się Krwawy Księżyc (w dniach). Jeśli ustawione na 0, Krwawy Księżyc nie pojawi się"
+  },
+  "BloodMoonRange": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Zakres Krwawego Księżyca. Rzeczywisty Krwawy Księżyc może pojawić się kilka dni różnicy od poprzedniego ustawienia. Jeśli ustawione na 0, Krwawy Księżyc pojawi się dokładnie w podanym cyklu częstotliwości Krwawego Księżyca"
+  },
+  "BloodMoonWarning": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Ostrzeżenie przed Krwawym Księżycem. Określa, ile godzin przed rozpoczęciem czerwonego dnia Krwawego Księżyca. Jeśli ustawione na -1, kolor czerwony nie będzie wyświetlany."
+  },
+  "BloodMoonEnemyCount": {
+    "Group": "Ustawienia Zombie",
+    "Desc": "Liczba wrogów podczas Krwawego Księżyca. To liczba zombie, które mogą jednocześnie pojawić się dla każdego gracza podczas Krwawego Księżyca. Jednak w trybie wieloosobowym MaxSpawnedZombies to unieważnia. Ponadto liczba zombie, które mogą pojawić się na raz, jest określana na podstawie etapu gry. Jeśli etap gry jest niski, liczba zombie spawnujących się podczas Krwawego Księżyca będzie mniejsza niż liczba ustawiona w liczbie wrogów Krwawego Księżyca. Zmiana tego ustawienia może znacznie wpłynąć na wydajność."
+  },
+  "LootAbundance": {
+    "Group": "Łupy",
+    "Desc": "Wskaźnik obfitości łupów"
+  },
+  "LootRespawnDays": {
+    "Group": "Łupy",
+    "Desc": "Czas odrodzenia łupów. Czas potrzebny na odnowienie zasobów łupów"
+  },
+  "AirDropFrequency": {
+    "Group": "Łupy",
+    "Desc": "Częstotliwość zrzutów lotniczych. Określa, co ile godzin w grze następuje zrzut lotniczy, 0 = nigdy się nie zdarzy"
+  },
+  "AirDropMarker": {
+    "Group": "Łupy",
+    "Desc": "Znacznik zrzutu lotniczego. Określa, czy znacznik zostanie dodany do mapy/kompasu dla zrzutu lotniczego"
+  },
+  "PartySharedKillRange": {
+    "Group": "Multiplayer",
+    "Desc": "Zakres dzielenia się zabiciami w drużynie. Odległość wymagana do uzyskania nagród za wspólne zabijanie w drużynie i nagród za zabijanie celów misji"
+  },
+  "PlayerKillingMode": {
+    "Group": "Multiplayer",
+    "Desc": "Tryb zabijania graczy (0 = Brak zabijania, 1 = Tylko sojusznicy mogą być atakowani, 2 = Tylko obcy mogą być atakowani, 3 = Wszyscy mogą być atakowani)"
+  },
+  "LandClaimCount": {
+    "Group": "Opcje Rozmiaru Posiadłości",
+    "Desc": "Liczba posiadłości. Maksymalna liczba posiadłości dozwolona na gracza"
+  },
+  "LandClaimSize": {
+    "Group": "Opcje Rozmiaru Posiadłości",
+    "Desc": "Obszar ochrony posiadłości. W jednostkach bloków"
+  },
+  "LandClaimDeadZone": {
+    "Group": "Opcje Rozmiaru Posiadłości",
+    "Desc": "Obszar ochrony posiadłości. Odległość między posiadłościami. Posiadłości muszą być oddalone o tę odległość (jeśli nie jesteś przyjacielem z innymi graczami)."
+  },
+  "LandClaimExpiryTime": {
+    "Group": "Opcje Rozmiaru Posiadłości",
+    "Desc": "Czas ochrony posiadłości, gdy gracz jest offline. Rzeczywisty czas, przez który posiadłość pozostaje aktywna, gdy gracz jest offline (w dniach)"
+  },
+  "LandClaimDecayMode": {
+    "Group": "Opcje Rozmiaru Posiadłości",
+    "Desc": "Tryb degradacji ochrony posiadłości. Kontroluje tryb degradacji dla obszaru posiadłości offline gracza. 0 = Wolny (liniowy), 1 = Szybki (eksponencjalny), 2 = Brak (pełna ochrona do wygaśnięcia)"
+  },
+  "LandClaimOnlineDurabilityModifier": {
+    "Group": "Opcje Kamienia Posiadłości",
+    "Desc": "Modyfikator ochrony kamienia posiadłości, gdy gracz jest online. Określa modyfikator wytrzymałości kamienia posiadłości, gdy gracz jest online. 0 oznacza, że jest niezniszczalny, a domyślnie jest to 4x"
+  },
+  "LandClaimOfflineDurabilityModifier": {
+    "Group": "Opcje Kamienia Posiadłości",
+    "Desc": "Modyfikator ochrony kamienia posiadłości, gdy gracz jest offline. Określa modyfikator wytrzymałości kamienia posiadłości, gdy gracz jest offline. 0 oznacza, że jest niezniszczalny, a domyślnie jest to 4x"
+  },
+  "LandClaimOfflineDelay": {
+    "Group": "Opcje Kamienia Posiadłości",
+    "Desc": "Czas przejścia wytrzymałości kamienia posiadłości z online na offline po opuszczeniu gry przez gracza (w minutach). Domyślnie 0"
+  },
+  "DynamicMeshEnabled": {
+    "Group": "Inne",
+    "Desc": "Czy system dynamicznej siatki jest włączony"
+  },
+  "DynamicMeshLandClaimOnly": {
+    "Group": "Inne",
+    "Desc": "Czy system dynamicznej siatki jest aktywny tylko w obszarze LCB gracza"
+  },
+  "DynamicMeshLandClaimBuffer": {
+    "Group": "Inne",
+    "Desc": "Promień bloku LCB dynamicznej siatki"
+  },
+  "DynamicMeshMaxItemCache": {
+    "Group": "Inne",
+    "Desc": "Maksymalna wartość pamięci podręcznej elementów dynamicznej siatki. To liczba projektów, które mogą być renderowane jednocześnie, a wysoka wartość zużywa więcej pamięci RAM"
+  },
+  "TwitchServerPermission": {
+    "Group": "Inne",
+    "Desc": "Poziom uprawnień wymagany do korzystania z integracji Twitch na serwerze"
+  },
+  "TwitchBloodMoonAllowed": {
+    "Group": "Inne",
+    "Desc": "Czy Twitch może zezwalać na Krwawy Księżyc. Jeśli serwer zezwala na operacje Twitch podczas Krwawego Księżyca, podczas Krwawego Księżyca mogą pojawić się dodatkowe zombie, co może spowodować opóźnienia serwera"
+  },
+  "QuestProgressionDailyLimit": {
+    "Group": "Inne",
+    "Desc": "Dzienny limit postępu misji. Ogranicza liczbę misji, które gracze mogą ukończyć w ciągu jednego dnia, aby zwiększyć poziomy misji. Misje przekraczające limit mogą być nadal ukończone i nagrody mogą być zdobyte"
+  }
+}

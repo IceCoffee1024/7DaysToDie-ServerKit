@@ -1,0 +1,224 @@
+{
+  "GlobalSettings": {
+    "GlobalServerName": "[FFFFFF]Server",
+    "WhisperServerName": "[FF0000]Server",
+    "ChatCommandPrefix": "",
+    "ChatCommandSeparator": "-",
+    "HandleChatMessageError": "[FF0000]시스템 오류입니다. 서버 관리자에게 문의하세요.",
+    "TeleZombieCheck": true,
+    "TeleDisableTip": "[00FF00]전송이 금지되었습니다. 주변이 안전한지 확인하세요.",
+    "KillZombieTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]좀비를 처치하고 1점을 획득했습니다\"",
+        "ty-cpp {EntityId} 1"
+      ]
+    },
+    "DeathTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]당신이 죽었습니다. 1포인트가 차감되었습니다\"",
+        "ty-cpp {EntityId} -1"
+      ]
+    },
+    "BlockFamilySharingAccount": false,
+    "IsEnablePlayerInitialSpawnPoint": false,
+    "PlayerInitialPosition": null,
+    "EnableAutoZombieCleanup": false,
+    "AutoZombieCleanupThreshold": 128,
+    "EnableXmlsSecondaryOverwrite": false,
+    "HideCommandInChat": false
+  },
+  "GameNoticeSettings": {
+    "IsEnabled": false,
+    "WelcomeNotice": "생존자 여러분, 환영합니다.",
+    "RotatingNotices": [],
+    "RotatingInterval": 300,
+    "BloodMoonNotice1": "다음 붉은 달은 {BloodMoonDays}일 후입니다.",
+    "BloodMoonNotice2": "다음 붉은 달은 오늘입니다. {BloodMoonStartTime}에 시작합니다.",
+    "BloodMoonNotice3": "붉은 달이 왔습니다. {BloodMoonEndTime}까지 기다려 주세요."
+  },
+  "PointsSystemSettings": {
+    "IsEnabled": false,
+    "SignInCmd": "si",
+    "SignInInterval": 3600,
+    "SignInRewardPoints": 10,
+    "SignInSuccessTip": "[00FF00]로그인 성공! 보상 포인트: {SignInRewardPoints}, 현재 포인트: {PlayerTotalPoints}",
+    "SignInFailureTip": "[FFFF00]로그인 실패! 나중에 다시 와주세요.",
+    "QueryPointsCmd": "points",
+    "QueryPointsTip": "[00FF00]현재 포인트: {PlayerTotalPoints}",
+    "IsCurrencyExchangeEnabled": false,
+    "CurrencyToPointsExchangeRate": "1",
+    "CurrencyExchangeCmd": "dh",
+    "ExchangeSuccessTip": "[00FF00]교환 성공! 게임 통화 소모: {CurrencyAmount}, 현재 포인트: {PlayerTotalPoints}",
+    "ExchangeFailureTip": "[FFFF00]교환 실패! Duke Casino 코인을 준비하거나 돌아오기 전에 로그인하세요"
+  },
+  "GameStoreSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "구매",
+    "BuyCmdPrefix": "구매",
+    "GoodsItemTip": "[FFFFFF]입력: [00FF00]구매-{GoodsId} [FFFFFF]구매 [00FF00]{GoodsName}[FFFFFF], [00FF00]가격: [FF00FF]{가격}",
+    "BuySuccessTip": "[00FF00]구매 성공!",
+    "PointsNotEnoughTip": "[00FF00]포인트가 부족합니다. 포인트가 필요합니다: {Price}",
+    "NoGoods": "[00FF00]상품이 없습니다."
+  },
+  "TeleportCitySettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "city",
+    "TeleCmdPrefix": "city",
+    "TeleInterval": 60,
+    "LocationItemTip": "[FFFFFF]입력: [00FF00]hc-{CityId} [FFFFFF][00FF00]{CityName}[FFFFFF]으로 순간이동, 필요한 포인트: [FF00FF]{PointsRequired}",
+    "TeleSuccessTip": "[00FF00]플레이어: {PlayerName}, 순간이동: {CityName}",
+    "PointsNotEnoughTip": "[00FF00]포인트가 부족합니다. 포인트가 필요합니다: {PointsRequired}",
+    "CoolingTip": "[00FF00]냉각 순간이동... 남은 시간: {CooldownSeconds}초.",
+    "NoLocation": "[00FF00]도시 위치가 없습니다."
+  },
+  "TeleportFriendSettings": {
+    "IsEnabled": false,
+    "TeleCmdPrefix": "tele",
+    "TeleInterval": 60,
+    "PointsRequired": 2,
+    "TeleSuccessTip": "[00FF00] 플레이어: {PlayerName}, {TargetName}으로 순간이동",
+    "PointsNotEnoughTip": "[00FF00]포인트가 부족합니다. 필요한 포인트: {PointsRequired}",
+    "CoolingTip": "[00FF00]순간이동 냉각... 남은 시간: {CooldownSeconds}초.",
+    "TargetNotFoundTip": "[FF00FF]순간이동 대상을 찾을 수 없습니다. 입력: [00FF00]/tele 친구 이름 [FFFFFF]텔레포트합니다.",
+    "IsFriendBypass": false,
+    "TeleConfirmTip": "[00FF00]플레이어: {PlayerName}이(가) 당신에게 순간이동되기를 원합니다. 동의하려면 Yes를 입력하고, 거부하려면 No를 입력하세요.",
+    "AcceptTele": "Yes",
+    "RejectTele": "No",
+    "TargetRejectTeleTip": "[FF0000]상대방이 전송 요청을 거부했습니다.",
+    "KeepDuration": 30
+  },
+  "TeleportHomeSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "home",
+    "TeleInterval": 60,
+    "SetHomeCmdPrefix": "setHome",
+    "SetCountLimit": 3,
+    "PointsRequiredForSet": 2,
+    "DeleteHomeCmdPrefix": "delHome",
+    "TeleHomeCmdPrefix": "home",
+    "PointsRequiredForTele": 2,
+    "NoHomeTip": "[00FF00]아직 집을 설정하지 않았습니다. /setHome을 사용하여 집을 설정하세요.",
+    "LocationItemTip": "[FFFFFF]입력: [00FF00]home-{HomeName} [FFFFFF][FF0000]{HomeName}[00FF00]로 이전",
+    "OverLimitTip": "[00FF00]설정된 주택의 최대 수를 초과했습니다. 최대 3개의 주택을 설정할 수 있습니다.",
+    "SetPointsNotEnoughTip": "[00FF00]포인트가 부족합니다. 필요한 포인트: 2",
+    "SetSuccessTip": "[00FF00]성공적으로 설정되었습니다.",
+    "OverwriteSuccessTip": "[00FF00]이전 좌표를 성공적으로 덮어썼습니다.",
+    "DeleteSuccessTip": "[00FF00]성공적으로 삭제되었습니다.",
+    "HomeNotFoundTip": "[00FF00]지정된 주택을 찾을 수 없습니다.",
+    "CoolingTip": "[00FF00]냉각을 순간이동합니다... 남은 시간: {CooldownSeconds}초.",
+    "TelePointsNotEnoughTip": "[00FF00]포인트가 부족합니다! 필요한 포인트: 2",
+    "TeleSuccessTip": "[00FF00]플레이어: {PlayerName}이(가) 홈: {HomeName}으로 순간이동했습니다"
+  },
+  "AutoBackupSettings": {
+    "IsEnabled": false,
+    "Interval": 7200,
+    "RetainedFileCountLimit": 12,
+    "ResetIntervalAfterManualBackup": true,
+    "SkipIfThereAreNoPlayers": true,
+    "AutoBackupOnServerStartup": true,
+    "ArchiveFolder": "LSTY_Data/Backup"
+  },
+  "VipGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "VIP",
+    "HasClaimedTip": "[00FF00]선물 패키지를 받으셨네요~",
+    "NonVipTip": "[00FF00]아직 VIP가 아니시네요~",
+    "ClaimSuccessTip": "[00FF00]선물 패키지를 성공적으로 받으신 것을 축하드립니다: {GiftName}"
+  },
+  "CdKeyRedeemSettings": {
+    "IsEnabled": false,
+    "HasAlreadyRedeemedTip": "[00FF00]이미 이 CD 키를 사용했습니다.",
+    "HasReachedMaxRedemptionLimitTip": "[00FF00]최대 사용 횟수에 도달했습니다.",
+    "HasRedemptionCodeExpiredTip": "[00FF00]사용 코드가 만료되었습니다.",
+    "RedeemSuccessTip": "[00FF00]CD 키를 성공적으로 사용했습니다."
+  },
+  "ColoredChatSettings": {
+    "IsEnabled": false,
+    "GlobalDefault": "FFFFFF",
+    "WhisperDefault": "D00000",
+    "FriendsDefault": "00BB00",
+    "PartyDefault": "FFCC00"
+  },
+  "BossKillRewardSettings": {
+    "IsEnabled": false,
+    "KillTip": "보스 {EntityName}을(를) 처치하여 1포인트를 획득했습니다",
+    "EnemyRewardMap": {},
+    "FallbackReward": 1
+  },
+  "TaskScheduleSettings": {
+    "IsEnabled": false
+  },
+  "LevelGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "lq",
+    "HasClaimedTip": "[00FF00]이미 이 레벨 선물을 받았습니다!",
+    "LevelNotEnoughTip": "[00FF00]레벨이 부족합니다. 레벨 {RequiredLevel}에 도달해야 합니다!",
+    "NoGiftTip": "[00FF00]받을 수 있는 레벨 선물이 없습니다!",
+    "ClaimSuccessTip": "[00FF00]축하합니다! {GiftName} 선물을 성공적으로 받았습니다!"
+  },
+  "MuteCommandAreaSettings": {
+    "IsEnabled": false,
+    "MutedCommandTip": "[FF0000]이 지역에서는 이 명령어가 비활성화되어 있습니다: {command}[-]"
+  },
+  "ChunkResetSettings": {
+    "IsEnabled": false,
+    "Interval": 3600,
+    "SkipIfPlayersInArea": true,
+    "RemoveEnemiesBeforeReset": true,
+    "ResetNoticeTip": "",
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffResetArea",
+    "IsLandClaimBanEnabled": false,
+    "IsBedrollBanEnabled": false,
+    "LandClaimBanTip": "[FF0000]정기 리셋 구역 내에서 영지석을 설치할 수 없습니다![-]",
+    "BedrollBanTip": "[FF0000]정기 리셋 구역 내에서 침낭을 설치할 수 없습니다![-]",
+    "IsPoiLandClaimBanEnabled": false,
+    "IsPoiBedrollBanEnabled": false,
+    "PoiLandClaimBanTip": "[FF0000]POI 건물 구역 내에서 영지석을 설치할 수 없습니다![-]",
+    "PoiBedrollBanTip": "[FF0000]POI 건물 구역 내에서 침낭을 설치할 수 없습니다![-]"
+  },
+  "TraderProtectSettings": {
+    "IsEnabled": false,
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffTraderProtect"
+  },
+  "PvpVeSettings": {
+    "IsEnabled": false,
+    "DefaultKillMode": 2,
+    "DefaultDropOnDeath": 0,
+    "DefaultLandClaimOnline": 4,
+    "DefaultLandClaimOffline": 8,
+    "DefaultBuffName": "buffPvpVeNoticePve"
+  },
+  "PointLogSettings": {
+    "IsEnabled": false,
+    "LogShop": true,
+    "LogSignIn": true,
+    "LogTransfer": true,
+    "LogTeleport": true,
+    "LogZombieKill": false,
+    "LogLottery": true,
+    "LogCdKey": true,
+    "LogLevelGift": true,
+    "LogVipGift": true,
+    "LogWebApi": true,
+    "LogExternal": true,
+    "LogOther": true,
+    "RetentionDays": 0
+  },
+  "LotterySettings": {
+    "IsEnabled": true,
+    "DrawCommand": "cj",
+    "QueryListCmd": "cjlist",
+    "DrawSuccessTip": "[00FF00]축하합니다! 당첨: {ItemName} x{Count}![-]",
+    "PointsNotEnoughTip": "[FF0000]포인트 부족! 추첨에 {DrawCost} 포인트 필요, 현재 {Points} 포인트[-]",
+    "CoolingTip": "[FFFF00]추첨 쿨다운 중! {Seconds}초 후 다시 시도하세요[-]",
+    "LotteryNotFoundTip": "[FF0000]추첨 풀을 찾을 수 없습니다![-]",
+    "LotteryDisabledTip": "[FF0000]이 추첨 풀은 비활성화되어 있습니다![-]",
+    "LotteryEmptyTip": "[FF0000]추첨 풀에 아이템이 없습니다![-]",
+    "LotteryItemTip": "[00FFFF]ID: {LotteryId} | 이름: {LotteryName} | 비용: {DrawCost} 포인트 | 쿨다운: {DrawInterval}초[-]",
+    "NoLottery": "[FFFF00]사용 가능한 추첨 풀이 없습니다![-]"
+  }
+}

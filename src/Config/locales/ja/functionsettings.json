@@ -1,0 +1,224 @@
+{
+  "GlobalSettings": {
+    "GlobalServerName": "[FFFFFF]サーバー",
+    "WhisperServerName": "[FF0000]サーバー",
+    "ChatCommandPrefix": "",
+    "ChatCommandSeparator": "-",
+    "HandleChatMessageError": "[FF0000]システムエラーです。サーバー管理者に連絡してください。",
+    "TeleZombieCheck": true,
+    "TeleDisableTip": "[00FF00]送信は禁止されています。周囲の安全を確認してください。",
+    "KillZombieTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]ゾンビを倒しました。1ポイント獲得しました\"",
+        "ty-cpp {EntityId} 1"
+      ]
+    },
+    "DeathTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]死亡しました。1ポイント減点されました\"",
+        "ty-cpp {EntityId} -1"
+      ]
+    },
+    "BlockFamilySharingAccount": false,
+    "IsEnablePlayerInitialSpawnPoint": false,
+    "PlayerInitialPosition": null,
+    "EnableAutoZombieCleanup": false,
+    "AutoZombieCleanupThreshold": 128,
+    "EnableXmlsSecondaryOverwrite": false,
+    "HideCommandInChat": false
+  },
+  "GameNoticeSettings": {
+    "IsEnabled": false,
+    "WelcomeNotice": "ようこそ、生存者。",
+    "RotatingNotices": [],
+    "RotatingInterval": 300,
+    "BloodMoonNotice1": "次のブラッドムーンは {BloodMoonDays} 日後です。",
+    "BloodMoonNotice2": "次のブラッドムーンは今日です。{BloodMoonStartTime} に始まります",
+    "BloodMoonNotice3": "ブラッドムーンがやってきました。{BloodMoonEndTime} までお待ちください"
+  },
+  "PointsSystemSettings": {
+    "IsEnabled": false,
+    "SignInCmd": "si",
+    "SignInInterval": 3600,
+    "SignInRewardPoints": 10,
+    "SignInSuccessTip": "[00FF00]サインインに成功しました! 報酬ポイント: {SignInRewardPoints}、現在のポイント数: {PlayerTotalPoints}",
+    "SignInFailureTip": "[FFFF00]サインインに失敗しました!後でもう一度お試しください。",
+    "QueryPointsCmd": "points",
+    "QueryPointsTip": "[00FF00]現在保有しているポイント: {PlayerTotalPoints}",
+    "IsCurrencyExchangeEnabled": false,
+    "CurrencyToPointsExchangeRate": "1",
+    "CurrencyExchangeCmd": "dh",
+    "ExchangeSuccessTip": "[00FF00]交換に成功しました! 消費したゲーム通貨: {CurrencyAmount}、現在保有しているポイント数: {PlayerTotalPoints}",
+    "ExchangeFailureTip": "[FFFF00]交換に失敗しました!戻る前にデューク カジノ コインを用意するか、サインインしてください"
+  },
+  "GameStoreSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "buy",
+    "BuyCmdPrefix": "buy",
+    "GoodsItemTip": "[FFFFFF]入力: [00FF00]buy-{GoodsId} [FFFFFF]buy [00FF00]{GoodsName}[FFFFFF], [00FF00]価格: [FF00FF]{Price}",
+    "BuySuccessTip": "[00FF00]購入に成功しました!",
+    "PointsNotEnoughTip": "[00FF00]ポイントが足りません。ポイントが必要です: {Price}",
+    "NoGoods": "[00FF00]商品がありません。"
+  },
+  "TeleportCitySettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "city",
+    "TeleCmdPrefix": "city",
+    "TeleInterval": 60,
+    "LocationItemTip": "[FFFFFF]入力: [00FF00]hc-{CityId} [FFFFFF]テレポート先: [00FF00]{CityName}[FFFFFF]、必要ポイント: [FF00FF]{PointsRequired}",
+    "TeleSuccessTip": "[00FF00]プレイヤー: {PlayerName}、テレポート先: {CityName}",
+    "PointsNotEnoughTip": "[00FF00]ポイントが足りません。必要なポイント: {PointsRequired}",
+    "CoolingTip": "[00FF00]テレポート冷却... 残り時間: {CooldownSeconds} 秒。",
+    "NoLocation": "[00FF00]都市の場所がありません。"
+  },
+  "TeleportFriendSettings": {
+    "IsEnabled": false,
+    "TeleCmdPrefix": "tele",
+    "TeleInterval": 60,
+    "PointsRequired": 2,
+    "TeleSuccessTip": "[00FF00] プレイヤー: {PlayerName}、テレポート先: {TargetName}",
+    "PointsNotEnoughTip": "[00FF00]ポイントが足りません。必要なポイント: {PointsRequired}",
+    "CoolingTip": "[00FF00]テレポート冷却... 残り時間: {CooldownSeconds} 秒。",
+    "TargetNotFoundTip": "[FF00FF]テレポートターゲットが見つかりません。[00FF00]/tele フレンド名 [FFFFFF] を入力してテレポートしてください。",
+    "IsFriendBypass": false,
+    "TeleConfirmTip": "[00FF00]プレーヤー: {PlayerName}、あなたにテレポートされることを希望しています。同意するには「Yes」と入力し、拒否するには「No」と入力します。",
+    "AcceptTele": "Yes",
+    "RejectTele": "No",
+    "TargetRejectTeleTip": "[FF0000]相手が送信要求を拒否しました",
+    "KeepDuration": 30
+  },
+  "TeleportHomeSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "home",
+    "TeleInterval": 60,
+    "SetHomeCmdPrefix": "setHome",
+    "SetCountLimit": 3,
+    "PointsRequiredForSet": 2,
+    "DeleteHomeCmdPrefix": "delHome",
+    "TeleHomeCmdPrefix": "home",
+    "PointsRequiredForTele": 2,
+    "NoHomeTip": "[00FF00]まだホームを設定していません。/setHome を使用して設定してください。",
+    "LocationItemTip": "[FFFFFF]入力: [00FF00]home-{HomeName} [FFFFFF][FF0000]{HomeName}[00FF00] に転送",
+    "OverLimitTip": "[00FF00]設定されているホームの最大数を超えました。最大 3 つのホームを設定できます。",
+    "SetPointsNotEnoughTip": "[00FF00]ポイントが足りません。必要なポイント: 2",
+    "SetSuccessTip": "[00FF00]設定に成功しました。",
+    "OverwriteSuccessTip": "[00FF00]古い座標を正常に上書きしました。",
+    "DeleteSuccessTip": "[00FF00]削除に成功しました。",
+    "HomeNotFoundTip": "[00FF00]指定されたホームが見つかりませんでした。",
+    "CoolingTip": "[00FF00]テレポート冷却... 残り時間: {CooldownSeconds} 秒。",
+    "TelePointsNotEnoughTip": "[00FF00]ポイントが足りません! 必要なポイント: 2",
+    "TeleSuccessTip": "[00FF00]プレイヤー: {PlayerName} がホーム: {HomeName} にテレポートしました"
+  },
+  "AutoBackupSettings": {
+    "IsEnabled": false,
+    "Interval": 7200,
+    "RetainedFileCountLimit": 12,
+    "ResetIntervalAfterManualBackup": true,
+    "SkipIfThereAreNoPlayers": true,
+    "AutoBackupOnServerStartup": true,
+    "ArchiveFolder": "LSTY_Data/Backup"
+  },
+  "VipGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "VIP",
+    "HasClaimedTip": "[00FF00]ギフト パッケージを受け取りました~",
+    "NonVipTip": "[00FF00]あなたはまだ VIP ではありません～",
+    "ClaimSuccessTip": "[00FF00]ギフト パッケージの受け取りおめでとうございます: {GiftName}"
+  },
+  "CdKeyRedeemSettings": {
+    "IsEnabled": false,
+    "HasAlreadyRedeemedTip": "[00FF00]このCDキーはすでに引き換え済みです。",
+    "HasReachedMaxRedemptionLimitTip": "[00FF00]引き換え回数の上限に達しました。",
+    "HasRedemptionCodeExpiredTip": "[00FF00]この引き換えコードは期限切れです。",
+    "RedeemSuccessTip": "[00FF00]CDキーの引き換えに成功しました。"
+  },
+  "ColoredChatSettings": {
+    "IsEnabled": false,
+    "GlobalDefault": "FFFFFF",
+    "WhisperDefault": "D00000",
+    "FriendsDefault": "00BB00",
+    "PartyDefault": "FFCC00"
+  },
+  "BossKillRewardSettings": {
+    "IsEnabled": false,
+    "KillTip": "ボス {EntityName} を倒し、1ポイントを獲得しました",
+    "EnemyRewardMap": {},
+    "FallbackReward": 1
+  },
+  "TaskScheduleSettings": {
+    "IsEnabled": false
+  },
+  "LevelGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "lq",
+    "HasClaimedTip": "[00FF00]このレベルギフトは既に受け取っています！",
+    "LevelNotEnoughTip": "[00FF00]レベルが不足しています。レベル{RequiredLevel}に到達する必要があります！",
+    "NoGiftTip": "[00FF00]受け取れるレベルギフトがありません！",
+    "ClaimSuccessTip": "[00FF00]おめでとうございます！{GiftName}ギフトを受け取りました！"
+  },
+  "MuteCommandAreaSettings": {
+    "IsEnabled": false,
+    "MutedCommandTip": "[FF0000]このエリアではこのコマンドは無効です: {command}[-]"
+  },
+  "ChunkResetSettings": {
+    "IsEnabled": false,
+    "Interval": 3600,
+    "SkipIfPlayersInArea": true,
+    "RemoveEnemiesBeforeReset": true,
+    "ResetNoticeTip": "",
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffResetArea",
+    "IsLandClaimBanEnabled": false,
+    "IsBedrollBanEnabled": false,
+    "LandClaimBanTip": "[FF0000]定期リセット区域内では土地占有石を設置できません！[-]",
+    "BedrollBanTip": "[FF0000]定期リセット区域内では寝袋を設置できません！[-]",
+    "IsPoiLandClaimBanEnabled": false,
+    "IsPoiBedrollBanEnabled": false,
+    "PoiLandClaimBanTip": "[FF0000]POI建築区域内では土地占有石を設置できません！[-]",
+    "PoiBedrollBanTip": "[FF0000]POI建築区域内では寝袋を設置できません！[-]"
+  },
+  "TraderProtectSettings": {
+    "IsEnabled": false,
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffTraderProtect"
+  },
+  "PvpVeSettings": {
+    "IsEnabled": false,
+    "DefaultKillMode": 2,
+    "DefaultDropOnDeath": 0,
+    "DefaultLandClaimOnline": 4,
+    "DefaultLandClaimOffline": 8,
+    "DefaultBuffName": "buffPvpVeNoticePve"
+  },
+  "PointLogSettings": {
+    "IsEnabled": false,
+    "LogShop": true,
+    "LogSignIn": true,
+    "LogTransfer": true,
+    "LogTeleport": true,
+    "LogZombieKill": false,
+    "LogLottery": true,
+    "LogCdKey": true,
+    "LogLevelGift": true,
+    "LogVipGift": true,
+    "LogWebApi": true,
+    "LogExternal": true,
+    "LogOther": true,
+    "RetentionDays": 0
+  },
+  "LotterySettings": {
+    "IsEnabled": true,
+    "DrawCommand": "cj",
+    "QueryListCmd": "cjlist",
+    "DrawSuccessTip": "[00FF00]おめでとうございます！当選: {ItemName} x{Count}![-]",
+    "PointsNotEnoughTip": "[FF0000]ポイント不足！抽選には{DrawCost}ポイント必要です。現在{Points}ポイント[-]",
+    "CoolingTip": "[FFFF00]抽選クールダウン中！{Seconds}秒お待ちください[-]",
+    "LotteryNotFoundTip": "[FF0000]抽選プールが見つかりません！[-]",
+    "LotteryDisabledTip": "[FF0000]この抽選プールは無効です！[-]",
+    "LotteryEmptyTip": "[FF0000]抽選プールにアイテムがありません！[-]",
+    "LotteryItemTip": "[00FFFF]ID: {LotteryId} | 名前: {LotteryName} | コスト: {DrawCost}ポイント | クールダウン: {DrawInterval}秒[-]",
+    "NoLottery": "[FFFF00]利用可能な抽選プールがありません！[-]"
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "ServerName": {
+    "Group": "Servidores",
+    "Desc": "Nombre del servidor. Rellena con cualquier nombre que te guste"
+  },
+  "ServerDescription": {
+    "Group": "Servidores",
+    "Desc": "Descripción del servidor. Rellena con cualquier descripción del servidor que te guste"
+  },
+  "ServerWebsiteURL": {
+    "Group": "Servidores",
+    "Desc": "Dirección del sitio web del servidor. Se mostrará como un enlace clicable en el navegador del servidor"
+  },
+  "ServerPassword": {
+    "Group": "Servidores",
+    "Desc": "Contraseña del servidor. La contraseña que los jugadores utilizan para entrar en el servidor de juego"
+  },
+  "ServerLoginConfirmationText": {
+    "Group": "Servidores",
+    "Desc": "Texto de confirmación de inicio de sesión en el servidor. Si esta opción está activada, los usuarios verán este mensaje al unirse al servidor y deberán confirmarlo antes de continuar. Para cambios más complejos en esta ventana, cambia la ventana serverjoinrulesdialog en XUi"
+  },
+  "Region": {
+    "Group": "Servidores",
+    "Desc": "La región donde se encuentra el servidor. Los valores posibles son: Asia, NorteAméricaEste, NorteAméricaOeste, AméricaCentral, AméricaDelSur, Europa, Rusia, MedioOriente, África, Oceanía"
+  },
+  "Language": {
+    "Group": "Servidores",
+    "Desc": "El idioma principal de los jugadores en el servidor. Usa el nombre en inglés de cualquier idioma que los jugadores deseen buscar. Los valores posibles son: english, german, spanish, french, italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese"
+  },
+  "ServerPort": {
+    "Group": "Red",
+    "Desc": "El puerto en el que el programa del servidor está escuchando. Si deseas que los ordenadores en la misma LAN lo vean como un servidor LAN, mantenlo en el rango de 26900 a 26905 o de 27015 a 27020"
+  },
+  "ServerVisibility": {
+    "Group": "Red",
+    "Desc": "Visibilidad del servidor. 2 = público, 1 = visible solo para amigos, 0 = no listado. Dado que nunca eres amigo del servidor dedicado, configurar esto en 1 solo funcionará si el primer jugador se conecta manualmente por IP"
+  },
+  "ServerDisabledNetworkProtocols": {
+    "Group": "Red",
+    "Desc": "Protocolos de red deshabilitados por el servidor. Separados por comas, valores posibles: LiteNetLib, SteamNetworking. Los servidores dedicados deben deshabilitar SteamNetworking si no hay un router NAT entre el usuario y el servidor, o si la redirección de puertos está configurada correctamente"
+  },
+  "ServerMaxWorldTransferSpeedKiBs": {
+    "Group": "Red",
+    "Desc": "Velocidad máxima de transferencia/descarga del mundo del servidor. Velocidad máxima (en kiB/s) para transferencias/descarga del mundo en la primera conexión si el cliente aún no tiene un mundo descargado. El valor máximo es de aproximadamente 1300 kiB/s, incluso si lo configuras más alto"
+  },
+  "ServerMaxPlayerCount": {
+    "Group": "Espacios",
+    "Desc": "Número máximo de jugadores en el servidor. Número máximo de jugadores permitidos en línea al mismo tiempo"
+  },
+  "ServerReservedSlots": {
+    "Group": "Espacios",
+    "Desc": "Espacios reservados del servidor. Más allá del número máximo de jugadores, muchos espacios solo pueden ser utilizados por jugadores con un cierto nivel de permiso, como por ejemplo administradores o vips."
+  },
+  "ServerReservedSlotsPermission": {
+    "Group": "Espacios",
+    "Desc": "Permiso de espacios reservados del servidor. El nivel de permiso requerido para usar los espacios reservados mencionados anteriormente"
+  },
+  "ServerAdminSlots": {
+    "Group": "Espacios",
+    "Desc": "Espacios de administrador del servidor. Incluso si el servidor ha alcanzado el número máximo de jugadores, aún pueden unirse tantos administradores"
+  },
+  "ServerAdminSlotsPermission": {
+    "Group": "Espacios",
+    "Desc": "Espacios de permiso de administrador del servidor. El nivel de permiso requerido para usar los espacios de administrador mencionados anteriormente"
+  },
+  "WebDashboardEnabled": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Habilitar/deshabilitar el tablero web."
+  },
+  "WebDashboardPort": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Puerto para el tablero web."
+  },
+  "WebDashboardUrl": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "URL externa para el tablero web. (Si no se usa solo la IP pública del servidor, por ejemplo, si el tablero web está detrás de un proxy inverso). Necesita ser una URL completa, por ejemplo: https://dominioDelProxyInverso.tld:1234/. Puede dejarse en blanco si se usa la IP pública y el puerto del tablero directamente."
+  },
+  "EnableMapRendering": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Habilitar renderización de mapas. Habilitar/deshabilitar la renderización de mapas como imágenes de mosaico al navegar por mapas. Por ejemplo, el tablero web puede usar esto para mostrar vistas de mapas."
+  },
+  "TelnetEnabled": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Si el servicio Telnet está habilitado. Habilitar o deshabilitar el servicio Telnet <true,false>"
+  },
+  "TelnetPort": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Puerto Telnet. Puerto del servidor Telnet"
+  },
+  "TelnetPassword": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Contraseña de acceso Telnet. Si no se establece una contraseña, el servidor solo escuchará en la interfaz de loopback local"
+  },
+  "TelnetFailedLoginLimit": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Límite de fallos de inicio de sesión Telnet. Después de que un cliente remoto ingrese una contraseña incorrecta varias veces, el cliente será bloqueado para conectarse a la interfaz Telnet"
+  },
+  "TelnetFailedLoginsBlocktime": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Tiempo de bloqueo por fallos de inicio de sesión. Después de superar el límite de fallos de inicio de sesión, ¿cuánto tiempo durará el bloqueo (en segundos)?"
+  },
+  "TerminalWindowEnabled": {
+    "Group": "Interfaz Administrativa",
+    "Desc": "Ventana de terminal habilitada. Mostrar ventana de terminal para salida de registros/entrada de comandos (solo Windows)"
+  },
+  "AdminFileName": {
+    "Group": "Ubicaciones de Carpetas y Archivos",
+    "Desc": "Nombre del archivo de administrador del servidor. Ruta relativa a SaveGameFolder"
+  },
+  "UserDataFolder": {
+    "Group": "Ubicaciones de Carpetas y Archivos",
+    "Desc": "Carpeta de datos de usuario. Usa esto para anular dónde el servidor almacena todos los datos generados, incluidos los mundos generados por RWG. No olvides descomentar"
+  },
+  "SaveGameFolder": {
+    "Group": "Ubicaciones de Carpetas y Archivos",
+    "Desc": "Carpeta de guardado de juegos. Solo se usa para anular la ruta de guardado del juego. No olvides descomentar"
+  },
+  "ServerAllowCrossplay": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Permitir juego cruzado en el servidor. Habilita/deshabilita el juego cruzado. Los servidores con juego cruzado solo se encontrarán en las búsquedas y serán accesibles si no se ignoran las sanciones y tienen un número de espacios para jugadores predeterminado o menor"
+  },
+  "EACEnabled": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Si el anti-trampas EAC está habilitado. Si se debe habilitar la función anti-trampas (necesita estar desactivada para servidores pirateados y chinos)"
+  },
+  "IgnoreEOSSanctions": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Ignorar sanciones EOS. Ignorar sanciones EOS al permitir que los jugadores se unan"
+  },
+  "HideCommandExecutionLog": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Ocultar registro de ejecución de comandos. 0 = Mostrar todo, 1 = Ocultar solo de Telnet/Panel de control, 2 = Ocultar también de clientes de juego remotos, 3 = Ocultar todo"
+  },
+  "MaxUncoveredMapChunksPerPlayer": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "El área que cada jugador puede explorar en el mapa del juego. Por lo tanto, el tamaño máximo del archivo del mapa por jugador está limitado a (x * 512 bytes) y el área de cobertura es (x * 256 metros cuadrados). El valor predeterminado de 131072 significa que se puede descubrir un máximo de 32 kilómetros cuadrados de mapa en cualquier momento"
+  },
+  "PersistentPlayerProfiles": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Si el perfil del jugador se puede cambiar. Si está deshabilitado, los jugadores pueden unirse con cualquier perfil seleccionado. Si es verdadero, se unirán usando el archivo de configuración con el que se unieron por última vez"
+  },
+  "MaxChunkAge": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Número de días en el juego que un fragmento se restablecerá a su estado original después de haber sido visitado si no ha sido revisitado o protegido (por ejemplo, al tener una piedra de territorio o una bolsa de dormir cerca)"
+  },
+  "SaveDataLimit": {
+    "Group": "Otras Configuraciones Técnicas",
+    "Desc": "Límite de datos guardados. Espacio máximo en disco permitido por juego guardado, en MB. Cuando se alcanza este límite, los fragmentos de juego guardados pueden restablecerse forzosamente a su estado original para liberar espacio. Los valores negativos desactivan el límite"
+  },
+  "GameWorld": {
+    "Group": "Mundo del Juego",
+    "Desc": "Mapa del mundo del juego. Navezgane[Mapa Fijo], RWG[Mapa Aleatorio] (ver las opciones 'Semilla del Mundo' y 'Tamaño del Mundo' a continuación) o cualquier nombre de mundo existente en la carpeta 'Worlds' (por ejemplo, 'Navezgane', 'PREGEN01'...)"
+  },
+  "WorldGenSeed": {
+    "Group": "Mundo del Juego",
+    "Desc": "Semilla del Mundo. Si es RWG, esta es la semilla para generar un nuevo mundo. Si ya existe un mundo con el mismo nombre, se cargará directamente"
+  },
+  "WorldGenSize": {
+    "Group": "Mundo del Juego",
+    "Desc": "Tamaño Generado del Mundo. Si es RWG, controla el ancho y la altura del mundo creado. Los tamaños oficialmente soportados están entre 6144 y 10240 y deben ser múltiplos de 2048, por ejemplo, 6144, 8192, 10240"
+  },
+  "GameName": {
+    "Group": "Mundo del Juego",
+    "Desc": "Nombre del Juego. Como quieras que se llame tu juego, esto afectará el nombre del juego guardado y la semilla utilizada al colocar decoraciones (árboles, etc.) en el mundo. Si creas un mundo RWG, no controla la disposición general del mundo"
+  },
+  "GameMode": {
+    "Group": "Mundo del Juego",
+    "Desc": "Modo de Juego. Modo de Juego Supervivencia (multijugador)"
+  },
+  "GameDifficulty": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Dificultad del Juego. Dificultad de 0 a 5, 0 es la más fácil y 5 es la más difícil"
+  },
+  "BlockDamagePlayer": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Daño a Bloques por el Jugador. Daño infligido a los bloques por el jugador (porcentaje, expresado como un número entero)"
+  },
+  "BlockDamageAI": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Daño a Bloques por la IA. Daño infligido a los bloques por la IA (porcentaje, expresado como un número entero)"
+  },
+  "BlockDamageAIBM": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Daño a Bloques por la IA durante la Luna de Sangre. Daño causado a los bloques por la IA durante la Luna de Sangre (porcentaje, expresado como un número entero)"
+  },
+  "XPMultiplier": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Multiplicador de Ganancia de XP. Multiplicador de Ganancia de XP para Jugadores (porcentaje, expresado como un número entero)"
+  },
+  "PlayerSafeZoneLevel": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Nivel de Zona Segura para Jugadores Novatos. Si el nivel del jugador es menor o igual a este nivel, creará una zona segura (sin enemigos) al aparecer. Si el jugador está por debajo de este nivel, los zombies ya no aparecerán a su alrededor"
+  },
+  "PlayerSafeZoneHours": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Duración de la Zona Segura. El tiempo efectivo de la zona segura del jugador (en horas de juego)"
+  },
+  "BuildCreate": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Modo Creativo. Activa o desactiva el modo creativo"
+  },
+  "DayNightLength": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Tiempo real de un día en el juego (en minutos). Indica cuántos minutos de tiempo real equivalen a un día en el juego"
+  },
+  "DayLightLength": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Duración de la Luz del Día en el juego. Indica cuántas horas de luz solar hay en un día (predeterminado 18 horas)"
+  },
+  "BiomeProgression": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Progresión del bioma. Activa los peligros del bioma. El clima y las tormentas no se ven afectados por esta configuración"
+  },
+  "StormFreq": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Frecuencia de tormentas. Ajusta la frecuencia de las tormentas. 0% las desactiva. Valores estándar: 0, 50, 100, 150, 200, 300, 400, 500"
+  },
+  "DeathPenalty": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Penalización después de la muerte. 0 = Ninguna. 1 = Predeterminado: Penalización clásica de XP. 2 = Herido: Mantendrás la mayoría de tus debuffs. Reaparecerás con un 50% de comida y agua. 3 = Muerte Permanente: Tu personaje se restablecerá por completo. Renacerás en un juego guardado)"
+  },
+  "DropOnDeath": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Caída al morir. 0 = Ninguna, 1 = Todo, 2 = Solo Cinturón de Herramientas, 3 = Solo Mochila, 4 = Eliminar Todo"
+  },
+  "DropOnQuit": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Caída al salir. 0 = Ninguna, 1 = Todo, 2 = Solo Cinturón de Herramientas, 3 = Solo Mochila"
+  },
+  "BedrollDeadZoneSize": {
+    "Group": "Dificultad del Juego",
+    "Desc": "El tamaño de la Zona Muerta del Saco de Dormir (es decir, un radio cuadrado con cada lado el doble de la longitud del valor dado) donde los zombies no aparecerán. Cualquier zona de durmientes despejada que toque la Zona Muerta del Saco de Dormir no volverá a aparecer después de ser despejada"
+  },
+  "BedrollExpiryTime": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Tiempo de expiración del Saco de Dormir. El número de días en el mundo real que un saco de dormir permanecerá activo después de que el propietario estuvo en línea por última vez"
+  },
+  "AllowSpawnNearFriend": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Permitir aparecer cerca de un amigo. ¿Pueden los nuevos jugadores que se unen al servidor por primera vez seleccionar aparecer cerca de cualquier amigo que esté jugando al mismo tiempo? 0 = Deshabilitado, 1 = Siempre, 2 = Solo cerca de amigos en el bioma del bosque"
+  },
+  "CameraRestrictionMode": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Modo de restricción de cámara. 0 = Los jugadores pueden cambiar libremente entre los modos de cámara en primera y tercera persona, 1 = Restringido a primera persona, 2 = Restringido a tercera persona"
+  },
+  "JarRefund": {
+    "Group": "Dificultad del Juego",
+    "Desc": "Reembolso de frasco. 0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100% El porcentaje de reembolso del frasco vacío después de consumir un objeto"
+  },
+  "MaxSpawnedZombies": {
+    "Group": "Rendimiento",
+    "Desc": "Número máximo de zombies generados. Esta configuración cubre todo el mapa, solo puede haber tantos zombies en todo el mapa al mismo tiempo. Cambiar esta configuración puede tener un gran impacto en el rendimiento"
+  },
+  "MaxSpawnedAnimals": {
+    "Group": "Rendimiento",
+    "Desc": "Número máximo de zombies generados. Si tienes un gran número de jugadores en tu servidor, puedes aumentar este límite para agregar más vida silvestre. Los animales no consumen mucha CPU como los zombies. Nota: Esto no hará que aparezcan arbitrariamente más animales: el sistema de generación de biomas solo generará un cierto número de animales en un área determinada, pero si tienes una base de jugadores grande y dispersa, puedes alcanzar el límite, por lo que puedes aumentarlo"
+  },
+  "ServerMaxAllowedViewDistance": {
+    "Group": "Rendimiento",
+    "Desc": "Distancia máxima de visión permitida para los clientes (6 - 12). Tiene un impacto significativo en el uso de memoria y el rendimiento"
+  },
+  "MaxQueuedMeshLayers": {
+    "Group": "Rendimiento",
+    "Desc": "El número máximo de capas de malla de fragmentos que se pueden poner en cola durante la generación de malla. Reducir este valor aumentará el uso de memoria, pero puede aumentar el tiempo de generación de fragmentos"
+  },
+  "EnemySpawnMode": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Habilitar/deshabilitar la generación de enemigos."
+  },
+  "EnemyDifficulty": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Intensidad de los zombies. 0 = normal, 1 = frenesí"
+  },
+  "ZombieFeralSense": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Sentido Feral de los Zombies. 0-3 (apagado, día, noche, todo)"
+  },
+  "ZombieMove": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Movimiento de los zombies. 0-4 (caminar, trotar, correr, esprintar, pesadilla)"
+  },
+  "ZombieMoveNight": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Movimiento nocturno de los zombies. 0-4 (caminar, trotar, correr, esprintar, pesadilla)"
+  },
+  "ZombieFeralMove": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Movimiento Feral de los Zombies. 0-4 (Caminar, Trotar, Correr, Esprintar, Pesadilla)"
+  },
+  "ZombieBMMove": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Movimiento BM de los Zombies. 0-4 (Caminar, Trotar, Correr, Esprintar, Pesadilla)"
+  },
+  "AISmellMode": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Modo de olfato de la IA. 0-5 (apagado, caminar, trotar, correr, esprintar, pesadilla)"
+  },
+  "BloodMoonFrequency": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Frecuencia de la Luna de Sangre. Con qué frecuencia (en días) aparece una Luna de Sangre. Configurarlo en 0 significa que no habrá Luna de Sangre"
+  },
+  "BloodMoonRange": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Rango de la Luna de Sangre. El día real de la Luna de Sangre puede desviarse de la configuración anterior por un número aleatorio de días. Cuando este valor se establece en 0, la Luna de Sangre aparecerá a tiempo cada N días especificados en la Frecuencia de la Luna de Sangre"
+  },
+  "BloodMoonWarning": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Advertencia de la Luna de Sangre. El número de horas después de que comience el día rojo de la Luna de Sangre. Cuando esto se establece en -1, el rojo nunca se mostrará."
+  },
+  "BloodMoonEnemyCount": {
+    "Group": "Configuración de Zombies",
+    "Desc": "Cantidad de Enemigos en la Luna de Sangre. Este es el número de zombies que pueden estar vivos (generados al mismo tiempo) en cualquier momento para cada jugador en un Grupo de Zombies de la Luna de Sangre, pero en multijugador, MaxSpawnedZombies anula esto. También ten en cuenta que la etapa del juego establece el número máximo de zombies por lado. Los valores bajos de la etapa del juego resultarán en un conteo de zombies inferior al configurado en la Cantidad de Enemigos en la Luna de Sangre. Cambiar esta configuración puede tener un gran impacto en el rendimiento."
+  },
+  "LootAbundance": {
+    "Group": "Botín",
+    "Desc": "Porcentaje de Abundancia de Objetos de Búsqueda"
+  },
+  "LootRespawnDays": {
+    "Group": "Botín",
+    "Desc": "Días de Reaparición de Objetos de Búsqueda. Cuántos días tarda en refrescarse los recursos de objetos de búsqueda"
+  },
+  "AirDropFrequency": {
+    "Group": "Botín",
+    "Desc": "Frecuencia de Airdrop. Indica cuántas horas de juego se realiza un airdrop, 0 = nunca"
+  },
+  "AirDropMarker": {
+    "Group": "Botín",
+    "Desc": "Marcador de Airdrop. Establece si se agrega un marcador en el mapa/compás para airdrops"
+  },
+  "PartySharedKillRange": {
+    "Group": "Multijugador",
+    "Desc": "Rango de muerte compartida en grupo. La distancia requerida para obtener recompensas de muerte compartida en grupo y recompensas de objetivo de misión de muerte en grupo"
+  },
+  "PlayerKillingMode": {
+    "Group": "Multijugador",
+    "Desc": "Configuración de daño a jugadores (0 = sin asesinatos, 1 = solo dañar aliados, 2 = solo dañar extraños, 3 = dañar a todos)"
+  },
+  "LandClaimCount": {
+    "Group": "Opciones de Tamaño de Reclamo de Tierra",
+    "Desc": "Número de Reclamos de Tierra. El número máximo de Reclamos de Tierra permitidos por jugador"
+  },
+  "LandClaimSize": {
+    "Group": "Opciones de Tamaño de Reclamo de Tierra",
+    "Desc": "Rango de protección del Reclamo de Tierra. Una unidad es un bloque"
+  },
+  "LandClaimDeadZone": {
+    "Group": "Opciones de Tamaño de Reclamo de Tierra",
+    "Desc": "Rango de protección del Reclamo de Tierra. La distancia entre los Reclamos de Tierra. La distancia a la que deben estar los bloques de reclamo entre jugadores. (a menos que seas amigo de la otra parte)"
+  },
+  "LandClaimExpiryTime": {
+    "Group": "Opciones de Tamaño de Reclamo de Tierra",
+    "Desc": "Número de días de protección del Reclamo de Tierra cuando el jugador está desconectado. Número de días (en tiempo real) que los Tamaños de Reclamo de Tierra son válidos después de que el jugador está desconectado"
+  },
+  "LandClaimDecayMode": {
+    "Group": "Opciones de Tamaño de Reclamo de Tierra",
+    "Desc": "Modo de descomposición de la protección del Reclamo de Tierra. Controla el modo de descomposición del Reclamo de tierra del jugador cuando está desconectado. 0 = Lento (Lineal), 1 = Rápido (Exponencial), 2 = Ninguno (Protección total hasta la expiración de los días establecidos)"
+  },
+  "LandClaimOnlineDurabilityModifier": {
+    "Group": "Opciones de Piedra de Reclamo de Tierra",
+    "Desc": "El multiplicador de protección del Bloque de Reclamo de Tierra cuando el jugador está en línea. Indica el multiplicador de dureza del Bloque de Reclamo de Tierra cuando el jugador está en línea, 0 significa invencibilidad, predeterminado 4 veces"
+  },
+  "LandClaimOfflineDurabilityModifier": {
+    "Group": "Opciones de Piedra de Reclamo de Tierra",
+    "Desc": "El multiplicador de protección del Bloque de Reclamo de Tierra cuando el jugador está desconectado. Indica el multiplicador de dureza del Bloque de Reclamo de Tierra cuando el jugador está desconectado, 0 significa invencibilidad, predeterminado 4 veces"
+  },
+  "LandClaimOfflineDelay": {
+    "Group": "Opciones de Piedra de Reclamo de Tierra",
+    "Desc": "El número de minutos después de que el jugador sale del juego, para que el Bloque de Reclamo de Tierra cambie de en línea a desconectado. El valor predeterminado es 0"
+  },
+  "DynamicMeshEnabled": {
+    "Group": "Otros",
+    "Desc": "Si se debe habilitar el sistema de malla dinámica"
+  },
+  "DynamicMeshLandClaimOnly": {
+    "Group": "Otros",
+    "Desc": "Si el sistema de malla dinámica solo es válido en el área de Bloque de Reclamo de Tierra (LCB) del jugador"
+  },
+  "DynamicMeshLandClaimBuffer": {
+    "Group": "Otros",
+    "Desc": "Radio del bloque LCB de malla dinámica"
+  },
+  "DynamicMeshMaxItemCache": {
+    "Group": "Otros",
+    "Desc": "Caché máximo de elementos de malla dinámica. Cuántos proyectos se pueden procesar simultáneamente, cuanto mayor sea el valor, más RAM se utilizará"
+  },
+  "TwitchServerPermission": {
+    "Group": "Otros",
+    "Desc": "Nivel de permiso requerido para usar la integración de Twitch en el servidor"
+  },
+  "TwitchBloodMoonAllowed": {
+    "Group": "Otros",
+    "Desc": "Si se permite la Luna de Sangre en Twitch. Si el servidor permite operaciones de Twitch durante una Luna de Sangre, pueden aparecer zombies adicionales durante la Luna de Sangre, lo que puede causar retraso en el servidor"
+  },
+  "QuestProgressionDailyLimit": {
+    "Group": "Otros",
+    "Desc": "Límite diario de progreso de misiones. Limita la cantidad de misiones que un jugador puede completar cada día para ayudar a aumentar su nivel de misiones. Las misiones por encima del límite aún se pueden completar para recibir recompensas"
+  }
+}
