@@ -1,0 +1,224 @@
+{
+  "GlobalSettings": {
+    "GlobalServerName": "[FFFFFF]Server",
+    "WhisperServerName": "[FF0000]Server",
+    "ChatCommandPrefix": "",
+    "ChatCommandSeparator": "-",
+    "HandleChatMessageError": "[FF0000]Sistem hatası, lütfen sunucu yöneticisiyle iletişime geçin.",
+    "TeleZombieCheck": true,
+    "TeleDisableTip": "[00FF00]Teleportasyon devre dışı. Çevrenin güvenli olduğundan emin olun.",
+    "KillZombieTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]Bir zombiyi öldürdünüz ve 1 puan kazandınız\"",
+        "ty-cpp {EntityId} 1"
+      ]
+    },
+    "DeathTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]Öldünüz, 1 puan kaybettiniz\"",
+        "ty-cpp {EntityId} -1"
+      ]
+    },
+    "BlockFamilySharingAccount": false,
+    "IsEnablePlayerInitialSpawnPoint": false,
+    "PlayerInitialPosition": null,
+    "EnableAutoZombieCleanup": false,
+    "AutoZombieCleanupThreshold": 128,
+    "EnableXmlsSecondaryOverwrite": false,
+    "HideCommandInChat": false
+  },
+  "GameNoticeSettings": {
+    "IsEnabled": false,
+    "WelcomeNotice": "Hoş geldin, hayatta kalan.",
+    "RotatingNotices": [],
+    "RotatingInterval": 300,
+    "BloodMoonNotice1": "Bir sonraki kanlı ay, {BloodMoonDays} gün içinde.",
+    "BloodMoonNotice2": "Bir sonraki kanlı ay bugün. {BloodMoonStartTime} saatinde başlayacak.",
+    "BloodMoonNotice3": "Kanlı ay geldi, {BloodMoonEndTime} saatine kadar dayan."
+  },
+  "PointsSystemSettings": {
+    "IsEnabled": false,
+    "SignInCmd": "giriş",
+    "SignInInterval": 3600,
+    "SignInRewardPoints": 10,
+    "SignInSuccessTip": "[00FF00]Başarılı giriş! Ödül puanları: {SignInRewardPoints}, Şu anki puanınız: {PlayerTotalPoints}",
+    "SignInFailureTip": "[FFFF00]Giriş başarısız! Lütfen daha sonra tekrar deneyin.",
+    "QueryPointsCmd": "puan",
+    "QueryPointsTip": "[00FF00]Şu anki puanınız: {PlayerTotalPoints}",
+    "IsCurrencyExchangeEnabled": false,
+    "CurrencyToPointsExchangeRate": "1",
+    "CurrencyExchangeCmd": "degistir",
+    "ExchangeSuccessTip": "[00FF00]Ticaret başarılı! Harcanan para: {CurrencyAmount}, Şu anki puanınız: {PlayerTotalPoints}",
+    "ExchangeFailureTip": "[FFFF00]Ticaret başarısız! Lütfen Duke'nun kumarhane jetonlarını hazırlayın veya giriş yapıp tekrar deneyin"
+  },
+  "GameStoreSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "satınal",
+    "BuyCmdPrefix": "satinal",
+    "GoodsItemTip": "[FFFFFF]Satın almak için [00FF00]satinal-{GoodsName}[FFFFFF], [00FF00]Fiyat: [FF00FF]{Price}",
+    "BuySuccessTip": "[00FF00]Satın alma başarılı!",
+    "PointsNotEnoughTip": "[00FF00]Yeterli puan yok, gereken: {Price}",
+    "NoGoods": "[00FF00]Mevcut ürün yok."
+  },
+  "TeleportCitySettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "şehir",
+    "TeleCmdPrefix": "şehir",
+    "TeleInterval": 60,
+    "LocationItemTip": "[FFFFFF]Işınlanmak için [00FF00]Şehir-{CityID}[FFFFFF]'i girin: [00FF00]{CityName}[FFFFFF], Gerekli puan: [FF00FF]{PointsRequired}",
+    "TeleSuccessTip": "[00FF00]Oyuncu: {PlayerName}, şu şehre teleport oldu: {CityName}",
+    "PointsNotEnoughTip": "[00FF00]Yeterli puan yok, gereken: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleport beklemede... Kalan süre: {CooldownSeconds} saniye.",
+    "NoLocation": "[00FF00]Mevcut şehir konumu yok."
+  },
+  "TeleportFriendSettings": {
+    "IsEnabled": false,
+    "TeleCmdPrefix": "teleport",
+    "TeleInterval": 60,
+    "PointsRequired": 2,
+    "TeleSuccessTip": "[00FF00] Oyuncu: {PlayerName}, şu kişiye teleport oldu: {TargetName}",
+    "PointsNotEnoughTip": "[00FF00]Yeterli puan yok, gereken: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleport beklemede... Kalan süre: {CooldownSeconds} saniye.",
+    "TargetNotFoundTip": "[FF00FF]Teleport hedefi bulunamadı, [FFFFFF]teleport olmak için. [00FF00]/teleport arkadaş ismini girin.",
+    "IsFriendBypass": false,
+    "TeleConfirmTip": "[00FF00]Oyuncu: {PlayerName}, size ışınlanmak istiyor, kabul etmek için Kabul yazin, reddetmek için Reddet yazin",
+    "AcceptTele": "Kabul",
+    "RejectTele": "Reddet",
+    "TargetRejectTeleTip": "[FF0000]Diğer taraf işinlanma isteğinizi reddetti",
+    "KeepDuration": 30
+  },
+  "TeleportHomeSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "ev",
+    "TeleInterval": 60,
+    "SetHomeCmdPrefix": "evAyarla",
+    "SetCountLimit": 3,
+    "PointsRequiredForSet": 2,
+    "DeleteHomeCmdPrefix": "evSil",
+    "TeleHomeCmdPrefix": "ev",
+    "PointsRequiredForTele": 2,
+    "NoHomeTip": "[00FF00]Henüz bir ev ayarlamadınız, ayarlamak için /evAyarla komutunu kullanın.",
+    "LocationItemTip": "[FFFFFF]Girin: [00FF00]ev-{HomeName} [FFFFFF]şu konuma gitmek için [FF0000]{HomeName}[00FF00]",
+    "OverLimitTip": "[00FF00]Maksimum ev sayısını aştınız. En fazla 3 ev ayarlayabilirsiniz.",
+    "SetPointsNotEnoughTip": "[00FF00]Yeterli puan yok, gereken: 2",
+    "SetSuccessTip": "[00FF00]Başarıyla ayarlandı.",
+    "OverwriteSuccessTip": "[00FF00]Koordinatlar başarıyla üzerine yazıldı.",
+    "DeleteSuccessTip": "[00FF00]Başarıyla silindi.",
+    "HomeNotFoundTip": "[00FF00]Belirtilen ev bulunamadı.",
+    "CoolingTip": "[00FF00]Teleport beklemede... Kalan süre: {CooldownSeconds} saniye.",
+    "TelePointsNotEnoughTip": "[00FF00]Yeterli puan yok! Gereken: 2",
+    "TeleSuccessTip": "[00FF00]Oyuncu: {PlayerName} şu evine teleport oldu: {HomeName}"
+  },
+  "AutoBackupSettings": {
+    "IsEnabled": false,
+    "Interval": 7200,
+    "RetainedFileCountLimit": 12,
+    "ResetIntervalAfterManualBackup": true,
+    "SkipIfThereAreNoPlayers": true,
+    "AutoBackupOnServerStartup": true,
+    "ArchiveFolder": "LSTY_Data/Backup"
+  },
+  "VipGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "VIP",
+    "HasClaimedTip": "[00FF00]Hediye paketinizi zaten aldınız~",
+    "NonVipTip": "[00FF00]Henüz VIP değilsiniz~",
+    "ClaimSuccessTip": "[00FF00]Tebrikler, hediye paketini başarıyla aldınız: {GiftName}"
+  },
+  "CdKeyRedeemSettings": {
+    "IsEnabled": false,
+    "HasAlreadyRedeemedTip": "[00FF00]Bu CD anahtarını zaten kullandınız.",
+    "HasReachedMaxRedemptionLimitTip": "[00FF00]Maksimum kullanım sınırına ulaştınız.",
+    "HasRedemptionCodeExpiredTip": "[00FF00]Kullanım kodunun süresi doldu.",
+    "RedeemSuccessTip": "[00FF00]CD anahtarını başarıyla kullandınız."
+  },
+  "ColoredChatSettings": {
+    "IsEnabled": false,
+    "GlobalDefault": "FFFFFF",
+    "WhisperDefault": "D00000",
+    "FriendsDefault": "00BB00",
+    "PartyDefault": "FFCC00"
+  },
+  "BossKillRewardSettings": {
+    "IsEnabled": false,
+    "KillTip": "{EntityName} adlı patronu öldürdünüz ve 1 puan kazandınız",
+    "EnemyRewardMap": {},
+    "FallbackReward": 1
+  },
+  "TaskScheduleSettings": {
+    "IsEnabled": false
+  },
+  "LevelGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "lq",
+    "HasClaimedTip": "[00FF00]Bu seviye hediyesini zaten aldınız!",
+    "LevelNotEnoughTip": "[00FF00]Seviyeniz yeterli değil, {RequiredLevel} seviyesine ulaşmanız gerekiyor!",
+    "NoGiftTip": "[00FF00]Alınacak seviye hediyeniz yok!",
+    "ClaimSuccessTip": "[00FF00]Tebrikler! {GiftName} hediyesini başarıyla aldınız!"
+  },
+  "MuteCommandAreaSettings": {
+    "IsEnabled": false,
+    "MutedCommandTip": "[FF0000]Bu komut bu bölgede devre dışı: {command}[-]"
+  },
+  "ChunkResetSettings": {
+    "IsEnabled": false,
+    "Interval": 3600,
+    "SkipIfPlayersInArea": true,
+    "RemoveEnemiesBeforeReset": true,
+    "ResetNoticeTip": "",
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffResetArea",
+    "IsLandClaimBanEnabled": false,
+    "IsBedrollBanEnabled": false,
+    "LandClaimBanTip": "[FF0000]Sıfırlama bölgelerinde toprak talep taşı yerleştirilemez![-]",
+    "BedrollBanTip": "[FF0000]Sıfırlama bölgelerinde uyku tulumu yerleştirilemez![-]",
+    "IsPoiLandClaimBanEnabled": false,
+    "IsPoiBedrollBanEnabled": false,
+    "PoiLandClaimBanTip": "[FF0000]POI binalarında toprak talep taşı yerleştirilemez![-]",
+    "PoiBedrollBanTip": "[FF0000]POI binalarında uyku tulumu yerleştirilemez![-]"
+  },
+  "TraderProtectSettings": {
+    "IsEnabled": false,
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffTraderProtect"
+  },
+  "PvpVeSettings": {
+    "IsEnabled": false,
+    "DefaultKillMode": 2,
+    "DefaultDropOnDeath": 0,
+    "DefaultLandClaimOnline": 4,
+    "DefaultLandClaimOffline": 8,
+    "DefaultBuffName": "buffPvpVeNoticePve"
+  },
+  "PointLogSettings": {
+    "IsEnabled": false,
+    "LogShop": true,
+    "LogSignIn": true,
+    "LogTransfer": true,
+    "LogTeleport": true,
+    "LogZombieKill": false,
+    "LogLottery": true,
+    "LogCdKey": true,
+    "LogLevelGift": true,
+    "LogVipGift": true,
+    "LogWebApi": true,
+    "LogExternal": true,
+    "LogOther": true,
+    "RetentionDays": 0
+  },
+  "LotterySettings": {
+    "IsEnabled": true,
+    "DrawCommand": "cj",
+    "QueryListCmd": "cjlist",
+    "DrawSuccessTip": "[00FF00]Tebrikler! Kazandınız: {ItemName} x{Count}![-]",
+    "PointsNotEnoughTip": "[FF0000]Yeterli puan yok! Çekiliş {DrawCost} puan gerektirir, {Points} puanınız var[-]",
+    "CoolingTip": "[FFFF00]Çekiliş bekleme süresinde! Lütfen {Seconds} saniye bekleyin[-]",
+    "LotteryNotFoundTip": "[FF0000]Çekiliş havuzu bulunamadı![-]",
+    "LotteryDisabledTip": "[FF0000]Bu çekiliş havuzu devre dışı![-]",
+    "LotteryEmptyTip": "[FF0000]Çekiliş havuzunda öğe yok![-]",
+    "LotteryItemTip": "[00FFFF]ID: {LotteryId} | Ad: {LotteryName} | Maliyet: {DrawCost} puan | Bekleme: {DrawInterval}s[-]",
+    "NoLottery": "[FFFF00]Kullanılabilir çekiliş havuzu yok![-]"
+  }
+}

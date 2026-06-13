@@ -1,0 +1,398 @@
+{
+  "ServerName": {
+    "Group": "Serveurs",
+    "Desc": "Nom du serveur. Remplissez avec n'importe quel nom que vous aimez"
+  },
+  "ServerDescription": {
+    "Group": "Serveurs",
+    "Desc": "Description du serveur. Remplissez avec n'importe quelle description du serveur que vous aimez"
+  },
+  "ServerWebsiteURL": {
+    "Group": "Serveurs",
+    "Desc": "Adresse du site web du serveur. Elle sera affichée comme un lien cliquable dans le navigateur du serveur"
+  },
+  "ServerPassword": {
+    "Group": "Serveurs",
+    "Desc": "Mot de passe du serveur. Le mot de passe que les joueurs utilisent pour entrer sur le serveur de jeu"
+  },
+  "ServerLoginConfirmationText": {
+    "Group": "Serveurs",
+    "Desc": "Texte de confirmation de connexion au serveur. Si cette option est activée, les utilisateurs verront ce message en rejoignant le serveur et devront le confirmer avant de continuer. Pour des modifications plus complexes de cette fenêtre, modifiez la fenêtre serverjoinrulesdialog dans XUi"
+  },
+  "Region": {
+    "Group": "Serveurs",
+    "Desc": "La région où se trouve le serveur. Les valeurs possibles sont : Asie, AmériqueDuNordEst, AmériqueDuNordOuest, AmériqueCentrale, AmériqueDuSud, Europe, Russie, MoyenOrient, Afrique, Océanie"
+  },
+  "Language": {
+    "Group": "Serveurs",
+    "Desc": "La langue principale des joueurs sur le serveur. Utilisez le nom anglais de n'importe quelle langue que les joueurs souhaitent rechercher. Les valeurs possibles sont : english, german, spanish, french, italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese"
+  },
+  "ServerPort": {
+    "Group": "Réseau",
+    "Desc": "Le port sur lequel le programme du serveur écoute. Si vous souhaitez que les ordinateurs sur le même réseau local le voient comme un serveur LAN, maintenez-le dans la plage de 26900 à 26905 ou de 27015 à 27020"
+  },
+  "ServerVisibility": {
+    "Group": "Réseau",
+    "Desc": "Visibilité du serveur. 2 = public, 1 = visible uniquement par les amis, 0 = non listé. Comme vous n'êtes jamais ami avec le serveur dédié, le configurer sur 1 ne fonctionnera que si le premier joueur se connecte manuellement par IP"
+  },
+  "ServerDisabledNetworkProtocols": {
+    "Group": "Réseau",
+    "Desc": "Protocoles réseau désactivés par le serveur. Séparés par des virgules, valeurs possibles : LiteNetLib, SteamNetworking. Les serveurs dédiés doivent désactiver SteamNetworking s'il n'y a pas de routeur NAT entre l'utilisateur et le serveur, ou si la redirection de port est correctement configurée"
+  },
+  "ServerMaxWorldTransferSpeedKiBs": {
+    "Group": "Réseau",
+    "Desc": "Vitesse maximale de transfert de monde du serveur. Vitesse maximale (en kiB/s) pour les transferts de monde lors de la première connexion si le client n'a pas encore de monde. La valeur maximale est d'environ 1300 kiB/s, même si vous la réglez plus haut"
+  },
+  "ServerMaxPlayerCount": {
+    "Group": "Emplacements",
+    "Desc": "Nombre maximum de joueurs sur le serveur. Nombre maximum de joueurs autorisés en ligne en même temps"
+  },
+  "ServerReservedSlots": {
+    "Group": "Emplacements",
+    "Desc": "Emplacements réservés du serveur. Au-delà du nombre maximum de joueurs, plusieurs emplacements ne peuvent être utilisés que par des joueurs avec un certain niveau de permission."
+  },
+  "ServerReservedSlotsPermission": {
+    "Group": "Emplacements",
+    "Desc": "Permission des emplacements réservés du serveur. Le niveau de permission requis pour utiliser les emplacements réservés mentionnés ci-dessus"
+  },
+  "ServerAdminSlots": {
+    "Group": "Emplacements",
+    "Desc": "Emplacements administrateur du serveur. Même si le serveur a atteint le nombre maximum de joueurs, autant d'administrateurs peuvent encore se joindre"
+  },
+  "ServerAdminSlotsPermission": {
+    "Group": "Emplacements",
+    "Desc": "Permissions des emplacements administrateur du serveur. Le niveau de permission requis pour utiliser les emplacements administrateur mentionnés ci-dessus"
+  },
+  "WebDashboardEnabled": {
+    "Group": "Interface d'Administration",
+    "Desc": "Activer/désactiver le tableau de bord web."
+  },
+  "WebDashboardPort": {
+    "Group": "Interface d'Administration",
+    "Desc": "Port pour le tableau de bord web."
+  },
+  "WebDashboardUrl": {
+    "Group": "Interface d'Administration",
+    "Desc": "URL externe pour le tableau de bord web. (Si non utilisé, seule l'IP publique du serveur, par exemple si le tableau de bord web est derrière un proxy inverse). Doit être une URL complète, par exemple : https://domaineDuProxyInverse.tld:1234/. Peut être laissé vide si l'IP publique et le port du tableau de bord sont utilisés directement."
+  },
+  "EnableMapRendering": {
+    "Group": "Interface d'Administration",
+    "Desc": "Activer le rendu de la carte. Activer/désactiver le rendu des cartes sous forme d'images de tuiles lors de la navigation sur les cartes. Par exemple, le tableau de bord web peut utiliser cela pour afficher des vues de cartes."
+  },
+  "TelnetEnabled": {
+    "Group": "Interface d'Administration",
+    "Desc": "Si le service Telnet est activé. Activer ou désactiver le service Telnet <true,false>"
+  },
+  "TelnetPort": {
+    "Group": "Interface d'Administration",
+    "Desc": "Port Telnet. Port du serveur Telnet"
+  },
+  "TelnetPassword": {
+    "Group": "Interface d'Administration",
+    "Desc": "Mot de passe d'accès Telnet. Si aucun mot de passe n'est défini, le serveur n'écoutera que sur l'interface de boucle locale"
+  },
+  "TelnetFailedLoginLimit": {
+    "Group": "Interface d'Administration",
+    "Desc": "Limite d'échecs de connexion Telnet. Après qu'un client distant ait entré un mot de passe incorrect plusieurs fois, le client sera bloqué pour se connecter à l'interface Telnet"
+  },
+  "TelnetFailedLoginsBlocktime": {
+    "Group": "Interface d'Administration",
+    "Desc": "Temps de blocage pour échecs de connexion. Après avoir dépassé la limite d'échecs de connexion, combien de temps durera le blocage (en secondes) ?"
+  },
+  "TerminalWindowEnabled": {
+    "Group": "Interface d'Administration",
+    "Desc": "Fenêtre de terminal activée. Afficher la fenêtre de terminal pour la sortie des journaux/l'entrée des commandes (Windows uniquement)"
+  },
+  "AdminFileName": {
+    "Group": "Emplacements des Dossiers et Fichiers",
+    "Desc": "Nom du fichier administrateur du serveur. Chemin relatif à SaveGameFolder"
+  },
+  "UserDataFolder": {
+    "Group": "Emplacements des Dossiers et Fichiers",
+    "Desc": "Dossier de données utilisateur. Utilisez cela pour remplacer l'endroit où le serveur stocke toutes les données générées, y compris les mondes générés par RWG. N'oubliez pas de décommenter"
+  },
+  "SaveGameFolder": {
+    "Group": "Emplacements des Dossiers et Fichiers",
+    "Desc": "Dossier de sauvegarde des jeux. Utilisé uniquement pour remplacer le chemin de sauvegarde du jeu. N'oubliez pas de décommenter"
+  },
+  "ServerAllowCrossplay": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Autoriser le jeu multiplateforme sur le serveur. Active/désactive le jeu multiplateforme. Les serveurs avec jeu multiplateforme ne seront trouvés dans les recherches et accessibles que si les sanctions ne sont pas ignorées et qu'ils ont un nombre par défaut ou inférieur d'emplacements de joueurs"
+  },
+  "EACEnabled": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Si l'anti-triche EAC est activé. Si la fonction anti-triche doit être activée (doit être désactivée pour les serveurs piratés et chinois)"
+  },
+  "IgnoreEOSSanctions": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Ignorer les sanctions EOS. Ignorer les sanctions EOS lors de l'autorisation des joueurs à rejoindre"
+  },
+  "HideCommandExecutionLog": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Masquer le journal d'exécution des commandes. 0 = Tout afficher, 1 = Masquer uniquement de Telnet/Tableau de bord, 2 = Masquer également des clients de jeu distants, 3 = Tout masquer"
+  },
+  "MaxUncoveredMapChunksPerPlayer": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "La zone que chaque joueur peut explorer sur la carte du jeu. Par conséquent, la taille maximale du fichier de carte par joueur est limitée à (x * 512 octets) et la zone de couverture est de (x * 256 mètres carrés). La valeur par défaut de 131072 signifie qu'un maximum de 32 kilomètres carrés de carte peut être découvert à tout moment"
+  },
+  "PersistentPlayerProfiles": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Si le profil du joueur peut être modifié. S'il est désactivé, les joueurs peuvent rejoindre avec n'importe quel profil sélectionné. S'il est activé, ils rejoindront en utilisant le fichier de configuration avec lequel ils ont rejoint pour la dernière fois"
+  },
+  "MaxChunkAge": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Nombre de jours dans le jeu qu'un fragment sera réinitialisé à son état d'origine après avoir été visité s'il n'a pas été revisité ou protégé (par exemple, en ayant une pierre de territoire ou un sac de couchage à proximité)"
+  },
+  "SaveDataLimit": {
+    "Group": "Autres Paramètres Techniques",
+    "Desc": "Limite de données sauvegardées. Espace disque maximum autorisé par jeu sauvegardé, en Mo. Lorsque cette limite est atteinte, les fragments de jeu sauvegardés peuvent être réinitialisés de force à leur état d'origine pour libérer de l'espace. Les valeurs négatives désactivent la limite"
+  },
+  "GameWorld": {
+    "Group": "Monde du Jeu",
+    "Desc": "Carte du monde du jeu. Navezgane[Carte Fixe], RWG[Carte Aléatoire] (voir les options 'Graine du Monde' et 'Taille du Monde' ci-dessous) ou tout nom de monde existant dans le dossier 'Worlds' (par exemple, 'Navezgane', 'PREGEN01'...)"
+  },
+  "WorldGenSeed": {
+    "Group": "Monde du Jeu",
+    "Desc": "Graine du Monde. Si RWG, c'est la graine pour générer un nouveau monde. Si un monde avec le même nom existe déjà, il sera chargé directement"
+  },
+  "WorldGenSize": {
+    "Group": "Monde du Jeu",
+    "Desc": "Taille Générée du Monde. Si RWG, contrôle la largeur et la hauteur du monde créé. Les tailles officiellement supportées vont de 6144 à 10240 et doivent être des multiples de 2048, par exemple, 6144, 8192, 10240"
+  },
+  "GameName": {
+    "Group": "Monde du Jeu",
+    "Desc": "Nom du Jeu. Comme vous souhaitez que votre jeu soit nommé, cela affectera le nom du jeu sauvegardé et la graine utilisée lors du placement des décorations (arbres, etc.) dans le monde. Si vous créez un monde RWG, cela ne contrôle pas la disposition générale du monde"
+  },
+  "GameMode": {
+    "Group": "Monde du Jeu",
+    "Desc": "Mode de Jeu. Mode de Jeu Survie (multijoueur)"
+  },
+  "GameDifficulty": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Difficulté du Jeu. Difficulté de 0 à 5, 0 étant le plus facile et 5 le plus difficile"
+  },
+  "BlockDamagePlayer": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Dommages aux Blocs par Joueur. Dommages infligés aux blocs par le joueur (pourcentage, exprimé en nombre entier)"
+  },
+  "BlockDamageAI": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Dommages aux Blocs par l'IA. Dommages infligés aux blocs par l'IA (pourcentage, exprimé en nombre entier)"
+  },
+  "BlockDamageAIBM": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Dommages aux Blocs par l'IA pendant la Lune de Sang. Dommages causés aux blocs par l'IA pendant la Lune de Sang (pourcentage, exprimé en nombre entier)"
+  },
+  "XPMultiplier": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Multiplicateur de Gain d'XP. Multiplicateur de Gain d'XP pour les Joueurs (pourcentage, exprimé en nombre entier)"
+  },
+  "PlayerSafeZoneLevel": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Niveau de Zone Sûre pour les Joueurs Débutants. Si le niveau du joueur est inférieur ou égal à ce niveau, une zone sûre (sans ennemis) sera créée lors de l'apparition. Si le joueur est en dessous de ce niveau, les zombies n'apparaîtront plus autour de lui"
+  },
+  "PlayerSafeZoneHours": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Durée de la Zone Sûre. Le temps effectif de la zone sûre du joueur (en heures de jeu)"
+  },
+  "BuildCreate": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Mode Créatif. Active ou désactive le mode triche"
+  },
+  "DayNightLength": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Temps réel d'une journée dans le jeu (en minutes). Indique combien de minutes de temps réel équivalent à une journée dans le jeu"
+  },
+  "DayLightLength": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Durée de la Lumière du Jour dans le jeu. Indique combien d'heures de lumière du jour il y a dans une journée (par défaut 18 heures)"
+  },
+  "BiomeProgression": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Progression du biome. Active les dangers du biome. La météo et les tempêtes ne sont pas affectées par ce paramètre"
+  },
+  "StormFreq": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Fréquence des tempêtes. Ajuste la fréquence des tempêtes. 0% les désactive. Valeurs vanilla : 0, 50, 100, 150, 200, 300, 400, 500"
+  },
+  "DeathPenalty": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Pénalité après la mort. 0 = Aucune. 1 = Par défaut : Pénalité classique d'XP. 2 = Blessé : Vous conserverez la plupart de vos debuffs. Vous réapparaîtrez avec 50% de nourriture et d'eau. 3 = Mort Permanente : Votre personnage sera complètement réinitialisé. Vous réapparaîtrez dans une partie sauvegardée)"
+  },
+  "DropOnDeath": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Chute à la mort. 0 = Aucune, 1 = Tout, 2 = Seulement la Ceinture d'Outils, 3 = Seulement le Sac à Dos, 4 = Tout Supprimer"
+  },
+  "DropOnQuit": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Chute à la déconnexion. 0 = Aucune, 1 = Tout, 2 = Seulement la Ceinture d'Outils, 3 = Seulement le Sac à Dos"
+  },
+  "BedrollDeadZoneSize": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Taille de la Zone Morte du Sac de Couchage (c'est-à-dire un rayon de boîte avec chaque côté deux fois la longueur de la valeur donnée) où les zombies n'apparaîtront pas. Toute zone de dormeurs dégagée qui touche la Zone Morte du Sac de Couchage ne réapparaîtra pas après avoir été dégagée"
+  },
+  "BedrollExpiryTime": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Temps d'expiration du Sac de Couchage. Le nombre de jours dans le monde réel qu'un sac de couchage restera actif après que le propriétaire ait été en ligne pour la dernière fois"
+  },
+  "AllowSpawnNearFriend": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Autoriser l'apparition près d'un ami. Les nouveaux joueurs rejoignant le serveur pour la première fois peuvent-ils choisir d'apparaître près d'un ami jouant en même temps ? 0 = Désactivé, 1 = Toujours, 2 = Uniquement près des amis dans le biome forestier"
+  },
+  "CameraRestrictionMode": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Mode de restriction de caméra. 0 = Les joueurs peuvent basculer librement entre les modes de caméra à la première et à la troisième personne, 1 = Limité à la première personne, 2 = Limité à la troisième personne"
+  },
+  "JarRefund": {
+    "Group": "Difficulté du Jeu",
+    "Desc": "Remboursement de bocal. 0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100% Le pourcentage de remboursement du bocal vide après la consommation d'un objet"
+  },
+  "MaxSpawnedZombies": {
+    "Group": "Performance",
+    "Desc": "Nombre maximum de zombies générés. Ce paramètre couvre toute la carte, il ne peut y avoir que tant de zombies sur toute la carte en même temps. Modifier ce paramètre peut avoir un impact significatif sur les performances"
+  },
+  "MaxSpawnedAnimals": {
+    "Group": "Performance",
+    "Desc": "Nombre maximum de zombies générés. Si vous avez un grand nombre de joueurs sur votre serveur, vous pouvez augmenter cette limite pour ajouter plus de faune. Les animaux ne consomment pas autant de CPU que les zombies. Remarque : Cela ne fera pas apparaître plus d'animaux de manière arbitraire : le système de génération de biomes ne générera qu'un certain nombre d'animaux dans une zone donnée, mais si vous avez une grande base de joueurs dispersée, vous pouvez atteindre la limite, vous pouvez donc l'augmenter"
+  },
+  "ServerMaxAllowedViewDistance": {
+    "Group": "Performance",
+    "Desc": "Distance de vision maximale autorisée pour les clients (6 - 12). A un impact significatif sur l'utilisation de la mémoire et les performances"
+  },
+  "MaxQueuedMeshLayers": {
+    "Group": "Performance",
+    "Desc": "Le nombre maximum de couches de maillage de fragments qui peuvent être mises en file d'attente pendant la génération de maillage. Réduire cette valeur augmentera l'utilisation de la mémoire, mais peut augmenter le temps de génération des fragments"
+  },
+  "EnemySpawnMode": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Activer/désactiver la génération d'ennemis."
+  },
+  "EnemyDifficulty": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Intensité des zombies. 0 = normal, 1 = frénésie"
+  },
+  "ZombieFeralSense": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Sens Féral des Zombies. 0-3 (désactivé, jour, nuit, tout)"
+  },
+  "ZombieMove": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Mouvement des zombies. 0-4 (marcher, trotter, courir, sprinter, cauchemar)"
+  },
+  "ZombieMoveNight": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Mouvement nocturne des zombies. 0-4 (marcher, trotter, courir, sprinter, cauchemar)"
+  },
+  "ZombieFeralMove": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Mouvement Féral des Zombies. 0-4 (Marcher, Trotter, Courir, Sprinter, Cauchemar)"
+  },
+  "ZombieBMMove": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Mouvement BM des Zombies. 0-4 (Marcher, Trotter, Courir, Sprinter, Cauchemar)"
+  },
+  "AISmellMode": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Mode d'odorat de l'IA. 0-5 (désactivé, marcher, trotter, courir, sprinter, cauchemar)"
+  },
+  "BloodMoonFrequency": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Fréquence de la Lune de Sang. À quelle fréquence (en jours) une Lune de Sang apparaît. La régler sur 0 signifie qu'il n'y aura pas de Lune de Sang"
+  },
+  "BloodMoonRange": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Plage de la Lune de Sang. Le jour réel de la Lune de Sang peut s'écarter du paramètre précédent d'un nombre aléatoire de jours. Lorsque cette valeur est définie sur 0, la Lune de Sang apparaîtra à temps tous les N jours spécifiés dans la Fréquence de la Lune de Sang"
+  },
+  "BloodMoonWarning": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Avertissement de la Lune de Sang. Le nombre d'heures après le début du jour rouge de la Lune de Sang. Lorsque cela est réglé sur -1, le rouge ne s'affichera jamais."
+  },
+  "BloodMoonEnemyCount": {
+    "Group": "Paramètres des Zombies",
+    "Desc": "Nombre d'Ennemis lors de la Lune de Sang. Il s'agit du nombre de zombies qui peuvent être vivants (générés en même temps) à tout moment pour chaque joueur dans un Groupe de Zombies de la Lune de Sang, mais en multijoueur, MaxSpawnedZombies annule cela. Notez également que l'étape du jeu définit le nombre maximum de zombies par côté. Les valeurs basses de l'étape du jeu entraîneront un nombre de zombies inférieur à celui configuré dans le Nombre d'Ennemis lors de la Lune de Sang. Modifier ce paramètre peut avoir un impact significatif sur les performances."
+  },
+  "LootAbundance": {
+    "Group": "Butin",
+    "Desc": "Pourcentage d'Abondance des Objets de Recherche"
+  },
+  "LootRespawnDays": {
+    "Group": "Butin",
+    "Desc": "Jours de Réapparition des Objets de Recherche. Combien de jours il faut pour rafraîchir les ressources des objets de recherche"
+  },
+  "AirDropFrequency": {
+    "Group": "Butin",
+    "Desc": "Fréquence des largages aériens. Indique combien d'heures de jeu se fait un largage aérien, 0 = jamais"
+  },
+  "AirDropMarker": {
+    "Group": "Butin",
+    "Desc": "Marqueur de largage aérien. Détermine si un marqueur est ajouté sur la carte/boussole pour les largages aériens"
+  },
+  "PartySharedKillRange": {
+    "Group": "Multijoueur",
+    "Desc": "Portée de mise à mort partagée en groupe. La distance requise pour obtenir des récompenses de mise à mort partagée en groupe et des récompenses d'objectif de mission de mise à mort en groupe"
+  },
+  "PlayerKillingMode": {
+    "Group": "Multijoueur",
+    "Desc": "Paramètre de meurtre de joueurs (0 = pas de meurtres, 1 = seulement blesser les alliés, 2 = seulement blesser les étrangers, 3 = blesser tout le monde)"
+  },
+  "LandClaimCount": {
+    "Group": "Options de Taille de Réclamation de Terrain",
+    "Desc": "Nombre de Réclamations de Terrain. Le nombre maximum de Réclamations de Terrain autorisées par joueur"
+  },
+  "LandClaimSize": {
+    "Group": "Options de Taille de Réclamation de Terrain",
+    "Desc": "Portée de protection de la Réclamation de Terrain. L'unité est le bloc"
+  },
+  "LandClaimDeadZone": {
+    "Group": "Options de Taille de Réclamation de Terrain",
+    "Desc": "Portée de protection de la Réclamation de Terrain. La distance entre les Réclamations de Terrain. Les Réclamations de Terrain doivent être supérieures à cette distance pour être établies (sauf si vous êtes ami avec l'autre partie)"
+  },
+  "LandClaimExpiryTime": {
+    "Group": "Options de Taille de Réclamation de Terrain",
+    "Desc": "Nombre de jours de protection de la Réclamation de Terrain lorsque le joueur est déconnecté. Nombre de jours (en temps réel) que les Réclamations de Terrain sont valides après que le joueur soit déconnecté"
+  },
+  "LandClaimDecayMode": {
+    "Group": "Options de Taille de Réclamation de Terrain",
+    "Desc": "Mode de décomposition de la protection de la Réclamation de Terrain. Contrôle le mode de décomposition de la zone de terrain du joueur déconnecté. 0 = Lent (Linéaire), 1 = Rapide (Exponentiel), 2 = Aucun (Protection totale jusqu'à expiration)"
+  },
+  "LandClaimOnlineDurabilityModifier": {
+    "Group": "Options de Pierre de Réclamation de Terrain",
+    "Desc": "Le multiplicateur de protection de la Pierre de Réclamation de Terrain lorsque le joueur est en ligne. Indique le multiplicateur de dureté de la Pierre de Réclamation de Terrain lorsque le joueur est en ligne, 0 signifie invincibilité, par défaut 4 fois"
+  },
+  "LandClaimOfflineDurabilityModifier": {
+    "Group": "Options de Pierre de Réclamation de Terrain",
+    "Desc": "Le multiplicateur de protection de la Pierre de Réclamation de Terrain lorsque le joueur est déconnecté. Indique le multiplicateur de dureté de la Pierre de Réclamation de Terrain lorsque le joueur est déconnecté, 0 signifie invincibilité, par défaut 4 fois"
+  },
+  "LandClaimOfflineDelay": {
+    "Group": "Options de Pierre de Réclamation de Terrain",
+    "Desc": "Le nombre de minutes après que le joueur quitte le jeu pour que la dureté de la Pierre de Réclamation de Terrain passe de en ligne à déconnecté. La valeur par défaut est 0"
+  },
+  "DynamicMeshEnabled": {
+    "Group": "Autres",
+    "Desc": "Si le système de maillage dynamique doit être activé"
+  },
+  "DynamicMeshLandClaimOnly": {
+    "Group": "Autres",
+    "Desc": "Si le système de maillage dynamique n'est valide que dans la zone LCB du joueur"
+  },
+  "DynamicMeshLandClaimBuffer": {
+    "Group": "Autres",
+    "Desc": "Rayon du bloc LCB de maillage dynamique"
+  },
+  "DynamicMeshMaxItemCache": {
+    "Group": "Autres",
+    "Desc": "Cache maximum d'éléments de maillage dynamique. Combien de projets peuvent être traités simultanément, plus la valeur est élevée, plus la RAM sera utilisée"
+  },
+  "TwitchServerPermission": {
+    "Group": "Autres",
+    "Desc": "Niveau de permission requis pour utiliser l'intégration Twitch sur le serveur"
+  },
+  "TwitchBloodMoonAllowed": {
+    "Group": "Autres",
+    "Desc": "Si la Lune de Sang est autorisée sur Twitch. Si le serveur permet les opérations Twitch pendant une Lune de Sang, des zombies supplémentaires peuvent apparaître pendant la Lune de Sang, ce qui peut causer un décalage sur le serveur"
+  },
+  "QuestProgressionDailyLimit": {
+    "Group": "Autres",
+    "Desc": "Limite quotidienne de progression des quêtes. Limite le nombre de quêtes qu'un joueur peut accomplir chaque jour pour aider à augmenter son niveau de quête. Les quêtes au-dessus de la limite peuvent encore être accomplies pour recevoir des récompenses"
+  }
+}

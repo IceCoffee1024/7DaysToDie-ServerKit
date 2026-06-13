@@ -1,0 +1,224 @@
+{
+  "GlobalSettings": {
+    "GlobalServerName": "[FFFFFF]Server",
+    "WhisperServerName": "[FF0000]Server",
+    "ChatCommandPrefix": "",
+    "ChatCommandSeparator": "-",
+    "HandleChatMessageError": "[FF0000]Systemfehler, bitte kontaktieren Sie den Serveradministrator.",
+    "TeleZombieCheck": true,
+    "TeleDisableTip": "[00FF00]Übertragung ist verboten. Bitte prüfen Sie, ob Ihre Umgebung sicher ist.",
+    "KillZombieTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]Sie haben einen Zombie getötet, 1 Punkt verdient\"",
+        "ty-cpp {EntityId} 1"
+      ]
+    },
+    "DeathTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]Sie sind gestorben, 1 Punkt abgezogen point\"",
+        "ty-cpp {EntityId} -1"
+      ]
+    },
+    "BlockFamilySharingAccount": false,
+    "IsEnablePlayerInitialSpawnPoint": false,
+    "PlayerInitialPosition": null,
+    "EnableAutoZombieCleanup": false,
+    "AutoZombieCleanupThreshold": 128,
+    "EnableXmlsSecondaryOverwrite": false,
+    "HideCommandInChat": false
+  },
+  "GameNoticeSettings": {
+    "IsEnabled": false,
+    "WelcomeNotice": "Willkommen, Überlebender.",
+    "RotatingNotices": [],
+    "RotatingInterval": 300,
+    "BloodMoonNotice1": "Der nächste Blutmond ist in {BloodMoonDays} Tagen.",
+    "BloodMoonNotice2": "Der nächste Blutmond ist heute. Er beginnt um {BloodMoonStartTime}",
+    "BloodMoonNotice3": "Der Blutmond ist da, warte bis {BloodMoonEndTime}"
+  },
+  "PointsSystemSettings": {
+    "IsEnabled": false,
+    "SignInCmd": "si",
+    "SignInInterval": 3600,
+    "SignInRewardPoints": 10,
+    "SignInSuccessTip": "[00FF00]Anmeldung erfolgreich! Belohnungspunkte: {SignInRewardPoints}, Sie haben derzeit Punkte: {PlayerTotalPoints}",
+    "SignInFailureTip": "[FFFF00]Anmeldung fehlgeschlagen! Bitte kommen Sie später noch einmal.",
+    "QueryPointsCmd": "Punkte",
+    "QueryPointsTip": "[00FF00]Sie haben derzeit Punkte: {PlayerTotalPoints}",
+    "IsCurrencyExchangeEnabled": false,
+    "CurrencyToPointsExchangeRate": "1",
+    "CurrencyExchangeCmd": "dh",
+    "ExchangeSuccessTip": "[00FF00]Umtausch erfolgreich! Spielwährung verbraucht: {CurrencyAmount}, Sie haben derzeit Punkte: {PlayerTotalPoints}",
+    "ExchangeFailureTip": "[FFFF00]Umtausch fehlgeschlagen! Bitte bereiten Sie Duke Casino-Münzen vor oder melden Sie sich an, bevor Sie zurückkommen"
+  },
+  "GameStoreSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "kaufen",
+    "BuyCmdPrefix": "kaufen",
+    "GoodsItemTip": "[FFFFFF]Eingabe: [00FF00]kaufen-{GoodsId} [FFFFFF]kaufen [00FF00]{GoodsName}[FFFFFF], [00FF00]Preis: [FF00FF]{Preis}",
+    "BuySuccessTip": "[00FF00]Kauf erfolgreich!",
+    "PointsNotEnoughTip": "[00FF00]Nicht genug Punkte, Punkte erforderlich: {Preis}",
+    "NoGoods": "[00FF00]Keine Waren."
+  },
+  "TeleportCitySettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "Stadt",
+    "TeleCmdPrefix": "Stadt",
+    "TeleInterval": 60,
+    "LocationItemTip": "[FFFFFF]Eingabe: [00FF00]hc-{CityId} [FFFFFF]Teleport nach [00FF00]{CityName}[FFFFFF], Erforderliche Punkte: [FF00FF]{PointsRequired}",
+    "TeleSuccessTip": "[00FF00]Spieler: {PlayerName}, teleportiert nach: {CityName}",
+    "PointsNotEnoughTip": "[00FF00]Nicht genug Punkte, benötigte Punkte: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleport-Abkühlung... Verbleibende Zeit: {CooldownSeconds} Sekunden.",
+    "NoLocation": "[00FF00]Es gibt keinen Stadtstandort."
+  },
+  "TeleportFriendSettings": {
+    "IsEnabled": false,
+    "TeleCmdPrefix": "tele",
+    "TeleInterval": 60,
+    "PointsRequired": 2,
+    "TeleSuccessTip": "[00FF00] Spieler: {PlayerName}, Teleportiert zu: {TargetName}",
+    "PointsNotEnoughTip": "[00FF00]Punkte nicht genug, Punkte erforderlich: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleportkühlung... Verbleibende Zeit: {CooldownSeconds} Sekunden.",
+    "TargetNotFoundTip": "[FF00FF]Teleportziel nicht gefunden, geben Sie ein: [00FF00]/Telefreundname [FFFFFF]zum Teleportieren.",
+    "IsFriendBypass": false,
+    "TeleConfirmTip": "[00FF00]Spieler: {PlayerName}, möchte zu dir teleportiert werden, gib „Yes“ ein, um zuzustimmen, gib „No“ ein, um abzulehnen",
+    "AcceptTele": "Yes",
+    "RejectTele": "No",
+    "TargetRejectTeleTip": "[FF0000]Die andere Partei hat Ihre Übertragungsanfrage abgelehnt",
+    "KeepDuration": 30
+  },
+  "TeleportHomeSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "home",
+    "TeleInterval": 60,
+    "SetHomeCmdPrefix": "setHome",
+    "SetCountLimit": 3,
+    "PointsRequiredForSet": 2,
+    "DeleteHomeCmdPrefix": "delHome",
+    "TeleHomeCmdPrefix": "home",
+    "PointsRequiredForTele": 2,
+    "NoHomeTip": "[00FF00]Sie haben noch kein Zuhause festgelegt. Verwenden Sie bitte /setHome, um eines festzulegen.",
+    "LocationItemTip": "[FFFFFF]Eingabe: [00FF00]home-{HomeName} [FFFFFF]Übertragung nach [FF0000]{HomeName}[00FF00]",
+    "OverLimitTip": "[00FF00]Maximale Anzahl festgelegter Zuhause überschritten. Sie können bis zu 3 Heime einrichten.",
+    "SetPointsNotEnoughTip": "[00FF00]Punkte nicht genug, erforderliche Punkte: 2",
+    "SetSuccessTip": "[00FF00]Erfolgreich eingerichtet.",
+    "OverwriteSuccessTip": "[00FF00]Die alten Koordinaten wurden erfolgreich überschrieben.",
+    "DeleteSuccessTip": "[00FF00]Erfolgreich gelöscht.",
+    "HomeNotFoundTip": "[00FF00]Das angegebene Heim wurde nicht gefunden.",
+    "CoolingTip": "[00FF00]Teleportkühlung... Verbleibende Zeit: {CooldownSeconds} Sekunden.",
+    "TelePointsNotEnoughTip": "[00FF00]Nicht genügend Punkte! Erforderliche Punkte: 2",
+    "TeleSuccessTip": "[00FF00]Spieler: {PlayerName} hat sich zu seinem Zuhause teleportiert: {HomeName}"
+  },
+  "AutoBackupSettings": {
+    "IsEnabled": false,
+    "Interval": 7200,
+    "RetainedFileCountLimit": 12,
+    "ResetIntervalAfterManualBackup": true,
+    "SkipIfThereAreNoPlayers": true,
+    "AutoBackupOnServerStartup": true,
+    "ArchiveFolder": "LSTY_Data/Backup"
+  },
+  "VipGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "VIP",
+    "HasClaimedTip": "[00FF00]Sie haben das Geschenkpaket erhalten~",
+    "NonVipTip": "[00FF00]Sie sind noch kein VIP~",
+    "ClaimSuccessTip": "[00FF00]Herzlichen Glückwunsch zum erfolgreichen Erhalt des Geschenkpakets: {GiftName}"
+  },
+  "CdKeyRedeemSettings": {
+    "IsEnabled": false,
+    "HasAlreadyRedeemedTip": "[00FF00]Du hast diesen CD-Key bereits eingelöst.",
+    "HasReachedMaxRedemptionLimitTip": "[00FF00]Du hast das maximale Einlöselimit erreicht.",
+    "HasRedemptionCodeExpiredTip": "[00FF00]Der Einlösecode ist abgelaufen.",
+    "RedeemSuccessTip": "[00FF00]Du hast den CD-Key erfolgreich eingelöst."
+  },
+  "ColoredChatSettings": {
+    "IsEnabled": false,
+    "GlobalDefault": "FFFFFF",
+    "WhisperDefault": "D00000",
+    "FriendsDefault": "00BB00",
+    "PartyDefault": "FFCC00"
+  },
+  "BossKillRewardSettings": {
+    "IsEnabled": false,
+    "KillTip": "Du hast den Boss {EntityName} getötet und 1 Punkt erhalten",
+    "EnemyRewardMap": {},
+    "FallbackReward": 1
+  },
+  "TaskScheduleSettings": {
+    "IsEnabled": false
+  },
+  "LevelGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "lq",
+    "HasClaimedTip": "[00FF00]Sie haben dieses Level-Geschenk bereits erhalten!",
+    "LevelNotEnoughTip": "[00FF00]Ihr Level ist nicht ausreichend, Sie müssen Level {RequiredLevel} erreichen!",
+    "NoGiftTip": "[00FF00]Sie haben keine Level-Geschenke zum Abholen!",
+    "ClaimSuccessTip": "[00FF00]Glückwunsch! Sie haben das {GiftName} Geschenk erfolgreich erhalten!"
+  },
+  "MuteCommandAreaSettings": {
+    "IsEnabled": false,
+    "MutedCommandTip": "[FF0000]Dieser Befehl ist in diesem Bereich deaktiviert: {command}[-]"
+  },
+  "ChunkResetSettings": {
+    "IsEnabled": false,
+    "Interval": 3600,
+    "SkipIfPlayersInArea": true,
+    "RemoveEnemiesBeforeReset": true,
+    "ResetNoticeTip": "",
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffResetArea",
+    "IsLandClaimBanEnabled": false,
+    "IsBedrollBanEnabled": false,
+    "LandClaimBanTip": "[FF0000]Landanspruch darf in Reset-Zonen nicht platziert werden![-]",
+    "BedrollBanTip": "[FF0000]Schlafsack darf in Reset-Zonen nicht platziert werden![-]",
+    "IsPoiLandClaimBanEnabled": false,
+    "IsPoiBedrollBanEnabled": false,
+    "PoiLandClaimBanTip": "[FF0000]Landanspruch darf in POI-Gebäuden nicht platziert werden![-]",
+    "PoiBedrollBanTip": "[FF0000]Schlafsack darf in POI-Gebäuden nicht platziert werden![-]"
+  },
+  "TraderProtectSettings": {
+    "IsEnabled": false,
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffTraderProtect"
+  },
+  "PvpVeSettings": {
+    "IsEnabled": false,
+    "DefaultKillMode": 2,
+    "DefaultDropOnDeath": 0,
+    "DefaultLandClaimOnline": 4,
+    "DefaultLandClaimOffline": 8,
+    "DefaultBuffName": "buffPvpVeNoticePve"
+  },
+  "PointLogSettings": {
+    "IsEnabled": false,
+    "LogShop": true,
+    "LogSignIn": true,
+    "LogTransfer": true,
+    "LogTeleport": true,
+    "LogZombieKill": false,
+    "LogLottery": true,
+    "LogCdKey": true,
+    "LogLevelGift": true,
+    "LogVipGift": true,
+    "LogWebApi": true,
+    "LogExternal": true,
+    "LogOther": true,
+    "RetentionDays": 0
+  },
+  "LotterySettings": {
+    "IsEnabled": true,
+    "DrawCommand": "cj",
+    "QueryListCmd": "cjlist",
+    "DrawSuccessTip": "[00FF00]Herzlichen Glückwunsch! Du hast gewonnen: {ItemName} x{Count}![-]",
+    "PointsNotEnoughTip": "[FF0000]Nicht genug Punkte! Lotterie benötigt {DrawCost} Punkte, du hast {Points} Punkte[-]",
+    "CoolingTip": "[FFFF00]Lotterie ist im Cooldown! Bitte warte {Seconds} Sekunden[-]",
+    "LotteryNotFoundTip": "[FF0000]Lotterie-Pool nicht gefunden![-]",
+    "LotteryDisabledTip": "[FF0000]Dieser Lotterie-Pool ist deaktiviert![-]",
+    "LotteryEmptyTip": "[FF0000]Keine Gegenstände im Lotterie-Pool![-]",
+    "LotteryItemTip": "[00FFFF]ID: {LotteryId} | Name: {LotteryName} | Kosten: {DrawCost} Punkte | Cooldown: {DrawInterval}s[-]",
+    "NoLottery": "[FFFF00]Keine Lotterie-Pools verfügbar![-]"
+  }
+}

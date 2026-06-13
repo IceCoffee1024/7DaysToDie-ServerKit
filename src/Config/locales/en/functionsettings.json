@@ -1,0 +1,224 @@
+{
+  "GlobalSettings": {
+    "GlobalServerName": "[FFFFFF]Server",
+    "WhisperServerName": "[FF0000]Server",
+    "ChatCommandPrefix": "",
+    "ChatCommandSeparator": "-",
+    "HandleChatMessageError": "[FF0000]System error, please contact the server administrator.",
+    "TeleZombieCheck": true,
+    "TeleDisableTip": "[00FF00]Transmission is forbidden. Please check if your surroundings are safe.",
+    "KillZombieTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]You killed a zombie, earned 1 point\"",
+        "ty-cpp {EntityId} 1"
+      ]
+    },
+    "DeathTrigger": {
+      "IsEnabled": false,
+      "ExecuteCommands": [
+        "ty-pm {EntityId} \"[00FF00]You died, deducted 1 point\"",
+        "ty-cpp {EntityId} -1"
+      ]
+    },
+    "BlockFamilySharingAccount": false,
+    "IsEnablePlayerInitialSpawnPoint": false,
+    "PlayerInitialPosition": null,
+    "EnableAutoZombieCleanup": false,
+    "AutoZombieCleanupThreshold": 128,
+    "EnableXmlsSecondaryOverwrite": false,
+    "HideCommandInChat": false
+  },
+  "GameNoticeSettings": {
+    "IsEnabled": false,
+    "WelcomeNotice": "Welcome, survivor.",
+    "RotatingNotices": [],
+    "RotatingInterval": 300,
+    "BloodMoonNotice1": "The next blood moon is in {BloodMoonDays} days.",
+    "BloodMoonNotice2": "The next blood moon is today. It will begin at {BloodMoonStartTime}",
+    "BloodMoonNotice3": "The blood moon is here, hold on until {BloodMoonEndTime}"
+  },
+  "PointsSystemSettings": {
+    "IsEnabled": false,
+    "SignInCmd": "si",
+    "SignInInterval": 3600,
+    "SignInRewardPoints": 10,
+    "SignInSuccessTip": "[00FF00]Sign in successful! Reward points: {SignInRewardPoints}, You currently have points: {PlayerTotalPoints}",
+    "SignInFailureTip": "[FFFF00]Failed to sign in! Please come back later.",
+    "QueryPointsCmd": "points",
+    "QueryPointsTip": "[00FF00]You currently have points: {PlayerTotalPoints}",
+    "IsCurrencyExchangeEnabled": false,
+    "CurrencyToPointsExchangeRate": "1",
+    "CurrencyExchangeCmd": "dh",
+    "ExchangeSuccessTip": "[00FF00]Exchange successful! Game currency consumed: {CurrencyAmount}, you currently have points: {PlayerTotalPoints}",
+    "ExchangeFailureTip": "[FFFF00]Exchange failed! Please prepare Duke Casino coins or sign in before coming back"
+  },
+  "GameStoreSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "buy",
+    "BuyCmdPrefix": "buy",
+    "GoodsItemTip": "[FFFFFF]Input: [00FF00]buy-{GoodsId} [FFFFFF]buy [00FF00]{GoodsName}[FFFFFF], [00FF00]Price: [FF00FF]{Price}",
+    "BuySuccessTip": "[00FF00]Purchase successful!",
+    "PointsNotEnoughTip": "[00FF00]Not enough points, need points: {Price}",
+    "NoGoods": "[00FF00]No goods."
+  },
+  "TeleportCitySettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "city",
+    "TeleCmdPrefix": "city",
+    "TeleInterval": 60,
+    "LocationItemTip": "[FFFFFF]Input: [00FF00]hc-{CityId} [FFFFFF]Teleport to [00FF00]{CityName}[FFFFFF], Points Required: [FF00FF]{PointsRequired}",
+    "TeleSuccessTip": "[00FF00]Player: {PlayerName}, teleported to: {CityName}",
+    "PointsNotEnoughTip": "[00FF00]Not enough points, need points: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleport cooling... Remaining time: {CooldownSeconds} seconds.",
+    "NoLocation": "[00FF00]There is no city location."
+  },
+  "TeleportFriendSettings": {
+    "IsEnabled": false,
+    "TeleCmdPrefix": "tele",
+    "TeleInterval": 60,
+    "PointsRequired": 2,
+    "TeleSuccessTip": "[00FF00] Player: {PlayerName}, Teleported to: {TargetName}",
+    "PointsNotEnoughTip": "[00FF00]Points Not enough, Points required: {PointsRequired}",
+    "CoolingTip": "[00FF00]Teleport cooling... Remaining time: {CooldownSeconds} seconds.",
+    "TargetNotFoundTip": "[FF00FF]Teleport target not found, enter: [00FF00]/tele friend name [FFFFFF]to teleport.",
+    "IsFriendBypass": false,
+    "TeleConfirmTip": "[00FF00]Player: {PlayerName}, wants to be teleported to you, enter Yes to agree, enter No to reject",
+    "AcceptTele": "Yes",
+    "RejectTele": "No",
+    "TargetRejectTeleTip": "[FF0000]The other party rejected your teleport request",
+    "KeepDuration": 30
+  },
+  "TeleportHomeSettings": {
+    "IsEnabled": false,
+    "QueryListCmd": "home",
+    "TeleInterval": 60,
+    "SetHomeCmdPrefix": "setHome",
+    "SetCountLimit": 3,
+    "PointsRequiredForSet": 2,
+    "DeleteHomeCmdPrefix": "delHome",
+    "TeleHomeCmdPrefix": "home",
+    "PointsRequiredForTele": 2,
+    "NoHomeTip": "[00FF00]You haven't set a home yet, please use /setHome to set one.",
+    "LocationItemTip": "[FFFFFF]Input: [00FF00]home-{HomeName} [FFFFFF]Transfer to [FF0000]{HomeName}[00FF00]",
+    "OverLimitTip": "[00FF00]Exceeded the maximum number of set homes. You can set up to 3 homes.",
+    "SetPointsNotEnoughTip": "[00FF00]Points Not enough, Points required: 2",
+    "SetSuccessTip": "[00FF00]Successfully set.",
+    "OverwriteSuccessTip": "[00FF00]Successfully overwritten the old coordinates.",
+    "DeleteSuccessTip": "[00FF00]Successfully deleted.",
+    "HomeNotFoundTip": "[00FF00]The specified home was not found.",
+    "CoolingTip": "[00FF00]Teleport cooling... Remaining time: {CooldownSeconds} seconds.",
+    "TelePointsNotEnoughTip": "[00FF00]Insufficient points! Points required: 2",
+    "TeleSuccessTip": "[00FF00]Player: {PlayerName} teleported to their home: {HomeName}"
+  },
+  "AutoBackupSettings": {
+    "IsEnabled": false,
+    "Interval": 7200,
+    "RetainedFileCountLimit": 12,
+    "ResetIntervalAfterManualBackup": true,
+    "SkipIfThereAreNoPlayers": true,
+    "AutoBackupOnServerStartup": true,
+    "ArchiveFolder": "LSTY_Data/Backup"
+  },
+  "VipGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "VIP",
+    "HasClaimedTip": "[00FF00]You have received the gift package~",
+    "NonVipTip": "[00FF00]You are not a VIP yet~",
+    "ClaimSuccessTip": "[00FF00]Congratulations on successfully receiving the gift package: {GiftName}"
+  },
+  "CdKeyRedeemSettings": {
+    "IsEnabled": false,
+    "HasAlreadyRedeemedTip": "[00FF00] You have already redeemed the CD key.",
+    "HasReachedMaxRedemptionLimitTip": "[00FF00] You have reached the maximum redemption limit.",
+    "HasRedemptionCodeExpiredTip": "[00FF00] The redemption code has expired.",
+    "RedeemSuccessTip": "[00FF00] You have successfully redeemed the CD key."
+  },
+  "ColoredChatSettings": {
+    "IsEnabled": false,
+    "GlobalDefault": "FFFFFF",
+    "WhisperDefault": "D00000",
+    "FriendsDefault": "00BB00",
+    "PartyDefault": "FFCC00"
+  },
+  "BossKillRewardSettings": {
+    "IsEnabled": false,
+    "KillTip": "You killed the boss {EntityName}, earned 1 points",
+    "EnemyRewardMap": {},
+    "FallbackReward": 1
+  },
+  "TaskScheduleSettings": {
+    "IsEnabled": false
+  },
+  "LotterySettings": {
+    "IsEnabled": true,
+    "DrawCommand": "cj",
+    "QueryListCmd": "cjlist",
+    "DrawSuccessTip": "[00FF00]Congratulations! You won: {ItemName} x{Count}![-]",
+    "PointsNotEnoughTip": "[FF0000]Not enough points! Lottery requires {DrawCost} points, you have {Points} points[-]",
+    "CoolingTip": "[FFFF00]Lottery is on cooldown! Please wait {Seconds} seconds[-]",
+    "LotteryNotFoundTip": "[FF0000]Lottery pool not found![-]",
+    "LotteryDisabledTip": "[FF0000]This lottery pool is disabled![-]",
+    "LotteryEmptyTip": "[FF0000]No items in the lottery pool![-]",
+    "LotteryItemTip": "[00FFFF]ID: {LotteryId} | Name: {LotteryName} | Cost: {DrawCost} points | Cooldown: {DrawInterval}s[-]",
+    "NoLottery": "[FFFF00]No lottery pools available![-]"
+  },
+  "LevelGiftSettings": {
+    "IsEnabled": false,
+    "ClaimCmd": "lq",
+    "HasClaimedTip": "[00FF00]You have already claimed this level gift!",
+    "LevelNotEnoughTip": "[00FF00]Your level is not enough, you need to reach level {RequiredLevel} to claim!",
+    "NoGiftTip": "[00FF00]You have no level gifts available to claim!",
+    "ClaimSuccessTip": "[00FF00]Congratulations! You have successfully claimed the {GiftName} gift!"
+  },
+  "MuteCommandAreaSettings": {
+    "IsEnabled": false,
+    "MutedCommandTip": "[FF0000]This command is disabled in this area: {command}[-]"
+  },
+  "ChunkResetSettings": {
+    "IsEnabled": false,
+    "Interval": 3600,
+    "SkipIfPlayersInArea": true,
+    "RemoveEnemiesBeforeReset": true,
+    "ResetNoticeTip": "",
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffResetArea",
+    "IsLandClaimBanEnabled": false,
+    "IsBedrollBanEnabled": false,
+    "LandClaimBanTip": "[FF0000]Land claim placement is forbidden in chunk reset areas![-]",
+    "BedrollBanTip": "[FF0000]Sleeping bag placement is forbidden in chunk reset areas![-]",
+    "IsPoiLandClaimBanEnabled": false,
+    "IsPoiBedrollBanEnabled": false,
+    "PoiLandClaimBanTip": "[FF0000]Land claim placement is forbidden in POI buildings![-]",
+    "PoiBedrollBanTip": "[FF0000]Sleeping bag placement is forbidden in POI buildings![-]"
+  },
+  "TraderProtectSettings": {
+    "IsEnabled": false,
+    "IsAreaBuffEnabled": false,
+    "AreaBuffName": "buffTraderProtect"
+  },
+  "PvpVeSettings": {
+    "IsEnabled": false,
+    "DefaultKillMode": 2,
+    "DefaultDropOnDeath": 0,
+    "DefaultLandClaimOnline": 4,
+    "DefaultLandClaimOffline": 8,
+    "DefaultBuffName": "buffPvpVeNoticePve"
+  },
+  "PointLogSettings": {
+    "IsEnabled": false,
+    "LogShop": true,
+    "LogSignIn": true,
+    "LogTransfer": true,
+    "LogTeleport": true,
+    "LogZombieKill": false,
+    "LogLottery": true,
+    "LogCdKey": true,
+    "LogLevelGift": true,
+    "LogVipGift": true,
+    "LogWebApi": true,
+    "LogExternal": true,
+    "LogOther": true,
+    "RetentionDays": 0
+  }
+}

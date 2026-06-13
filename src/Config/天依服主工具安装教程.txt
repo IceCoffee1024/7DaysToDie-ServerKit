@@ -1,0 +1,9 @@
+安装方法：
+将压缩包中的“TianYiSdtdServerKit”文件夹直接放进服务端MODS文件夹中即可，面板服也是一样操作。
+同时你需要确保服务器端自带的下列四个MOD都在
+TFP_CommandExtensions
+TFP_MapRendering
+TFP_WebServer
+Xample_MarkersMod
+服务端启动后，默认网页面板端口为8888
+假如您的服务器IP为1.1.1.1，那么您可以在浏览器中输入 1.1.1.1:8888 访问控制页面。

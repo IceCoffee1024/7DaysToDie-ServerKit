@@ -1,0 +1,9 @@
+Installation method:
+Simply put the "TianYiSdtdServerKit" folder in the compressed package directly into the server side MODS folder, and the same is done for the panel service.
+At the same time, you need to ensure that the following four MODs that come with the server are all present
+TFP_CommandExtensions
+TFP_MapRendering
+TFP_WebServer
+Xample_MarkersMod
+After the server is started, the default web panel port is 8888
+If your server IP is 1.1.1.1, you can enter 1.1.1.1:8888 in your browser to access the control page.

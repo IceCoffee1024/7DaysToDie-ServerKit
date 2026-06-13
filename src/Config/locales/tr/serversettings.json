@@ -1,0 +1,398 @@
+{
+  "ServerName": {
+    "Group": "Sunucu",
+    "Desc": "Sunucu adı. İstediğiniz adı girin"
+  },
+  "ServerDescription": {
+    "Group": "Sunucular",
+    "Desc": "Sunucu açıklaması. İstediğiniz sunucu açıklamasını girin"
+  },
+  "ServerWebsiteURL": {
+    "Group": "Sunucular",
+    "Desc": "Sunucu web sitesi URL'si. Sunucu tarayıcısında tıklanabilir bir bağlantı olarak gösterilecektir"
+  },
+  "ServerPassword": {
+    "Group": "Sunucu",
+    "Desc": "Sunucu şifresi. Oyuncuların oyun sunucusuna bağlanırken kullanacakları şifre"
+  },
+  "ServerLoginConfirmationText": {
+    "Group": "Sunucu",
+    "Desc": "Sunucu giriş onay metni. Etkinleştirildiğinde, kullanıcılar sunucuya bağlanırken bu mesajı görecek ve onaylamaları gerekecek. Bu pencereyi daha karmaşık bir şekilde düzenlemek için XUi'de serverjoinrulesdialog penceresini düzenleyin"
+  },
+  "Region": {
+    "Group": "Sunucu",
+    "Desc": "Sunucunun bulunduğu bölge. Olası değerler: Asia, NorthAmericaEast, NorthAmericaWest, CentralAmerica, SouthAmerica, Europe, Russia, MiddleEast, Africa, Oceania"
+  },
+  "Language": {
+    "Group": "Sunucu",
+    "Desc": "Sunucuda kullanılan ana dil. Oyuncuların arayacağı dilin İngilizce adını kullanın. Olası değerler: english, german, spanish, french, italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese"
+  },
+  "ServerPort": {
+    "Group": "Ağ",
+    "Desc": "Sunucu programının dinlediği port. Aynı yerel ağdaki bilgisayarların bunu bir LAN sunucusu olarak tanıması için 26900 ile 26905 veya 27015 ile 27020 arasında bir aralıkta kalın"
+  },
+  "ServerVisibility": {
+    "Group": "Ağ",
+    "Desc": "Sunucu görünürlüğü. 2 = herkese açık, 1 = yalnızca arkadaşlar, 0 = listede görünmez. Özel sunucular arkadaş olmadığından, 1 olarak ayarlanmışsa yalnızca ilk oyuncu IP üzerinden manuel olarak bağlandığında çalışır"
+  },
+  "ServerDisabledNetworkProtocols": {
+    "Group": "Ağ",
+    "Desc": "Sunucuda devre dışı bırakılan ağ protokolleri. Virgülle ayrılmış değerler: LiteNetLib, SteamNetworking. Özel sunucular, kullanıcı ile sunucu arasında NAT yönlendirici yoksa veya port yönlendirme düzgün yapılandırılmışsa SteamNetworking'i devre dışı bırakmalıdır"
+  },
+  "ServerMaxWorldTransferSpeedKiBs": {
+    "Group": "Ağ",
+    "Desc": "Sunucunun maksimum dünya transfer hızı. Bir istemcinin henüz dünyaya sahip olmadığı ilk bağlantı sırasında dünya transferi için maksimum hız (kiB/s). Maksimum değer yaklaşık 1300 kiB/s'dir ve daha yüksek ayarlansa bile bu değer aşılmaz"
+  },
+  "ServerMaxPlayerCount": {
+    "Group": "Slotlar",
+    "Desc": "Sunucunun maksimum oyuncu sayısı. Aynı anda çevrimiçi olabilecek maksimum oyuncu sayısı"
+  },
+  "ServerReservedSlots": {
+    "Group": "Slotlar",
+    "Desc": "Sunucu rezerve edilmiş slotlar. Maksimum oyuncu sayısına ek olarak, bazı slotlar yalnızca belirli bir yetki seviyesine sahip oyuncular tarafından kullanılabilir"
+  },
+  "ServerReservedSlotsPermission": {
+    "Group": "Slotlar",
+    "Desc": "Sunucu rezerve edilmiş slot yetkisi. Yukarıda belirtilen rezerve edilmiş slotları kullanmak için gerekli yetki seviyesi"
+  },
+  "ServerAdminSlots": {
+    "Group": "Slotlar",
+    "Desc": "Sunucu yönetici slotları. Sunucu maksimum oyuncu sayısına ulaştığında bile yöneticiler hala bağlanabilir"
+  },
+  "ServerAdminSlotsPermission": {
+    "Group": "Slotlar",
+    "Desc": "Sunucu yönetici slot yetkisi. Yukarıda belirtilen yönetici slotlarını kullanmak için gerekli yetki seviyesi"
+  },
+  "WebDashboardEnabled": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Web gösterge panelini etkinleştir/devre dışı bırak."
+  },
+  "WebDashboardPort": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Web gösterge paneli portu."
+  },
+  "WebDashboardUrl": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Web gösterge paneli için harici URL (kullanılmadığında, yalnızca sunucunun genel IP'si kullanılır. Web gösterge paneli bir ters proxy'nin arkasındaysa). Tam URL olmalıdır. Örnek: https://reverseProxyDomain.tld:1234/. Genel IP ve gösterge paneli portunu doğrudan kullanıyorsanız boş bırakılabilir."
+  },
+  "EnableMapRendering": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Harita işleme etkinleştirme. Harita keşfi sırasında haritayı döşeme görüntüleri olarak işleyebilirsiniz. Örneğin, web gösterge paneli bunu kullanarak harita görünümünü gösterebilir."
+  },
+  "TelnetEnabled": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Telnet hizmetinin etkin olup olmadığı. Telnet hizmetini etkinleştirin veya devre dışı bırakın <true,false>"
+  },
+  "TelnetPort": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Telnet portu. Telnet sunucu portu"
+  },
+  "TelnetPassword": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Telnet giriş şifresi. Şifre ayarlanmadıysa, sunucu yalnızca geri döngü arayüzünde dinler"
+  },
+  "TelnetFailedLoginLimit": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Telnet başarısız giriş limiti. Uzaktan bir istemci şifreyi yanlış girerse, bu limit aşıldığında, istemci Telnet arayüzüne bağlanmaya çalıştığında engellenecektir"
+  },
+  "TelnetFailedLoginsBlocktime": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Başarısız girişlerde engelleme süresi. Başarısız giriş denemeleri limitini aştıktan sonra engellemenin süreceği süre (saniye)?"
+  },
+  "TerminalWindowEnabled": {
+    "Group": "Yönetim Arayüzü",
+    "Desc": "Terminal penceresi etkinleştirildi. Günlük çıkışı/komut girişi için bir terminal penceresi gösterir (yalnızca Windows)"
+  },
+  "AdminFileName": {
+    "Group": "Klasör ve Dosya Yolları",
+    "Desc": "Sunucu yönetici dosya adı. SaveGameFolder için göreceli yol"
+  },
+  "UserDataFolder": {
+    "Group": "Klasör ve Dosya Yolları",
+    "Desc": "Kullanıcı verileri klasörü. Sunucu tarafından oluşturulan tüm verilerin depolandığı yeri geçersiz kılmak için bunu kullanın. RWG tarafından oluşturulan dünyalar da dahildir. Yorum satırını kaldırmayı unutmayın"
+  },
+  "SaveGameFolder": {
+    "Group": "Klasör ve Dosya Yolları",
+    "Desc": "Oyun kayıt klasörü. Oyun kayıt yolunu geçersiz kılmak için kullanılır. Yorum satırını kaldırmayı unutmayın"
+  },
+  "ServerAllowCrossplay": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Sunucuda çapraz oyuna izin ver. Çapraz oyunu etkinleştirir/devre dışı bırakır. Çapraz oyun sunucuları, yaptırımlar göz ardı edilmediği ve varsayılan veya daha az oyuncu yuvası sayısına sahip olduğunda yalnızca aramalarda bulunabilir ve katılınabilir"
+  },
+  "EACEnabled": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "EAC Anti-Cheat'in etkin olup olmadığı. Anti-Cheat'i etkinleştirip etkinleştirmeyeceğinizi seçin (korsan sunucular ve Çin sunucuları için devre dışı bırakılmalıdır)"
+  },
+  "IgnoreEOSSanctions": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "EOS yaptırımlarını yoksay. Oyuncuların sunucuya bağlanırken EOS yaptırımlarını yoksayacağını seçin"
+  },
+  "HideCommandExecutionLog": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Komut yürütme günlüğünü gizle. 0 = Tüm günlükler gösterilsin, 1 = Yalnızca Telnet/gösterge panelinde gizle, 2 = Uzaktan oyun istemcisinde de gizle, 3 = Tüm günlükleri gizle"
+  },
+  "MaxUncoveredMapChunksPerPlayer": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Bir oyuncunun oyun haritasında keşfedebileceği alan. Bu nedenle, oyuncu başına harita dosyasının maksimum boyutu (x * 512 bayt) ile sınırlıdır ve keşfedilebilir alan (x * 256 metrekare) olur. Varsayılan 131072 değeri, bir oyuncunun aynı anda en fazla 32 kilometrekarelik bir haritayı keşfedebileceği anlamına gelir"
+  },
+  "PersistentPlayerProfiles": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Oyuncu profillerinin düzenlenebilir olup olmadığı. Devre dışı bırakıldığında, oyuncular seçilen profille oturum açar. Etkinleştirildiğinde, son oturum açılan yapılandırma dosyasını kullanarak oturum açarlar"
+  },
+  "MaxChunkAge": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Ziyaret edildikten sonra tekrar ziyaret edilmediği veya korunmadığı (örneğin, yakınında bir toprak taşı veya yatak rulosu yoksa) durumda, parçanın orijinal durumuna geri yüklenmesi için geçen oyun içi gün sayısı"
+  },
+  "SaveDataLimit": {
+    "Group": "Diğer Teknik Ayarlar",
+    "Desc": "Kayıt verisi sınırı. Kaydedilen oyuna izin verilen maksimum disk alanı (MB cinsinden). Bu sınıra ulaşıldığında, kaydedilen oyun parçaları zorla orijinal durumuna geri döndürülebilir. Negatif bir değer, sınırı devre dışı bırakır"
+  },
+  "GameWorld": {
+    "Group": "Oyun Dünyası",
+    "Desc": "Oyun dünyası haritası. Navezgane[sabit harita], RWG[rastgele harita] (aşağıdaki 'Dünya Tohumu' ve 'Dünya Boyutu' seçeneklerine bakın) veya 'Worlds' klasöründe bulunan mevcut bir dünya adı (örneğin, 'Navezgane', 'PREGEN01'...)"
+  },
+  "WorldGenSeed": {
+    "Group": "Oyun Dünyası",
+    "Desc": "Dünya Tohumu. RWG ise, yeni bir dünya oluşturmak için kullanılan tohumdur. Aynı adla bir dünya zaten mevcutsa, o dünya doğrudan yüklenir"
+  },
+  "WorldGenSize": {
+    "Group": "Oyun Dünyası",
+    "Desc": "Oluşturulan dünya boyutu. RWG ise, oluşturulan dünyanın genişliğini ve yüksekliğini kontrol eder. Resmi olarak desteklenen boyutlar 6144 ile 10240 arasındadır ve 2048'in katı olmalıdır. Örneğin, 6144, 8192, 10240"
+  },
+  "GameName": {
+    "Group": "Oyun Dünyası",
+    "Desc": "Oyun adı. Oyun için bir ad belirleme yöntemi olup, kaydedilen oyun için bir ad ve dünyaya dekorasyon (ağaçlar vb.) yerleştirirken kullanılan tohum üzerinde etkisi vardır. RWG dünyası oluşturuluyorsa, bu dünya genel yerleşimini kontrol etmez"
+  },
+  "GameMode": {
+    "Group": "Oyun Dünyası",
+    "Desc": "Oyun modu. Hayatta kalma modu (çok oyunculu)"
+  },
+  "GameDifficulty": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Oyun zorluğu. Zorluk seviyesi 0 ile 5 arasında olup, 0 en kolay, 5 ise en zor seviyedir"
+  },
+  "BlockDamagePlayer": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Oyuncu tarafından yapılan blok hasarı. Oyuncunun bloklara verdiği hasar (yüzde olarak, tam sayı)"
+  },
+  "BlockDamageAI": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "AI tarafından yapılan blok hasarı. AI'nın bloklara verdiği hasar (yüzde olarak, tam sayı)"
+  },
+  "BlockDamageAIBM": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Kanlı Ay sırasında AI tarafından yapılan blok hasarı. Kanlı Ay sırasında AI'nın bloklara verdiği hasar (yüzde olarak, tam sayı)"
+  },
+  "XPMultiplier": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "XP kazanma çarpanı. Oyuncunun XP kazanma oranı (yüzde olarak, tam sayı)"
+  },
+  "PlayerSafeZoneLevel": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Yeni oyuncular için güvenli bölge seviyesi. Oyuncunun seviyesi bu seviyenin altındaysa, doğduğunda bir güvenli bölge (düşmanların olmadığı bir bölge) oluşturulur. Oyuncu bu seviyenin altındaysa, zombiler onun etrafında artık ortaya çıkmaz"
+  },
+  "PlayerSafeZoneHours": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Güvenli bölge süresi. Oyuncunun güvenli bölgesinin süresi (oyun saati olarak)"
+  },
+  "BuildCreate": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Yaratıcı mod. Hile modunu etkinleştirir veya devre dışı bırakır"
+  },
+  "DayNightLength": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Oyun içi bir günün gerçek süresi (dakika olarak). Gerçek zaman olarak kaç dakikanın oyun içi bir güne eşdeğer olduğunu belirler"
+  },
+  "DayLightLength": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Oyun içi gün ışığı süresi. Günün kaç saatinin gündüz olduğunu belirler (varsayılan 18 saat)"
+  },
+  "BiomeProgression": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Biyom ilerlemesi. Biyom tehlikelerini etkinleştirir. Hava ve fırtınalar bu ayardan etkilenmez"
+  },
+  "StormFreq": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Fırtına sıklığı. Fırtınaların sıklığını ayarlar. 0% onları kapatır. Standart değerler: 0, 50, 100, 150, 200, 300, 400, 500"
+  },
+  "DeathPenalty": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Ölüm sonrası ceza. 0 = Yok. 1 = Varsayılan: Klasik XP cezası. 2 = Yaralanma: Çoğu debuff'ı korur. %50 yiyecek ve su ile yeniden doğar. 3 = Kalıcı ölüm: Karakter tamamen sıfırlanır. Kaydedilen oyunla yeniden başlatılır)"
+  },
+  "DropOnDeath": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Ölümde düşürme. 0 = Yok, 1 = Her şey, 2 = Araç kemeri, 3 = Sırt çantası, 4 = Her şeyi sil"
+  },
+  "DropOnQuit": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Çıkışta düşürme. 0 = Yok, 1 = Her şey, 2 = Araç kemeri, 3 = Sırt çantası"
+  },
+  "BedrollDeadZoneSize": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Yatak rulosu ölü bölge boyutu (yani, verilen değerin iki katı uzunluğunda her iki yanda bir kutu yarıçapı) içinde zombiler ortaya çıkmaz. Yatak rulosu ölü bölgesine dokunan tüm uyuyan bölgeler kaldırılır ve yeniden ortaya çıkmaz"
+  },
+  "BedrollExpiryTime": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Yatak rulosu süre aşımı. Oyuncunun son çevrimiçi olduğu zamandan sonra yatak rulosunun etkin kalacağı gerçek süre (gün)"
+  },
+  "AllowSpawnNearFriend": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Arkadaşın yakınında doğmaya izin ver. Sunucuya ilk kez katılan yeni oyuncular, aynı anda oynayan herhangi bir arkadaşın yakınında doğmayı seçebilir mi? 0 = Devre dışı, 1 = Her zaman, 2 = Yalnızca orman biyomundaki arkadaşların yakınında"
+  },
+  "CameraRestrictionMode": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Kamera kısıtlama modu. 0 = Oyuncular birinci ve üçüncü şahıs kamera modları arasında serbestçe geçiş yapabilir, 1 = Birinci şahıs ile sınırlı, 2 = Üçüncü şahıs ile sınırlı"
+  },
+  "JarRefund": {
+    "Group": "Oyun Zorluğu",
+    "Desc": "Kavanoz iadesi. 0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100% Bir öğe tüketildikten sonra boş kavanozun iade yüzdesi"
+  },
+  "MaxSpawnedZombies": {
+    "Group": "Performans",
+    "Desc": "Maksimum zombiler. Bu ayar, haritanın genelinde geçerlidir ve aynı anda haritada bulunabilecek zombi sayısını sınırlar. Bu ayarı değiştirmek performansı büyük ölçüde etkileyebilir"
+  },
+  "MaxSpawnedAnimals": {
+    "Group": "Performans",
+    "Desc": "Maksimum hayvanlar. Sunucuda çok sayıda oyuncu varsa, bu sınırı artırarak daha fazla hayvan ekleyebilirsiniz. Hayvanlar, zombilere göre daha az CPU kullanır. Not: Bu ayar, rastgele daha fazla hayvan oluşturmaz ve biyom spawn sistemi, belirli bir alanda yalnızca belirli bir sayıda hayvan oluşturur. Ancak oyuncular geniş bir alana yayılmışsa, sınıra ulaşılabilir, bu nedenle bu sınırı artırabilirsiniz"
+  },
+  "ServerMaxAllowedViewDistance": {
+    "Group": "Performans",
+    "Desc": "İstemcide izin verilen maksimum görüş mesafesi (6 - 12). Bellek kullanımı ve performansı büyük ölçüde etkiler"
+  },
+  "MaxQueuedMeshLayers": {
+    "Group": "Performans",
+    "Desc": "Kuyruğa alınabilecek maksimum ağ katmanı sayısı. Bu değeri azaltmak bellek kullanımını artırır, ancak chunk oluşturma süresini uzatabilir"
+  },
+  "EnemySpawnMode": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Düşman spawn'ı etkinleştir/devre dışı bırak."
+  },
+  "EnemyDifficulty": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi gücü. 0 = Normal, 1 = Öfkeli"
+  },
+  "ZombieFeralSense": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi vahşi duyusu. 0-3 (Devre dışı, Gündüz, Gece, Tümü)"
+  },
+  "ZombieMove": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi hareket hızı. 0-4 (Yürüyüş, Hızlı yürüyüş, Koşu, Sprint, Kabus)"
+  },
+  "ZombieMoveNight": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi gece hareket hızı. 0-4 (Yürüyüş, Hızlı yürüyüş, Koşu, Sprint, Kabus)"
+  },
+  "ZombieFeralMove": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi vahşi hareket hızı. 0-4 (Yürüyüş, Hızlı yürüyüş, Koşu, Sprint, Kabus)"
+  },
+  "ZombieBMMove": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Zombi BM hareket hızı. 0-4 (Yürüyüş, Hızlı yürüyüş, Koşu, Sprint, Kabus)"
+  },
+  "AISmellMode": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Yapay zeka koku modu. 0-5 (kapalı, yürüyüş, hızlı yürüyüş, koşu, sprint, kabus)"
+  },
+  "BloodMoonFrequency": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Kanlı Ay sıklığı. Kanlı Ay'ın göründüğü döngü (gün olarak). 0 olarak ayarlanırsa, Kanlı Ay görünmez"
+  },
+  "BloodMoonRange": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Kanlı Ay aralığı. Gerçek Kanlı Ay, önceki ayardan birkaç gün farklı olabilir. Bu değer 0 olarak ayarlanırsa, Kanlı Ay her N gününde tam olarak belirtilen Kanlı Ay sıklığında görünür"
+  },
+  "BloodMoonWarning": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Kanlı Ay uyarısı. Kanlı Ay'ın kırmızı günü başlamadan önce kaç saat olduğunu belirler. Bu değer -1 olarak ayarlanırsa, kırmızı renk gösterilmez."
+  },
+  "BloodMoonEnemyCount": {
+    "Group": "Zombi Ayarları",
+    "Desc": "Kanlı Ay sırasında düşman sayısı. Bu, Kanlı Ay sırasında her oyuncu için aynı anda spawn olabilecek zombi sayısıdır. Ancak, çok oyunculu modda MaxSpawnedZombies bunu geçersiz kılar. Ayrıca, oyun aşamasına bağlı olarak bir yanda spawn olabilecek zombi sayısı belirlenir. Oyun aşaması düşükse, Kanlı Ay düşman sayısına ayarlanan zombi sayısından daha az zombi spawn olur. Bu ayarı değiştirmek performansı büyük ölçüde etkileyebilir."
+  },
+  "LootAbundance": {
+    "Group": "Ganimet",
+    "Desc": "Ganimet bolluk oranı"
+  },
+  "LootRespawnDays": {
+    "Group": "Ganimet",
+    "Desc": "Ganimet yeniden doğma süresi. Ganimet kaynaklarının yenilenmesi için geçen süre"
+  },
+  "AirDropFrequency": {
+    "Group": "Ganimet",
+    "Desc": "Hava yardımı sıklığı. Oyun içi kaç saatte bir hava yardımı gerçekleşeceğini belirler, 0 = asla gerçekleşmez"
+  },
+  "AirDropMarker": {
+    "Group": "Ganimet",
+    "Desc": "Hava yardımı işareti. Hava yardımına bir işaretin haritada/pusulada eklenip eklenmeyeceğini belirler"
+  },
+  "PartySharedKillRange": {
+    "Group": "Çok Oyunculu",
+    "Desc": "Parti paylaşımı öldürme mesafesi. Partide paylaşılan öldürme ödülleri ve görev hedefi öldürme ödüllerini almak için gereken mesafe"
+  },
+  "PlayerKillingMode": {
+    "Group": "Çok Oyunculu",
+    "Desc": "Oyuncu öldürme modu (0 = Öldürme yok, 1 = Yalnızca müttefiklere saldırılabilir, 2 = Yalnızca yabancılara saldırılabilir, 3 = Herkese saldırılabilir)"
+  },
+  "LandClaimCount": {
+    "Group": "Arazi Sahipliği Boyut Seçenekleri",
+    "Desc": "Arazi sahipliği sayısı. Oyuncu başına izin verilen maksimum arazi sahipliği sayısı"
+  },
+  "LandClaimSize": {
+    "Group": "Arazi Sahipliği Boyut Seçenekleri",
+    "Desc": "Arazi sahipliği koruma alanı. Birim blok olarak"
+  },
+  "LandClaimDeadZone": {
+    "Group": "Arazi Sahipliği Boyut Seçenekleri",
+    "Desc": "Arazi sahipliği koruma alanı. Arazi sahiplikleri arasındaki mesafe. Arazi sahiplikleri, bu mesafeden daha uzak olmalıdır (diğer oyuncularla arkadaş değilseniz)."
+  },
+  "LandClaimExpiryTime": {
+    "Group": "Arazi Sahipliği Boyut Seçenekleri",
+    "Desc": "Oyuncu çevrimdışıyken arazi sahipliği koruma süresi. Oyuncu çevrimdışıyken arazi sahipliğinin geçerli kalacağı gerçek süre (gün)"
+  },
+  "LandClaimDecayMode": {
+    "Group": "Arazi Sahipliği Boyut Seçenekleri",
+    "Desc": "Arazi sahipliği koruma durumunun çürüme modu. Çevrimdışı oyuncunun arazi sahipliği alanı için çürüme modunu kontrol eder. 0 = Yavaş (doğrusal), 1 = Hızlı (üstel), 2 = Yok (süre aşımına kadar tam koruma)"
+  },
+  "LandClaimOnlineDurabilityModifier": {
+    "Group": "Arazi Sahipliği Taşı Seçenekleri",
+    "Desc": "Oyuncu çevrimiçiyken arazi sahipliği taşının koruma çarpanı. Oyuncu çevrimiçiyken arazi sahipliği taşının dayanıklılık çarpanını belirtir. 0, yenilmez olduğu anlamına gelir ve varsayılan 4 katıdır"
+  },
+  "LandClaimOfflineDurabilityModifier": {
+    "Group": "Arazi Sahipliği Taşı Seçenekleri",
+    "Desc": "Oyuncu çevrimdışıyken arazi sahipliği taşının koruma çarpanı. Oyuncu çevrimdışıyken arazi sahipliği taşının dayanıklılık çarpanını belirtir. 0, yenilmez olduğu anlamına gelir ve varsayılan 4 katıdır"
+  },
+  "LandClaimOfflineDelay": {
+    "Group": "Arazi Sahipliği Taşı Seçenekleri",
+    "Desc": "Oyuncu oyunu terk ettikten sonra arazi sahipliği taşının dayanıklılığının çevrimiçiden çevrimdışıya geçiş süresi (dakika). Varsayılan 0'dır"
+  },
+  "DynamicMeshEnabled": {
+    "Group": "Diğer",
+    "Desc": "Dinamik ağ sisteminin etkin olup olmadığı"
+  },
+  "DynamicMeshLandClaimOnly": {
+    "Group": "Diğer",
+    "Desc": "Dinamik ağ sisteminin yalnızca oyuncunun LCB alanında geçerli olup olmadığı"
+  },
+  "DynamicMeshLandClaimBuffer": {
+    "Group": "Diğer",
+    "Desc": "Dinamik ağ LCB blok yarıçapı"
+  },
+  "DynamicMeshMaxItemCache": {
+    "Group": "Diğer",
+    "Desc": "Dinamik ağ öğesi önbellek maksimum değeri. Aynı anda işlenebilecek proje sayısıdır ve yüksek bir değer daha fazla RAM kullanır"
+  },
+  "TwitchServerPermission": {
+    "Group": "Diğer",
+    "Desc": "Sunucuda Twitch entegrasyonunu kullanmak için gereken izin seviyesi"
+  },
+  "TwitchBloodMoonAllowed": {
+    "Group": "Diğer",
+    "Desc": "Twitch'te Kanlı Ay'a izin verilip verilmediği. Sunucu, Kanlı Ay sırasında Twitch işlemlerine izin veriyorsa, Kanlı Ay sırasında ek zombiler spawn olabilir ve bu da sunucu gecikmesine neden olabilir"
+  },
+  "QuestProgressionDailyLimit": {
+    "Group": "Diğer",
+    "Desc": "Görev ilerleme günlük limiti. Oyuncuların görev seviyelerini artırmak için bir günde tamamlayabilecekleri görev sayısını sınırlar. Limiti aşan görevler yine de tamamlanabilir ve ödüller kazanılabilir"
+  }
+}

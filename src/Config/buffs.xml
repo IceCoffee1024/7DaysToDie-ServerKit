@@ -1,0 +1,36 @@
+<Config>
+    <append xpath="/buffs" >
+        <buff name="buffResetArea" name_key="非建家区域" description_key="此区域禁止放置领地石或者睡袋！" icon="ui_game_symbol_challenge_homesteading_place_land_claim" icon_color="255,0,0">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[ff0000]禁止[-]]" />
+            <effect_group>
+            </effect_group>
+        </buff>
+        <buff name="buffTraderProtect" name_key="商人保护区" description_key="此区域为商人保护区，禁止破坏与建造！" icon="ui_game_symbol_trader" icon_color="124,77,255">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[7c4dff]安全[-]]" />
+            <effect_group>
+            </effect_group>
+        </buff>
+        <buff name="buffPvpVeNoticePve" name_key="PVE 安全区" description_key="此区域为 PVE 安全区，玩家之间不会造成伤害。" icon="ui_game_symbol_block_repair" icon_color="0,255,0">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[00ff00]PVE[-]]" />
+            <effect_group>
+            </effect_group>
+        </buff>
+        <buff name="buffPvpVeNoticePvp" name_key="PVP 战区" description_key="此区域为 PVP 战区，玩家之间可以互相伤害。" icon="ui_game_symbol_block_repair" icon_color="255,0,0">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[ff0000]PVP[-]]" />
+            <effect_group>
+            </effect_group>
+        </buff>
+    </append>
+</Config>
